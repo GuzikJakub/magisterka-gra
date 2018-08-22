@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class Przycisk_zachownaie : MonoBehaviour
@@ -12,8 +13,7 @@ public class Przycisk_zachownaie : MonoBehaviour
 
     public void wykonaj_przycisk()
     {
-        przycisk = FindObjectOfType<Button>();
-        var tekst = przycisk.GetComponentInChildren<Text>().text;
+        var tekst = EventSystem.current.currentSelectedGameObject.name;
 
         tekst_uroczystosc.SetActive(true);
         tekst_uroczystosc.GetComponent<UnityEngine.UI.Text>().text = tekst;
