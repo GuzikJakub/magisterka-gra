@@ -10,7 +10,7 @@ public class Licznik_czasu : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        poczatek = Time.time;
+            poczatek = Time.time;
 	}
 	
 	// Update is called once per frame
