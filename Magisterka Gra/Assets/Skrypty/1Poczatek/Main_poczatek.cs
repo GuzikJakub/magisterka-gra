@@ -16,7 +16,7 @@ public class Main_poczatek : MonoBehaviour {
 
     IEnumerator Przycisk()
     {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(3);
         napis.SetActive(false);
         przycisk1.SetActive(true);
         przycisk2.SetActive(true);
