@@ -24,4 +24,5 @@ public class Event_glowne : MonoBehaviour {
             przycisk_cofnij.SetActive(true);
         }
     }
+
 }
