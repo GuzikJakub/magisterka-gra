@@ -18,6 +18,7 @@ public class Przycisk_zachownaie : MonoBehaviour
     public GameObject scena8;
     public GameObject scena9;
     public GameObject scena10;
+    public GameObject scena11;
 
     public GameObject pop_up_wyjdz;
     public int licznik_scen = 0;
@@ -61,6 +62,54 @@ public class Przycisk_zachownaie : MonoBehaviour
             licznik_scen--;
             scena3.SetActive(false);
             scena2.SetActive(true);
+        }
+        else if (licznik_scen == 4)
+        {
+            licznik_scen--;
+            scena4.SetActive(false);
+            scena3.SetActive(true);
+        }
+        else if (licznik_scen == 5)
+        {
+            licznik_scen--;
+            scena5.SetActive(false);
+            scena4.SetActive(true);
+        }
+        else if (licznik_scen == 6)
+        {
+            licznik_scen--;
+            scena6.SetActive(false);
+            scena5.SetActive(true);
+        }
+        else if (licznik_scen == 7)
+        {
+            licznik_scen--;
+            scena7.SetActive(false);
+            scena6.SetActive(true);
+        }
+        else if (licznik_scen == 8)
+        {
+            licznik_scen--;
+            scena8.SetActive(false);
+            scena7.SetActive(true);
+        }
+        else if (licznik_scen == 9)
+        {
+            licznik_scen--;
+            scena9.SetActive(false);
+            scena8.SetActive(true);
+        }
+        else if (licznik_scen == 10)
+        {
+            licznik_scen--;
+            scena10.SetActive(false);
+            scena9.SetActive(true);
+        }
+        else if (licznik_scen == 11)
+        {
+            licznik_scen--;
+            scena11.SetActive(false);
+            scena10.SetActive(true);
         }
     }
 }
