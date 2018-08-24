@@ -662,6 +662,8 @@ MonoBehaviour:
   scena8: {fileID: 0}
   scena9: {fileID: 0}
   scena10: {fileID: 0}
+  scena11: {fileID: 0}
+  ilosc_osob: {fileID: 0}
   pop_up_wyjdz: {fileID: 0}
   licznik_scen: 0
 --- !u!1 &1303592429

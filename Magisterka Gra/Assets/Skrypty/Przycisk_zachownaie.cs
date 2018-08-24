@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class Przycisk_zachownaie : MonoBehaviour
 {
-    Button przycisk;
+   // Button przycisk;
     public GameObject tekst_uroczystosc;
     public GameObject scena1;
     public GameObject scena2;
@@ -19,9 +19,15 @@ public class Przycisk_zachownaie : MonoBehaviour
     public GameObject scena9;
     public GameObject scena10;
     public GameObject scena11;
+    public InputField ilosc_osob;
+    public GameObject widok_sala1;
+    public GameObject widok_sala2;
+    public GameObject punkty;
+    public int ilosc_punktow;
 
     public GameObject pop_up_wyjdz;
-    public int licznik_scen = 0;
+    public int licznik_scen;
+    string ilosc_osob_l;
 
     public void wybor_uroczystosci()
     {
@@ -49,6 +55,7 @@ public class Przycisk_zachownaie : MonoBehaviour
     {
         Application.LoadLevel(name);
         licznik_scen = 0;
+        ilosc_punktow = 0;
     }
 
     public void cofnij()
@@ -110,6 +117,40 @@ public class Przycisk_zachownaie : MonoBehaviour
             licznik_scen--;
             scena11.SetActive(false);
             scena10.SetActive(true);
+        }
+    }
+
+    public void get_ilosc_osob()
+    {
+
+        ilosc_osob_l = ilosc_osob.text;
+        Debug.Log(ilosc_osob_l);
+
+    }
+
+    public void zapisz_scena()
+    {
+        licznik_scen++;
+        scena2.SetActive(false);
+        scena3.SetActive(true);
+    }
+
+    public void wybor_sali()
+    {
+        var tekst = EventSystem.current.currentSelectedGameObject.name;
+        Debug.Log(tekst);
+        if (tekst == "Sala 1")
+        {
+            widok_sala1.SetActive(true);
+            widok_sala2.SetActive(false);
+            ilosc_punktow = ilosc_punktow + 2;
+            punkty.GetComponent<UnityEngine.UI.Text>().text = ilosc_punktow.ToString();
+            //jeżeli kilka to dodać ifa z boolenem, że już wykorzystane (podczas cofania)
+        }
+        else if (tekst == "Sala 2")
+        {
+            widok_sala1.SetActive(false);
+            widok_sala2.SetActive(true);
         }
     }
 }
