@@ -261,6 +261,7 @@ public class Przycisk_zachownaie : MonoBehaviour
         if(ilosc_osob_tmp <= wynik_tmp && ilosc_osob_tmp > wynik_tmp2)
         {
             //button do następnej sceny
+            //wyswietlenie większej ilości stołów
         }
         else
         {

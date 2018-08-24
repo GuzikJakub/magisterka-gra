@@ -130,7 +130,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &128535895
 RectTransform:
   m_ObjectHideFlags: 0
@@ -664,6 +664,20 @@ MonoBehaviour:
   scena10: {fileID: 0}
   scena11: {fileID: 0}
   ilosc_osob: {fileID: 0}
+  ilosc_stolow_get: {fileID: 0}
+  max_ilosc_stolow: 0
+  widok_sala1: {fileID: 0}
+  widok_sala2: {fileID: 0}
+  widok_sala3: {fileID: 0}
+  widok_sala4: {fileID: 0}
+  max_ilosc_osob: 0
+  widok_stol1: {fileID: 0}
+  widok_stol2: {fileID: 0}
+  widok_stol3: {fileID: 0}
+  widok_stol4: {fileID: 0}
+  punkty: {fileID: 0}
+  ilosc_punktow: 0
+  blad: {fileID: 0}
   pop_up_wyjdz: {fileID: 0}
   licznik_scen: 0
 --- !u!1 &1303592429
@@ -683,7 +697,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1303592430
 RectTransform:
   m_ObjectHideFlags: 0
@@ -805,7 +819,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1516029706
 RectTransform:
   m_ObjectHideFlags: 0
