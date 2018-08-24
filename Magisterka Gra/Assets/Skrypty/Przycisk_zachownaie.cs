@@ -207,10 +207,10 @@ public class Przycisk_zachownaie : MonoBehaviour
         if (tekst == "Stol kwadratowy")
         {
             max_ilosc_stolow = 2;
-            widok_sala1.SetActive(true);
-            widok_sala2.SetActive(false);
-            widok_sala3.SetActive(false);
-            widok_sala4.SetActive(false);
+            widok_stol1.SetActive(true);
+            widok_stol2.SetActive(false);
+            widok_stol3.SetActive(false);
+            widok_stol4.SetActive(false);
             ilosc_punktow = ilosc_punktow + 1;
             punkty.GetComponent<UnityEngine.UI.Text>().text = ilosc_punktow.ToString();
             //jeżeli kilka to dodać ifa z boolenem, że już wykorzystane (podczas cofania)
@@ -219,26 +219,26 @@ public class Przycisk_zachownaie : MonoBehaviour
         else if (tekst == "Stol prostokatny")
         {
             max_ilosc_stolow = 4;
-            widok_sala1.SetActive(false);
-            widok_sala2.SetActive(true);
-            widok_sala3.SetActive(false);
-            widok_sala4.SetActive(false);
+            widok_stol1.SetActive(false);
+            widok_stol2.SetActive(true);
+            widok_stol3.SetActive(false);
+            widok_stol4.SetActive(false);
         }
         else if (tekst == "Stol okragly 70")
         {
             max_ilosc_stolow = 2;
-            widok_sala1.SetActive(false);
-            widok_sala2.SetActive(false);
-            widok_sala3.SetActive(true);
-            widok_sala4.SetActive(false);
+            widok_stol1.SetActive(false);
+            widok_stol2.SetActive(false);
+            widok_stol3.SetActive(true);
+            widok_stol4.SetActive(false);
         }
         else if (tekst == "Stol okragly 90")
         {
             max_ilosc_stolow = 4;
-            widok_sala1.SetActive(false);
-            widok_sala2.SetActive(false);
-            widok_sala3.SetActive(false);
-            widok_sala4.SetActive(true);
+            widok_stol1.SetActive(false);
+            widok_stol2.SetActive(false);
+            widok_stol3.SetActive(false);
+            widok_stol4.SetActive(true);
         }
         scena4.SetActive(false);
         scena5.SetActive(true);
@@ -252,16 +252,15 @@ public class Przycisk_zachownaie : MonoBehaviour
         ile_stolow = ilosc_stolow_get.text;
         int wynik_tmp;
 
-
         int.TryParse(ilosc_osob_l, out ilosc_osob_tmp);
         int.TryParse(ile_stolow, out ile_stolow_tmp);
 
         wynik_tmp = ile_stolow_tmp * max_ilosc_stolow;
         int wynik_tmp2 = ile_stolow_tmp * (max_ilosc_stolow - 1);
 
-        if(ilosc_osob_tmp <= wynik_tmp && ilosc_osob_tmp > wynik_tmp2) //poprawka, ze nie może być jednej osoby przy stole
+        if(ilosc_osob_tmp <= wynik_tmp && ilosc_osob_tmp > wynik_tmp2)
         {
-
+            //button do następnej sceny
         }
         else
         {
