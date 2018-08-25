@@ -282,4 +282,49 @@ public class Przycisk_zachownaie : MonoBehaviour
         scena5.SetActive(false);
         scena6.SetActive(true);
     }
+
+    public Toggle Obrus1;
+    public Toggle Obrus2;
+    public Toggle Obrus3;
+    public Toggle Obrus4;
+
+    public void check_obrus()
+    {
+        if (Obrus1.isOn == true)
+        {
+            Obrus2.interactable = false;
+            Obrus3.interactable = false;
+            Obrus4.interactable = false;
+            //tutaj wyskakuje inforamcja z wyborem koloru obrusu - to jak będę miał stolik
+ //           Debug.Log(Obrus1.isOn);
+        }
+        else if (Obrus2.isOn == true)
+        {
+            Obrus1.interactable = false;
+            Obrus3.interactable = false;
+            Obrus4.interactable = false;
+//            Debug.Log(Obrus2.isOn);
+        }
+        else if (Obrus3.isOn == true)
+        {
+            Obrus1.interactable = false;
+            Obrus2.interactable = false;
+            Obrus4.interactable = false;
+//            Debug.Log(Obrus1.isOn);
+        }
+        else if (Obrus4.isOn == true)
+        {
+            Obrus1.interactable = false;
+            Obrus2.interactable = false;
+            Obrus3.interactable = false;
+//            Debug.Log(Obrus1.isOn);
+        }
+        else
+        {
+            Obrus1.interactable = true;
+            Obrus2.interactable = true;
+            Obrus3.interactable = true;
+            Obrus4.interactable = true;
+        }
+    }
 }
