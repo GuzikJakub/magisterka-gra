@@ -44,8 +44,10 @@ public class Przycisk_zachownaie : MonoBehaviour
     public GameObject pop_up_wyjdz;
     public int licznik_scen;
     string ilosc_osob_l;
-//    string nazwa_stolu;
-//    string nazwa_sali;
+    //    string nazwa_stolu;
+    //    string nazwa_sali;
+
+    public string nazwa_uroczystosci;
 
     public void wybor_uroczystosci()
     {
@@ -53,6 +55,7 @@ public class Przycisk_zachownaie : MonoBehaviour
 
         tekst_uroczystosc.SetActive(true);
         tekst_uroczystosc.GetComponent<UnityEngine.UI.Text>().text = tekst;
+        nazwa_uroczystosci = tekst.ToString();
         scena1.SetActive(false);
         scena2.SetActive(true);
         licznik_scen++;
@@ -90,6 +93,8 @@ public class Przycisk_zachownaie : MonoBehaviour
         }
         else if (licznik_scen == 4)
         {
+            ilosc_punktow = ilosc_punktow - 2;
+            punkty.GetComponent<UnityEngine.UI.Text>().text = ilosc_punktow.ToString();
             licznik_scen--;
             scena4.SetActive(false);
             scena3.SetActive(true);
@@ -97,11 +102,15 @@ public class Przycisk_zachownaie : MonoBehaviour
         else if (licznik_scen == 5)
         {
             licznik_scen--;
+            ilosc_punktow = ilosc_punktow - 1;
+            punkty.GetComponent<UnityEngine.UI.Text>().text = ilosc_punktow.ToString();
             scena5.SetActive(false);
             scena4.SetActive(true);
         }
         else if (licznik_scen == 6)
         {
+            ilosc_punktow = ilosc_punktow - 1;
+            punkty.GetComponent<UnityEngine.UI.Text>().text = ilosc_punktow.ToString();
             licznik_scen--;
             scena6.SetActive(false);
             scena5.SetActive(true);
@@ -153,96 +162,195 @@ public class Przycisk_zachownaie : MonoBehaviour
         scena3.SetActive(true);
     }
 
+    public string nazwa_sali;
+
     public void wybor_sali()
     {
-        licznik_scen++;
         var tekst = EventSystem.current.currentSelectedGameObject.name;
+        nazwa_sali = tekst.ToString();
 //        nazwa_sali = tekst.ToString();
         Debug.Log(tekst);
+        bool czy_kolejna = false;
         if (tekst == "Sala 1")
         {
-            max_ilosc_osob = 15;
-            widok_sala1.SetActive(true);
-            widok_sala2.SetActive(false);
-            widok_sala3.SetActive(false);
-            widok_sala4.SetActive(false);
-            ilosc_punktow = ilosc_punktow + 2;
-            punkty.GetComponent<UnityEngine.UI.Text>().text = ilosc_punktow.ToString();
-            //jeżeli kilka to dodać ifa z boolenem, że już wykorzystane (podczas cofania)
+            if (uroczystosc_warunki_sala(nazwa_uroczystosci) == true)
+            {
+                max_ilosc_osob = 15;
+                widok_sala1.SetActive(true);
+                widok_sala2.SetActive(false);
+                widok_sala3.SetActive(false);
+                widok_sala4.SetActive(false);
+                //jeżeli kilka to dodać ifa z boolenem, że już wykorzystane (podczas cofania)
+                czy_kolejna = true;
+            }
+            else
+            {
+                powiadomienie_blad();
+            }
+
         }
         else if (tekst == "Sala 2")
         {
-            max_ilosc_osob = 8;
-            widok_sala1.SetActive(false);
-            widok_sala2.SetActive(true);
-            widok_sala3.SetActive(false);
-            widok_sala4.SetActive(false);
+            if (uroczystosc_warunki_sala(nazwa_uroczystosci) == true)
+            {
+                max_ilosc_osob = 8;
+                widok_sala1.SetActive(false);
+                widok_sala2.SetActive(true);
+                widok_sala3.SetActive(false);
+                widok_sala4.SetActive(false);
+                czy_kolejna = true;
+            }
+            else
+            {
+                powiadomienie_blad();
+            }
         }
         else if (tekst == "Sala 3")
         {
-            max_ilosc_osob = 4;
-            widok_sala1.SetActive(false);
-            widok_sala2.SetActive(false);
-            widok_sala3.SetActive(true);
-            widok_sala4.SetActive(false);
+            if (uroczystosc_warunki_sala(nazwa_uroczystosci) == true)
+            {
+                max_ilosc_osob = 4;
+                widok_sala1.SetActive(false);
+                widok_sala2.SetActive(false);
+                widok_sala3.SetActive(true);
+                widok_sala4.SetActive(false);
+                czy_kolejna = true;
+            }
+            else
+            {
+                powiadomienie_blad();
+            }
         }
         else if (tekst == "Sala 4")
         {
-            max_ilosc_osob = 2;
-            widok_sala1.SetActive(false);
-            widok_sala2.SetActive(false);
-            widok_sala3.SetActive(false);
-            widok_sala4.SetActive(true);
+            if (uroczystosc_warunki_sala(nazwa_uroczystosci) == true)
+            {
+                max_ilosc_osob = 2;
+                widok_sala1.SetActive(false);
+                widok_sala2.SetActive(false);
+                widok_sala3.SetActive(false);
+                widok_sala4.SetActive(true);
+                czy_kolejna = true;
+            }
+            else
+            {
+                powiadomienie_blad();
+            }
         }
-        scena3.SetActive(false);
-        scena4.SetActive(true);
+        if (czy_kolejna == true)
+        {
+            ilosc_punktow = ilosc_punktow + 2;
+            punkty.GetComponent<UnityEngine.UI.Text>().text = ilosc_punktow.ToString();
+            scena3.SetActive(false);
+            scena4.SetActive(true);
+            licznik_scen++;
+        }
+        
     }
+
+    public bool uroczystosc_warunki_sala(string uroczystosc)
+    {
+        if (uroczystosc == "Walentynki")
+        {
+            if (ilosc_osob_l == "2" || ilosc_osob_l == "4")
+            {
+                if (nazwa_sali == "Sala 4")
+                {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    string nazwa_stolu_tmp; 
 
     public void wybor_stolu()
     {
-        licznik_scen++;
         var tekst = EventSystem.current.currentSelectedGameObject.name;
+        nazwa_stolu_tmp = tekst.ToString();
  //       nazwa_stolu = tekst.ToString();
-        Debug.Log(tekst);
+        Debug.Log(nazwa_stolu_tmp);
+        bool czy_ok = false;
         if (tekst == "Stol kwadratowy")
         {
-            max_ilosc_stolow = 2;
-            widok_stol1.SetActive(true);
-            widok_stol2.SetActive(false);
-            widok_stol3.SetActive(false);
-            widok_stol4.SetActive(false);
-            ilosc_punktow = ilosc_punktow + 1;
-            punkty.GetComponent<UnityEngine.UI.Text>().text = ilosc_punktow.ToString();
-            //jeżeli kilka to dodać ifa z boolenem, że już wykorzystane (podczas cofania)
-
+  //          Debug.Log("1");
+            if (stol_warunki(nazwa_uroczystosci) == true)
+            {
+                max_ilosc_stolow = 2;
+                widok_stol1.SetActive(true); //zmienic to -> znikaja przyciski
+                widok_stol2.SetActive(false);
+                widok_stol3.SetActive(false);
+                widok_stol4.SetActive(false);
+                //jeżeli kilka to dodać ifa z boolenem, że już wykorzystane (podczas cofania)
+                czy_ok = true;
+            }
+            else
+            {
+                powiadomienie_blad();
+            }
         }
         else if (tekst == "Stol prostokatny")
         {
-            max_ilosc_stolow = 4;
-            widok_stol1.SetActive(false);
-            widok_stol2.SetActive(true);
-            widok_stol3.SetActive(false);
-            widok_stol4.SetActive(false);
+            if (stol_warunki(nazwa_uroczystosci) == true)
+            {
+                max_ilosc_stolow = 4;
+                widok_stol1.SetActive(false);
+                widok_stol2.SetActive(true);
+                widok_stol3.SetActive(false);
+                widok_stol4.SetActive(false);
+                czy_ok = true;
+            }
+            else
+            {
+                powiadomienie_blad();
+            }
         }
         else if (tekst == "Stol okragly 70")
         {
-            max_ilosc_stolow = 2;
-            widok_stol1.SetActive(false);
-            widok_stol2.SetActive(false);
-            widok_stol3.SetActive(true);
-            widok_stol4.SetActive(false);
+            if (stol_warunki(nazwa_uroczystosci) == true)
+            {
+                max_ilosc_stolow = 2;
+                widok_stol1.SetActive(false);
+                widok_stol2.SetActive(false);
+                widok_stol3.SetActive(true);
+                widok_stol4.SetActive(false);
+                czy_ok = true;
+            }
+            else
+            {
+                powiadomienie_blad();
+            }
         }
         else if (tekst == "Stol okragly 90")
         {
-            max_ilosc_stolow = 4;
-            widok_stol1.SetActive(false);
-            widok_stol2.SetActive(false);
-            widok_stol3.SetActive(false);
-            widok_stol4.SetActive(true);
+            if (stol_warunki(nazwa_uroczystosci) == true)
+            {
+                max_ilosc_stolow = 4;
+                widok_stol1.SetActive(false);
+                widok_stol2.SetActive(false);
+                widok_stol3.SetActive(false);
+                widok_stol4.SetActive(true);
+
+                czy_ok = true;
+            }
+            else
+            {
+                powiadomienie_blad();
+            }
         }
-        scena4.SetActive(false);
-        scena5.SetActive(true);
+        if (czy_ok == true)
+        {
+            ilosc_punktow = ilosc_punktow + 1;
+            punkty.GetComponent<UnityEngine.UI.Text>().text = ilosc_punktow.ToString();
+            Debug.Log("JESTEM");
+            scena4.SetActive(false);
+            scena5.SetActive(true);
+            licznik_scen++;
+        }
     }
+
+    bool ilosc_stolow_dalej;
 
     public void get_ilosc_stolow()
     {
@@ -251,6 +359,7 @@ public class Przycisk_zachownaie : MonoBehaviour
         int ilosc_osob_tmp;
         ile_stolow = ilosc_stolow_get.text;
         int wynik_tmp;
+        ilosc_stolow_dalej = false;
 
         int.TryParse(ilosc_osob_l, out ilosc_osob_tmp);
         int.TryParse(ile_stolow, out ile_stolow_tmp);
@@ -260,14 +369,69 @@ public class Przycisk_zachownaie : MonoBehaviour
 
         if(ilosc_osob_tmp <= wynik_tmp && ilosc_osob_tmp > wynik_tmp2)
         {
-            //button do następnej sceny
+            ilosc_punktow = ilosc_punktow + 1;
+            punkty.GetComponent<UnityEngine.UI.Text>().text = ilosc_punktow.ToString();
+            ilosc_stolow_dalej = true; //button do następnej sceny
             //wyswietlenie większej ilości stołów
+        }
+    }
+
+    bool stol_warunki(string uroczystosc)
+    {
+        if (nazwa_uroczystosci == "Walentynki")
+        {
+            if (nazwa_stolu_tmp == "Stol kwadratowy")
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public Button pomoc;
+    public GameObject ksiazka_scena;
+    public Text pomoc_text;
+
+    public void pomoc_przycisk()
+    {
+        blad.SetActive(false);
+        ksiazka_scena.SetActive(true);
+        ilosc_punktow = ilosc_punktow - 1;
+        punkty.GetComponent<UnityEngine.UI.Text>().text = ilosc_punktow.ToString();
+        if (nazwa_uroczystosci == "Walentynki")
+        {
+            if (licznik_scen == 3)
+            {
+                pomoc_text.GetComponent<UnityEngine.UI.Text>().text = "Wybierając uroczystosc " + nazwa_uroczystosci + " dla " + ilosc_osob_l + " osób powinienieś wybrać salę, która będzie odpowiednia dla uroczystości romantycznych. Dodatkowo pamiętaj, żeby dobrze dysponować wszystkimi salami w naszej restauracji. Dla mniejszej ilości osób wybieraj mniejsze sale. Za pomoc utraciłeś 1 punkt.";
+            }
+            if (licznik_scen == 4)
+            {
+                pomoc_text.GetComponent<UnityEngine.UI.Text>().text = "Wybierając uroczystość " + nazwa_uroczystosci + " dla " + ilosc_osob_l + "osób, pamiętaj o dobrze odpowiedniego stolika. Takiej osoby chciałby siedzieć naprzeciwko siebie oraz jak najbardziej blisko. Rozdysponuj stolikami tak, aby w przypadku mniejszej ilości osób na jeden stolik, takie osoby dostawały mniejsze stoliki.";
+            }
+            if (licznik_scen == 5)
+            {
+                pomoc_text.GetComponent<UnityEngine.UI.Text>().text = "Wybrałeś uroczystość " + nazwa_uroczystosci + " dla " + ilosc_osob_l +  "osób. Stoliki, na którym siąda goście są dla " + max_ilosc_osob + " osób. Przelicz jeszcze raz ilość stolików!";
+            }
+        }
+    }
+
+    public void zamknij_pomoc()
+    {
+        ksiazka_scena.SetActive(false);
+    }
+
+    public void powiadomienie_blad()
+    {
+        if (ilosc_punktow > 0)
+        {
+            pomoc.interactable = true;
         }
         else
         {
-            blad.SetActive(true);
-            StartCoroutine(Blad_wait());
+            pomoc.interactable = false;
         }
+        blad.SetActive(true);
+        StartCoroutine(Blad_wait());
     }
 
     IEnumerator Blad_wait()
@@ -278,9 +442,17 @@ public class Przycisk_zachownaie : MonoBehaviour
 
     public void zapisz_scena_stol()
     {
-        licznik_scen++;
-        scena5.SetActive(false);
-        scena6.SetActive(true);
+        if (ilosc_stolow_dalej == true)
+        {
+            licznik_scen++;
+            scena5.SetActive(false);
+            scena6.SetActive(true);
+        }
+        else
+        {
+            powiadomienie_blad();
+        }
+        
     }
 
     public Toggle Obrus1;
