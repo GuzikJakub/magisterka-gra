@@ -418,6 +418,10 @@ public class Przycisk_zachownaie : MonoBehaviour
             {
                 pomoc_text.GetComponent<UnityEngine.UI.Text>().text = "Wybraleś uroczystość " + nazwa_uroczystosci + ". Dla romantycznej kolacji, najlepiej, żeby stoły były trochę od siebie oddalone. Dajmy ludziom trochę prywatności :)";
             }
+            if (licznik_scen == 7 && obrus_chec == false)
+            {
+                pomoc_text.GetComponent<UnityEngine.UI.Text>().text = "Na wybrany przez Ciebie stół " + nazwa_stolu_tmp + " powinienieś wybrać inny obrus. Zastanów się nad tym i spróbuj poprawić!";
+            }
         }
     }
 
@@ -566,6 +570,7 @@ public class Przycisk_zachownaie : MonoBehaviour
     public Toggle Obrus2;
     public Toggle Obrus3;
     public Toggle Obrus4;
+    bool obrus_chec;
 
     public void check_obrus()
     {
@@ -574,6 +579,14 @@ public class Przycisk_zachownaie : MonoBehaviour
             Obrus2.interactable = false;
             Obrus3.interactable = false;
             Obrus4.interactable = false;
+            if (nazwa_stolu_tmp == "Stol kwadratowy")
+            {
+                obrus_chec = true;
+            }
+            else
+            {
+                obrus_chec = false;
+            }
             //tutaj wyskakuje inforamcja z wyborem koloru obrusu - to jak będę miał stolik
  //           Debug.Log(Obrus1.isOn);
         }
@@ -582,21 +595,45 @@ public class Przycisk_zachownaie : MonoBehaviour
             Obrus1.interactable = false;
             Obrus3.interactable = false;
             Obrus4.interactable = false;
-//            Debug.Log(Obrus2.isOn);
+            if (nazwa_stolu_tmp == "Stol prostokątny")
+            {
+                obrus_chec = true;
+            }
+            else
+            {
+                obrus_chec = false;
+            }
+            //            Debug.Log(Obrus2.isOn);
         }
         else if (Obrus3.isOn == true)
         {
             Obrus1.interactable = false;
             Obrus2.interactable = false;
             Obrus4.interactable = false;
-//            Debug.Log(Obrus1.isOn);
+            if (nazwa_stolu_tmp == "Stol okragly 70")
+            {
+                obrus_chec = true;
+            }
+            else
+            {
+                obrus_chec = false;
+            }
+            //            Debug.Log(Obrus1.isOn);
         }
         else if (Obrus4.isOn == true)
         {
             Obrus1.interactable = false;
             Obrus2.interactable = false;
             Obrus3.interactable = false;
-//            Debug.Log(Obrus1.isOn);
+            if (nazwa_stolu_tmp == "Strol okragly 90")
+            {
+                obrus_chec = true;
+            }
+            else
+            {
+                obrus_chec = false;
+            }
+            //            Debug.Log(Obrus1.isOn);
         }
         else
         {
@@ -604,6 +641,7 @@ public class Przycisk_zachownaie : MonoBehaviour
             Obrus2.interactable = true;
             Obrus3.interactable = true;
             Obrus4.interactable = true;
+            obrus_chec = false;
         }
     }
 
@@ -611,6 +649,7 @@ public class Przycisk_zachownaie : MonoBehaviour
     public Toggle serwety2;
     public Toggle serwety3;
     public Toggle serwety4;
+    bool serwety_check;
 
     public void serwety_ulozenie()
     {
@@ -619,24 +658,28 @@ public class Przycisk_zachownaie : MonoBehaviour
             serwety2.interactable = false;
             serwety3.interactable = false;
             serwety4.interactable = false;
+            serwety_check = true;
         }
         else if (serwety2.isOn == true)
         {
             serwety1.interactable = false;
             serwety3.interactable = false;
             serwety4.interactable = false;
+            serwety_check = true;
         }
         else if (serwety3.isOn == true)
         {
             serwety1.interactable = false;
             serwety2.interactable = false;
             serwety4.interactable = false;
+            serwety_check = true;
         }
         else if (serwety4.isOn == true)
         {
             serwety1.interactable = false;
             serwety2.interactable = false;
             serwety3.interactable = false;
+            serwety_check = true;
         }
         else
         {
@@ -644,24 +687,30 @@ public class Przycisk_zachownaie : MonoBehaviour
             serwety2.interactable = true;
             serwety3.interactable = true;
             serwety4.interactable = true;
+            serwety_check = false;
         }
     }
 
     public Toggle Laufry1;
     public Toggle Laufry2;
     public Toggle Laufry3;
+    bool laufry_check;
 
     public Toggle Skirtingi1;
     public Toggle Skirtingi2;
     public Toggle Skirtingi3;
+    bool skirtingi_check;
 
     public Toggle Napperony1;
     public Toggle Napperony2;
     public Toggle Napperony3;
+    bool napperony_check;
 
     public Toggle Dekoracje1;
     public Toggle Dekoracje2;
     public Toggle Dekoracje3;
+    bool dekoracje_check;
+
 
     public void kolory_ustaw_laufry()
     {
@@ -669,22 +718,26 @@ public class Przycisk_zachownaie : MonoBehaviour
         {
             Laufry2.interactable = false;
             Laufry3.interactable = false;
+            laufry_check = true;
         }
         else if (Laufry2.isOn == true)
         {
             Laufry1.interactable = false;
             Laufry3.interactable = false;
+            laufry_check = true;
         }
         else if (Laufry3.isOn == true)
         {
             Laufry1.interactable = false;
             Laufry2.interactable = false;
+            laufry_check = true;
         }
         else
         {
             Laufry1.interactable = true;
             Laufry2.interactable = true;
             Laufry3.interactable = true;
+            laufry_check = false;
         }
     }
 
@@ -694,22 +747,26 @@ public class Przycisk_zachownaie : MonoBehaviour
         {
             Skirtingi2.interactable = false;
             Skirtingi3.interactable = false;
+            skirtingi_check = true;
         }
         else if (Skirtingi2.isOn == true)
         {
             Skirtingi1.interactable = false;
             Skirtingi3.interactable = false;
+            skirtingi_check = true;
         }
         else if (Skirtingi3.isOn == true)
         {
             Skirtingi2.interactable = false;
             Skirtingi3.interactable = false;
+            skirtingi_check = true;
         }
         else
         {
             Skirtingi1.interactable = true;
             Skirtingi2.interactable = true;
             Skirtingi3.interactable = true;
+            skirtingi_check = false;
         }
     }
 
@@ -719,22 +776,26 @@ public class Przycisk_zachownaie : MonoBehaviour
         {
             Napperony2.interactable = false;
             Napperony3.interactable = false;
+            napperony_check = true;
         }
         else if (Napperony2.isOn == true)
         {
             Napperony1.interactable = false;
             Napperony3.interactable = false;
+            napperony_check = true;
         }
         else if (Napperony3.isOn == true)
         {
             Napperony1.interactable = false;
             Napperony2.interactable = false;
+            napperony_check = true;
         }
         else
         {
             Napperony1.interactable = true;
             Napperony2.interactable = true;
             Napperony3.interactable = true;
+            napperony_check = false;
         }
     }
 
@@ -744,64 +805,101 @@ public class Przycisk_zachownaie : MonoBehaviour
         {
             Dekoracje2.interactable = false;
             Dekoracje3.interactable = false;
+            dekoracje_check = true;
         }
         else if (Dekoracje2.isOn == true)
         {
             Dekoracje1.interactable = false;
             Dekoracje3.interactable = false;
+            dekoracje_check = true;
         }
         else if (Dekoracje3.isOn == true)
         {
             Dekoracje1.interactable = false;
             Dekoracje2.interactable = false;
+            dekoracje_check = true;
         }
         else
         {
             Dekoracje1.interactable = true;
             Dekoracje2.interactable = true;
             Dekoracje3.interactable = true;
+            dekoracje_check = false;
         }
     }
 
-    bool sprawdz_obrus()
+    bool sprawdz_licznik(int licznik)
     {
-        if (nazwa_stolu_tmp == "Stol kwadratowy")
+        if (licznik <= 3)
         {
-            if (Obrus1.isOn == true)
-            {
-                return true;
-            }
+            return true;
         }
-        if (nazwa_stolu_tmp == "Stol prostokątny")
+        else
         {
-            if (Obrus2.isOn == true)
-            {
-                return true;
-            }
+            return false;
         }
-        if (nazwa_stolu_tmp == "Stol okragly 70")
+    }
+
+    public void sprawdz_dekoracja()
+    {
+        if (nazwa_uroczystosci == "Walentynki")
         {
-            if (Obrus3.isOn == true)
-            {
-                return true;
-            }
+
         }
-        if (nazwa_stolu_tmp == "Strol okragly 90")
-        {
-            if (Obrus4.isOn == true)
-            {
-                return true;
-            }
-        }
-        return false;
     }
 
     public void zatwierdz_bielizna()
     {
-
-        licznik_scen++;
-        scena7.SetActive(false);
-        scena8.SetActive(true);
+        int licznik_punkty = 0;
+        if (obrus_chec == true)
+        {
+            ilosc_punktow = ilosc_punktow + 1;
+            punkty.GetComponent<UnityEngine.UI.Text>().text = ilosc_punktow.ToString();
+            if (serwety_check == true)
+            {
+                if (sprawdz_licznik(licznik_punkty) == true)
+                {
+                    ilosc_punktow = ilosc_punktow + 1;
+                    punkty.GetComponent<UnityEngine.UI.Text>().text = ilosc_punktow.ToString();
+                    licznik_punkty++;
+                }
+            }
+            if (laufry_check == true)
+            {
+                if (sprawdz_licznik(licznik_punkty) == true)
+                {
+                    ilosc_punktow = ilosc_punktow + 1;
+                    punkty.GetComponent<UnityEngine.UI.Text>().text = ilosc_punktow.ToString();
+                    licznik_punkty++;
+                }
+            }
+            if (skirtingi_check == true)
+            {
+                if (sprawdz_licznik(licznik_punkty) == true)
+                {
+                    ilosc_punktow = ilosc_punktow + 1;
+                    punkty.GetComponent<UnityEngine.UI.Text>().text = ilosc_punktow.ToString();
+                    licznik_punkty++;
+                }
+            }
+            if (napperony_check == true)
+            {
+                if (sprawdz_licznik(licznik_punkty) == true)
+                {
+                    ilosc_punktow = ilosc_punktow + 1;
+                    punkty.GetComponent<UnityEngine.UI.Text>().text = ilosc_punktow.ToString();
+                    licznik_punkty++;
+                }
+            }
+            sprawdz_dekoracja();
+            licznik_scen++;
+            scena7.SetActive(false);
+            scena8.SetActive(true);
+        }
+        else
+        {
+            powiadomienie_blad();
+        }
         //kod do sprawdzenia czy dobre rzeczy został wybrane
     }
 }

@@ -19639,18 +19639,18 @@ MonoBehaviour:
   serwety2: {fileID: 1172132937}
   serwety3: {fileID: 1823585174}
   serwety4: {fileID: 2071389399}
-  Laufry1: {fileID: 0}
-  Laufry2: {fileID: 0}
-  Laufry3: {fileID: 0}
-  Skirtingi1: {fileID: 0}
-  Skirtingi2: {fileID: 0}
-  Skirtingi3: {fileID: 0}
-  Napperony1: {fileID: 0}
-  Napperony2: {fileID: 0}
-  Napperony3: {fileID: 0}
-  Dekoracje1: {fileID: 0}
-  Dekoracje2: {fileID: 0}
-  Dekoracje3: {fileID: 0}
+  Laufry1: {fileID: 1462369165}
+  Laufry2: {fileID: 1680171492}
+  Laufry3: {fileID: 1457470285}
+  Skirtingi1: {fileID: 1094428551}
+  Skirtingi2: {fileID: 1739059914}
+  Skirtingi3: {fileID: 1073892300}
+  Napperony1: {fileID: 214401103}
+  Napperony2: {fileID: 444620613}
+  Napperony3: {fileID: 1036681402}
+  Dekoracje1: {fileID: 1922907865}
+  Dekoracje2: {fileID: 1671991086}
+  Dekoracje3: {fileID: 1881580747}
 --- !u!114 &1430363619
 MonoBehaviour:
   m_ObjectHideFlags: 0
