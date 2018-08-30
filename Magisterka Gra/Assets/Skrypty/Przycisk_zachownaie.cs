@@ -123,8 +123,14 @@ public class Przycisk_zachownaie : MonoBehaviour
             scena7.SetActive(false);
             scena6.SetActive(true);
         }
-        else if (licznik_scen == 8)
+        else if (licznik_scen == 8) // inna
         {
+            ilosc_punktow = ilosc_punktow - 1 - licznik_punkty;
+            if (byl_punkt_dekoracje == true)
+            {
+                ilosc_punktow = ilosc_punktow - 1;
+            }
+            punkty.GetComponent<UnityEngine.UI.Text>().text = ilosc_punktow.ToString();
             licznik_scen--;
             scena8.SetActive(false);
             scena7.SetActive(true);
@@ -422,9 +428,17 @@ public class Przycisk_zachownaie : MonoBehaviour
             {
                 pomoc_text.GetComponent<UnityEngine.UI.Text>().text = "Na wybrany przez Ciebie stół " + nazwa_stolu_tmp + " powinienieś wybrać inny obrus. Zastanów się nad tym i spróbuj poprawić!";
             }
-            if (licznik_scen == 7 && dekoracje_check == true && Dekoracje3 == true)
-            {
+            if (licznik_scen == 7 && dekoracje_check == true && Dekoracje3 == true && nazwa_uroczystosci == "Walentynki")
+            { //to nie mam ogólne, tylko na walentynki
                 pomoc_text.GetComponent<UnityEngine.UI.Text>().text = "Na wybraną przez Ciebie uroczystość " + nazwa_uroczystosci + " powinienieś wybrać bardziej dogodne dekoracje, które wprowadzą elementy romatyczne";
+            }
+            if (licznik_scen == 8)
+            {
+                pomoc_text.GetComponent<UnityEngine.UI.Text>().text = "Na wybraną przez Ciebie uroczystość " + nazwa_uroczystosci + " powinienieś wybrać menu, które najbardziej będzie odpowiadało gościom. Czy jesteś pewny tego? Zastanów się :) ";
+            }
+            if (licznik_scen == 9)
+            {
+                pomoc_text.GetComponent<UnityEngine.UI.Text>().text = "Na wybraną przez Ciebie uroczystość " + nazwa_uroczystosci + " i wybranym menu " + nazwa_menu + "powinienieś wybrać bardziej przystosowany rodzaj nakrycia";
             }
         }
     }
@@ -805,6 +819,7 @@ public class Przycisk_zachownaie : MonoBehaviour
 
     public void dekoracje_ustaw()
     {
+        
         if (Dekoracje1.isOn == true)
         {
             Dekoracje2.interactable = false;
@@ -834,7 +849,7 @@ public class Przycisk_zachownaie : MonoBehaviour
 
     bool sprawdz_licznik(int licznik)
     {
-        if (licznik <= 3)
+        if (licznik < 3)
         {
             return true;
         }
@@ -843,36 +858,41 @@ public class Przycisk_zachownaie : MonoBehaviour
             return false;
         }
     }
-
-    public void sprawdz_dekoracja()
+    bool byl_punkt_dekoracje;
+    bool sprawdz_dekoracja()
     {
+        byl_punkt_dekoracje = false;
         if (nazwa_uroczystosci == "Walentynki")
         {
-            if (dekoracje_check == true && Dekoracje3 == true)
-            {
-                powiadomienie_blad();
-            }
-            else
+            if (Dekoracje1.isOn == true || Dekoracje2.isOn == true)
             {
                 ilosc_punktow = ilosc_punktow + 1;
                 punkty.GetComponent<UnityEngine.UI.Text>().text = ilosc_punktow.ToString();
+                byl_punkt_dekoracje = true;
+                return true;
+            }
+            else if (Dekoracje3.isOn == true)
+            {
+                Debug.Log("TEN BŁĄD");
+                powiadomienie_blad();
+                return false;
             }
         }
+        return true;
     }
-
+    int licznik_punkty;
     public void zatwierdz_bielizna()
     {
-        int licznik_punkty = 0;
+        licznik_punkty = 0;
         if (obrus_chec == true)
         {
             ilosc_punktow = ilosc_punktow + 1;
-            punkty.GetComponent<UnityEngine.UI.Text>().text = ilosc_punktow.ToString();
+            
             if (serwety_check == true)
             {
                 if (sprawdz_licznik(licznik_punkty) == true)
                 {
                     ilosc_punktow = ilosc_punktow + 1;
-                    punkty.GetComponent<UnityEngine.UI.Text>().text = ilosc_punktow.ToString();
                     licznik_punkty++;
                 }
             }
@@ -881,7 +901,6 @@ public class Przycisk_zachownaie : MonoBehaviour
                 if (sprawdz_licznik(licznik_punkty) == true)
                 {
                     ilosc_punktow = ilosc_punktow + 1;
-                    punkty.GetComponent<UnityEngine.UI.Text>().text = ilosc_punktow.ToString();
                     licznik_punkty++;
                 }
             }
@@ -890,7 +909,6 @@ public class Przycisk_zachownaie : MonoBehaviour
                 if (sprawdz_licznik(licznik_punkty) == true)
                 {
                     ilosc_punktow = ilosc_punktow + 1;
-                    punkty.GetComponent<UnityEngine.UI.Text>().text = ilosc_punktow.ToString();
                     licznik_punkty++;
                 }
             }
@@ -899,14 +917,17 @@ public class Przycisk_zachownaie : MonoBehaviour
                 if (sprawdz_licznik(licznik_punkty) == true)
                 {
                     ilosc_punktow = ilosc_punktow + 1;
-                    punkty.GetComponent<UnityEngine.UI.Text>().text = ilosc_punktow.ToString();
                     licznik_punkty++;
                 }
             }
-            sprawdz_dekoracja();
-            licznik_scen++;
-            scena7.SetActive(false);
-            scena8.SetActive(true);
+            if (sprawdz_dekoracja() == true)
+            {
+                punkty.GetComponent<UnityEngine.UI.Text>().text = ilosc_punktow.ToString();
+                licznik_scen++;
+                scena7.SetActive(false);
+                scena8.SetActive(true);
+            }
+            
         }
         else
         {
@@ -1093,6 +1114,26 @@ public class Przycisk_zachownaie : MonoBehaviour
         else
         {
             aktywnosc.interactable = false;
+        }
+    }
+
+    public Toggle talerz1;
+    public Toggle talerz2;
+
+    public void talerze_block()
+    {
+        if (talerz1.isOn == true)
+        {
+            talerz2.interactable = false;
+        }
+        else if (talerz2.isOn == true)
+        {
+            talerz1.interactable = false;
+        }
+        else
+        {
+            talerz1.interactable = true;
+            talerz2.interactable = true;
         }
     }
 }
