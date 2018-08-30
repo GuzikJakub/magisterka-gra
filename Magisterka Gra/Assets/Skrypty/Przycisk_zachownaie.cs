@@ -1079,4 +1079,20 @@ public class Przycisk_zachownaie : MonoBehaviour
         }
         return false;
     }
+
+    Toggle sprawdz_toggle;
+    // InputField aktywnosc;
+
+
+    public void aktywne_toggle_off(InputField aktywnosc)
+    {
+        if (aktywnosc.interactable == false)
+        {
+            aktywnosc.interactable = true;
+        }
+        else
+        {
+            aktywnosc.interactable = false;
+        }
+    }
 }
