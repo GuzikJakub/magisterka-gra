@@ -4693,7 +4693,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1430363618}
-        m_MethodName: wybor_uroczystosci
+        m_MethodName: sprawdz_nakrycie
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5159,7 +5159,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1430363618}
-        m_MethodName: wybor_sali
+        m_MethodName: sprawdz_menu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -11703,7 +11703,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1430363618}
-        m_MethodName: wybor_sali
+        m_MethodName: sprawdz_menu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12352,7 +12352,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1430363618}
-        m_MethodName: wybor_sali
+        m_MethodName: sprawdz_menu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -19651,6 +19651,10 @@ MonoBehaviour:
   Dekoracje1: {fileID: 1922907865}
   Dekoracje2: {fileID: 1671991086}
   Dekoracje3: {fileID: 1881580747}
+  menu1: {fileID: 0}
+  menu2: {fileID: 0}
+  menu3: {fileID: 0}
+  menu4: {fileID: 0}
 --- !u!114 &1430363619
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27916,7 +27920,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1430363618}
-        m_MethodName: wybor_sali
+        m_MethodName: sprawdz_menu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -29802,7 +29806,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1430363618}
-        m_MethodName: wybor_uroczystosci
+        m_MethodName: sprawdz_nakrycie
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -29925,7 +29929,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1430363618}
-        m_MethodName: wybor_uroczystosci
+        m_MethodName: sprawdz_nakrycie
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

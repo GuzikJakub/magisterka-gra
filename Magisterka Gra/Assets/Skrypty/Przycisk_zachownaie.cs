@@ -422,6 +422,10 @@ public class Przycisk_zachownaie : MonoBehaviour
             {
                 pomoc_text.GetComponent<UnityEngine.UI.Text>().text = "Na wybrany przez Ciebie stół " + nazwa_stolu_tmp + " powinienieś wybrać inny obrus. Zastanów się nad tym i spróbuj poprawić!";
             }
+            if (licznik_scen == 7 && dekoracje_check == true && Dekoracje3 == true)
+            {
+                pomoc_text.GetComponent<UnityEngine.UI.Text>().text = "Na wybraną przez Ciebie uroczystość " + nazwa_uroczystosci + " powinienieś wybrać bardziej dogodne dekoracje, które wprowadzą elementy romatyczne";
+            }
         }
     }
 
@@ -844,7 +848,15 @@ public class Przycisk_zachownaie : MonoBehaviour
     {
         if (nazwa_uroczystosci == "Walentynki")
         {
-
+            if (dekoracje_check == true && Dekoracje3 == true)
+            {
+                powiadomienie_blad();
+            }
+            else
+            {
+                ilosc_punktow = ilosc_punktow + 1;
+                punkty.GetComponent<UnityEngine.UI.Text>().text = ilosc_punktow.ToString();
+            }
         }
     }
 
@@ -901,5 +913,170 @@ public class Przycisk_zachownaie : MonoBehaviour
             powiadomienie_blad();
         }
         //kod do sprawdzenia czy dobre rzeczy został wybrane
+    }
+
+    public GameObject menu1;
+    public GameObject menu2;
+    public GameObject menu3;
+    public GameObject menu4;
+    string nazwa_menu;
+
+    public void sprawdz_menu()
+    {
+        var tekst = EventSystem.current.currentSelectedGameObject.name;
+        nazwa_menu = tekst.ToString();
+        //        nazwa_sali = tekst.ToString();
+        Debug.Log(tekst);
+        bool czy_kolejna = false;
+        if (tekst == "Romantyczna kolacja")
+        {
+            Debug.Log("JESSSST");
+            Debug.Log(menu_warunki());
+            if (menu_warunki() == true)
+            {
+                //jeżeli kilka to dodać ifa z boolenem, że już wykorzystane (podczas cofania)
+                czy_kolejna = true;
+                Debug.Log("JESTEM");
+            }
+            else
+            {
+                powiadomienie_blad();
+            }
+        }
+        else if (tekst == "Menu codzienne")
+        {
+            if (menu_warunki() == true)
+            {
+                czy_kolejna = true;
+            }
+            else
+            {
+                powiadomienie_blad();
+            }
+        }
+        else if (tekst == "Obiad wystawny")
+        {
+            if (menu_warunki() == true)
+            {
+                czy_kolejna = true;
+            }
+            else
+            {
+                powiadomienie_blad();
+            }
+        }
+        else if (tekst == "Oferta rozszerzona")
+        {
+            if (menu_warunki() == true)
+            {
+                czy_kolejna = true;
+            }
+            else
+            {
+                powiadomienie_blad();
+            }
+        }
+        if (czy_kolejna == true)
+        {
+            ilosc_punktow = ilosc_punktow + 1;
+            punkty.GetComponent<UnityEngine.UI.Text>().text = ilosc_punktow.ToString();
+            scena8.SetActive(false);
+            scena9.SetActive(true);
+            licznik_scen++;
+        }
+    }
+
+    bool menu_warunki()
+    {
+        Debug.Log("JESTEM 2");
+        if (nazwa_uroczystosci == "Walentynki")
+        {
+            if (nazwa_menu == "Romantyczna kolacja")
+            {
+                Debug.Log("JESTEM 3");
+                return true;
+            }
+        }
+        return false;
+    }
+
+    string nakrycie_tmp;
+
+    public void sprawdz_nakrycie()
+    {
+        var tekst = EventSystem.current.currentSelectedGameObject.name;
+        nakrycie_tmp = tekst.ToString();
+        //        nazwa_sali = tekst.ToString();
+        Debug.Log(tekst);
+        bool czy_kolejna = false;
+        if (tekst == "Proste")
+        {
+            Debug.Log(menu_warunki());
+            if (nakrycie_warunki() == true)
+            {
+                //jeżeli kilka to dodać ifa z boolenem, że już wykorzystane (podczas cofania)
+                czy_kolejna = true;
+            }
+            else
+            {
+                powiadomienie_blad();
+            }
+        }
+        else if (tekst == "Rozszerzone")
+        {
+            if (nakrycie_warunki() == true)
+            {
+                czy_kolejna = true;
+            }
+            else
+            {
+                powiadomienie_blad();
+            }
+        }
+        else if (tekst == "la carte")
+        {
+            if (nakrycie_warunki() == true)
+            {
+                czy_kolejna = true;
+            }
+            else
+            {
+                powiadomienie_blad();
+            }
+        }
+        if (czy_kolejna == true)
+        {
+            ilosc_punktow = ilosc_punktow + 1;
+            punkty.GetComponent<UnityEngine.UI.Text>().text = ilosc_punktow.ToString();
+            scena9.SetActive(false);
+            scena10.SetActive(true);
+            licznik_scen++;
+        }
+    }
+
+    bool nakrycie_warunki()
+    {
+        if (nakrycie_tmp == "Proste")
+        {
+            if (nazwa_menu == "Romantyczna kolacja" || nazwa_menu == "Menu codzienne")
+            {
+                return true;
+            }
+        }
+        if (nakrycie_tmp == "Rozszerzone")
+        {
+            if (nazwa_menu == "Obiad wystawny")
+            {
+                return true;
+            }
+        }
+        if (nakrycie_tmp == "la carte")
+        {
+            if (nazwa_menu == "Oferta rozszerzona")
+            {
+                return true;
+            }
+        }
+        return false;
     }
 }
