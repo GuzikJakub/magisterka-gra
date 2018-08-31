@@ -1528,17 +1528,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1430363618}
-        m_MethodName: aktywne_toggle_off
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.InputField, UnityEngine.UI
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1430363618}
         m_MethodName: talerze_block
         m_Mode: 1
         m_Arguments:
@@ -15463,7 +15452,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &917333717
 RectTransform:
   m_ObjectHideFlags: 0
@@ -25305,7 +25294,8 @@ MonoBehaviour:
   scena8: {fileID: 1337964768}
   scena9: {fileID: 1142738867}
   scena10: {fileID: 917333716}
-  scena11: {fileID: 1025882546}
+  scena11: {fileID: 552583633}
+  scena12: {fileID: 1025882546}
   ilosc_osob: {fileID: 574313502}
   ilosc_stolow_get: {fileID: 1848165175}
   max_ilosc_stolow: 0
@@ -34965,17 +34955,6 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1430363618}
-        m_MethodName: aktywne_toggle_off
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.InputField, UnityEngine.UI
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
       - m_Target: {fileID: 1430363618}
         m_MethodName: talerze_block
         m_Mode: 1

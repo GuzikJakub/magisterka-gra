@@ -20,6 +20,7 @@ public class Przycisk_zachownaie : MonoBehaviour
     public GameObject scena9;
     public GameObject scena10;
     public GameObject scena11;
+    public GameObject scena12;
 
     public InputField ilosc_osob;
     public InputField ilosc_stolow_get;
@@ -94,7 +95,7 @@ public class Przycisk_zachownaie : MonoBehaviour
         else if (licznik_scen == 4)
         {
             ilosc_punktow = ilosc_punktow - 2;
-            punkty.GetComponent<UnityEngine.UI.Text>().text = ilosc_punktow.ToString();
+//            punkty.GetComponent<UnityEngine.UI.Text>().text = ilosc_punktow.ToString();
             licznik_scen--;
             scena4.SetActive(false);
             scena3.SetActive(true);
@@ -103,14 +104,14 @@ public class Przycisk_zachownaie : MonoBehaviour
         {
             licznik_scen--;
             ilosc_punktow = ilosc_punktow - 1;
-            punkty.GetComponent<UnityEngine.UI.Text>().text = ilosc_punktow.ToString();
+//            punkty.GetComponent<UnityEngine.UI.Text>().text = ilosc_punktow.ToString();
             scena5.SetActive(false);
             scena4.SetActive(true);
         }
         else if (licznik_scen == 6)
         {
             ilosc_punktow = ilosc_punktow - 1;
-            punkty.GetComponent<UnityEngine.UI.Text>().text = ilosc_punktow.ToString();
+//            punkty.GetComponent<UnityEngine.UI.Text>().text = ilosc_punktow.ToString();
             licznik_scen--;
             scena6.SetActive(false);
             scena5.SetActive(true);
@@ -118,7 +119,7 @@ public class Przycisk_zachownaie : MonoBehaviour
         else if (licznik_scen == 7)
         {
             ilosc_punktow = ilosc_punktow - 1;
-            punkty.GetComponent<UnityEngine.UI.Text>().text = ilosc_punktow.ToString();
+//            punkty.GetComponent<UnityEngine.UI.Text>().text = ilosc_punktow.ToString();
             licznik_scen--;
             scena7.SetActive(false);
             scena6.SetActive(true);
@@ -130,7 +131,7 @@ public class Przycisk_zachownaie : MonoBehaviour
             {
                 ilosc_punktow = ilosc_punktow - 1;
             }
-            punkty.GetComponent<UnityEngine.UI.Text>().text = ilosc_punktow.ToString();
+//            punkty.GetComponent<UnityEngine.UI.Text>().text = ilosc_punktow.ToString();
             licznik_scen--;
             scena8.SetActive(false);
             scena7.SetActive(true);
@@ -138,23 +139,33 @@ public class Przycisk_zachownaie : MonoBehaviour
         else if (licznik_scen == 9)
         {
             licznik_scen--;
-            ilosc_punktow = ilosc_punktow - 2;
-            punkty.GetComponent<UnityEngine.UI.Text>().text = ilosc_punktow.ToString();
+            ilosc_punktow = ilosc_punktow - 1;
+//            punkty.GetComponent<UnityEngine.UI.Text>().text = ilosc_punktow.ToString();
             scena9.SetActive(false);
             scena8.SetActive(true);
         }
         else if (licznik_scen == 10)
         {
             licznik_scen--;
+            ilosc_punktow = ilosc_punktow - 1;
+//            punkty.GetComponent<UnityEngine.UI.Text>().text = ilosc_punktow.ToString();
             scena10.SetActive(false);
             scena9.SetActive(true);
         }
         else if (licznik_scen == 11)
         {
             licznik_scen--;
+            ilosc_punktow = ilosc_punktow - 2;
             scena11.SetActive(false);
             scena10.SetActive(true);
         }
+        else if (licznik_scen == 11)
+        {
+            licznik_scen--;
+            scena12.SetActive(false);
+            scena11.SetActive(true);
+        }
+        punkty.GetComponent<UnityEngine.UI.Text>().text = ilosc_punktow.ToString();
     }
 
     public void get_ilosc_osob()
