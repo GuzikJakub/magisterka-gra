@@ -138,6 +138,8 @@ public class Przycisk_zachownaie : MonoBehaviour
         else if (licznik_scen == 9)
         {
             licznik_scen--;
+            ilosc_punktow = ilosc_punktow - 2;
+            punkty.GetComponent<UnityEngine.UI.Text>().text = ilosc_punktow.ToString();
             scena9.SetActive(false);
             scena8.SetActive(true);
         }
@@ -424,13 +426,16 @@ public class Przycisk_zachownaie : MonoBehaviour
             {
                 pomoc_text.GetComponent<UnityEngine.UI.Text>().text = "Wybraleś uroczystość " + nazwa_uroczystosci + ". Dla romantycznej kolacji, najlepiej, żeby stoły były trochę od siebie oddalone. Dajmy ludziom trochę prywatności :)";
             }
-            if (licznik_scen == 7 && obrus_chec == false)
+            if (licznik_scen == 7)
             {
-                pomoc_text.GetComponent<UnityEngine.UI.Text>().text = "Na wybrany przez Ciebie stół " + nazwa_stolu_tmp + " powinienieś wybrać inny obrus. Zastanów się nad tym i spróbuj poprawić!";
-            }
-            if (licznik_scen == 7 && dekoracje_check == true && Dekoracje3 == true && nazwa_uroczystosci == "Walentynki")
-            { //to nie mam ogólne, tylko na walentynki
-                pomoc_text.GetComponent<UnityEngine.UI.Text>().text = "Na wybraną przez Ciebie uroczystość " + nazwa_uroczystosci + " powinienieś wybrać bardziej dogodne dekoracje, które wprowadzą elementy romatyczne";
+                if (obrus_chec == false)
+                {
+                    pomoc_text.GetComponent<UnityEngine.UI.Text>().text = "Na wybrany przez Ciebie stół " + nazwa_stolu_tmp + " powinienieś wybrać inny obrus. Zastanów się nad tym i spróbuj poprawić!";
+                }
+                else if (licznik_scen == 7 && dekoracje_check == true && Dekoracje3 == true && nazwa_uroczystosci == "Walentynki")
+                { //to nie mam ogólne, tylko na walentynki
+                    pomoc_text.GetComponent<UnityEngine.UI.Text>().text = "Na wybraną przez Ciebie uroczystość " + nazwa_uroczystosci + " powinienieś wybrać bardziej dogodne dekoracje, które wprowadzą elementy romatyczne";
+                }
             }
             if (licznik_scen == 8)
             {
@@ -439,6 +444,10 @@ public class Przycisk_zachownaie : MonoBehaviour
             if (licznik_scen == 9)
             {
                 pomoc_text.GetComponent<UnityEngine.UI.Text>().text = "Na wybraną przez Ciebie uroczystość " + nazwa_uroczystosci + " i wybranym menu " + nazwa_menu + "powinienieś wybrać bardziej przystosowany rodzaj nakrycia";
+            }
+            if (licznik_scen == 10)
+            {
+                pomoc_text.GetComponent<UnityEngine.UI.Text>().text = "Dla wybranego " + nazwa_menu + " wybrane przez Ciebie elementy są błędną lub niekompletne. Zobacz jeszcze raz na menu, a następnie ponownie skup się nad przygotowaniem zastawy ceramicznej.";
             }
         }
     }
@@ -1105,7 +1114,7 @@ public class Przycisk_zachownaie : MonoBehaviour
     // InputField aktywnosc;
 
 
-    public void aktywne_toggle_off(InputField aktywnosc)
+/*    public void aktywne_toggle_off(InputField aktywnosc)
     {
         if (aktywnosc.interactable == false)
         {
@@ -1115,7 +1124,7 @@ public class Przycisk_zachownaie : MonoBehaviour
         {
             aktywnosc.interactable = false;
         }
-    }
+    } */
 
     public Toggle talerz1;
     public Toggle talerz2;
@@ -1136,4 +1145,41 @@ public class Przycisk_zachownaie : MonoBehaviour
             talerz2.interactable = true;
         }
     }
+
+    public Toggle ceramika3;
+    public Toggle ceramika4;
+    public Toggle ceramika5;
+    public Toggle ceramika6;
+    public Toggle ceramika7;
+    public Toggle ceramika8;
+    public Toggle ceramika9;
+    public Toggle ceramika10;
+    public Toggle ceramika11;
+    bool nastepna_scena_ceramika;
+    public void ceramika_sprawdzian()
+    {
+        nastepna_scena_ceramika = false;
+        if (nazwa_uroczystosci == "Walentynki")
+        {
+            if (talerz1.isOn == true && ceramika3.isOn == true && ceramika4.isOn == true)
+            {
+                ilosc_punktow = ilosc_punktow + 2;
+                nastepna_scena_ceramika = true;
+            }
+            else
+            {
+                powiadomienie_blad();
+            }
+        }
+
+        if (nastepna_scena_ceramika == true)
+        {
+            licznik_scen++;
+            punkty.GetComponent<UnityEngine.UI.Text>().text = ilosc_punktow.ToString();
+            scena10.SetActive(false);
+            scena11.SetActive(true);
+        }
+    }
+
+
 }
