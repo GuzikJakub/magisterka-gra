@@ -157,6 +157,8 @@ public class Przycisk_zachownaie : MonoBehaviour
             licznik_scen--;
             ilosc_punktow = ilosc_punktow - 2;
             scena11.SetActive(false);
+            scena11_srodek_rozszerzone.SetActive(false);
+            scena11_srodek_proste.SetActive(false);
             scena10.SetActive(true);
         }
         else if (licznik_scen == 11)
@@ -1125,7 +1127,7 @@ public class Przycisk_zachownaie : MonoBehaviour
     // InputField aktywnosc;
 
 
-/*    public void aktywne_toggle_off(InputField aktywnosc)
+    public void aktywne_toggle_off(InputField aktywnosc)
     {
         if (aktywnosc.interactable == false)
         {
@@ -1134,8 +1136,11 @@ public class Przycisk_zachownaie : MonoBehaviour
         else
         {
             aktywnosc.interactable = false;
+            aktywnosc.text = "";
+            //           wino_biale.SetActive(false);
+            wino_czerwone.SetActive(false);
         }
-    } */
+    } 
 
     public Toggle talerz1;
     public Toggle talerz2;
@@ -1166,6 +1171,8 @@ public class Przycisk_zachownaie : MonoBehaviour
     public Toggle ceramika9;
     public Toggle ceramika10;
     public Toggle ceramika11;
+    public GameObject scena11_srodek_proste;
+    public GameObject scena11_srodek_rozszerzone;
     bool nastepna_scena_ceramika;
     public void ceramika_sprawdzian()
     {
@@ -1189,8 +1196,70 @@ public class Przycisk_zachownaie : MonoBehaviour
             punkty.GetComponent<UnityEngine.UI.Text>().text = ilosc_punktow.ToString();
             scena10.SetActive(false);
             scena11.SetActive(true);
+            if (nazwa_menu == "Romantyczna kolacja" || nazwa_menu == "Menu codzienne")
+            {
+                scena11_srodek_proste.SetActive(true);
+            }
+            else
+            {
+                scena11_srodek_rozszerzone.SetActive(true);
+            }
+            
         }
     }
 
+    public InputField szklo1;
+    public InputField szklo2;
+    public InputField szklo3;
+    public InputField szklo4;
+    public InputField szklo5;
+    public InputField szklo6;
+    public InputField szklo7;
+    public InputField szklo8;
+    public InputField szklo9;
 
+    public GameObject wino_biale;
+    public GameObject wino_czerwone;
+
+    public void szklo_wyswietl_proste()
+    {
+        obiekt_wyswietl(wino_biale, szklo1.text);
+        obiekt_wyswietl(wino_czerwone, szklo2.text);
+    }
+
+    public void obiekt_wyswietl(GameObject wyswietl, string numer)
+    {
+        if (numer == "1")
+        {
+            wyswietl.transform.position = new Vector3(426.0f, 214.7f, 0.0f);
+            wyswietl.SetActive(true);
+        }
+        if (numer == "2")
+        {
+            wyswietl.transform.position = new Vector3(776f, 214.7f, 0.0f);
+            wyswietl.SetActive(true);
+        }
+        if (numer == "3")
+        {
+            wyswietl.transform.position = new Vector3(834f, 214.7f, 0.0f);
+            wyswietl.SetActive(true);
+        }
+        if (numer == "4")
+        {
+            wyswietl.transform.position = new Vector3(767f, 110.2f, 0.0f);
+            wyswietl.SetActive(true);
+        }
+        if (numer == "5")
+        {
+            wyswietl.transform.position = new Vector3(827.8f, 139.2f, 0.0f);
+            wyswietl.SetActive(true);
+        }
+        if (numer == "6")
+        {
+            wyswietl.transform.position = new Vector3(613f, 89.7f, 0.0f);
+            wyswietl.SetActive(true);
+        }
+    }
+
+    
 }
