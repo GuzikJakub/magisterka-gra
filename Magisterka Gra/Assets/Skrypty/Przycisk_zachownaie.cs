@@ -1218,15 +1218,61 @@ public class Przycisk_zachownaie : MonoBehaviour
     public InputField szklo8;
     public InputField szklo9;
 
+    public Toggle szklo11;
+    public Toggle szklo22;
+    public Toggle szklo33;
+
+    public void toggle_blokuj_szklo()
+    {
+        if (scena11_srodek_proste.activeSelf == true)
+        {
+            if (szklo11.isOn == true)
+            {
+                szklo22.interactable = false;
+                szklo33.interactable = false;
+            }
+            else if (szklo22.isOn == true)
+            {
+                szklo11.interactable = false;
+                szklo33.interactable = false;
+            }
+            else if (szklo33.isOn == true)
+            {
+                szklo11.interactable = false;
+                szklo22.interactable = false;
+            }
+            else
+            {
+                szklo11.interactable = true;
+                szklo22.interactable = true;
+                szklo33.interactable = true;
+            }
+        }
+    }
+
     public GameObject wino_biale;
     public GameObject wino_czerwone;
-
+    Random losowe = new Random();
     public void szklo_wyswietl_proste()
     {
         obiekt_wyswietl(wino_biale, szklo1.text);
         obiekt_wyswietl(wino_czerwone, szklo2.text);
+        if (licznik_szklo >= 1)
+        {
+            int x = Random.Range(0, 15);
+            Debug.Log(x);
+            if (x % 4 == 0)
+            {
+                if (tablica[x] != null)
+                {
+                    int y = Random.Range(1, 6);
+                    obiekt_wyswietl(tablica[x], y.ToString());
+                }
+            }
+        }
     }
-
+    private GameObject[] tablica = new GameObject[100];
+    int licznik_szklo = 0;
     public void obiekt_wyswietl(GameObject wyswietl, string numer)
     {
         if (numer == "1")
@@ -1259,7 +1305,79 @@ public class Przycisk_zachownaie : MonoBehaviour
             wyswietl.transform.position = new Vector3(613f, 89.7f, 0.0f);
             wyswietl.SetActive(true);
         }
+        tablica[licznik_szklo] = wyswietl;
+        licznik_szklo++;
+    }
+    
+    public void szkolo_proste_check()
+    {
+        if (nazwa_uroczystosci == "Walentynki")
+        {
+            if (szklo1.text == "4" || szklo2.text == "4" || szklo3.text == "4")
+            {
+                Debug.Log("JESTEM");
+                if (szklo4.text == "5")
+                {
+                    Debug.Log("JESTEM");
+                    if (szklo5.interactable == false && szklo6.interactable == false && szklo7.interactable == false && szklo8.interactable == false && szklo9.interactable == false)
+                    {
+                        Debug.Log("JESTEM");
+                        scena11.SetActive(false);
+                        scena12.SetActive(true);
+                    }
+                    else
+                    {
+                        powiadomienie_blad();
+                    }
+                }
+                else
+                {
+                    powiadomienie_blad();
+                }
+            }
+            else
+            {
+                powiadomienie_blad();
+            }
+        }
     }
 
-    
+    public InputField sztucce1;
+    public InputField sztucce2;
+    public InputField sztucce3;
+    public InputField sztucce4;
+    public InputField sztucce5;
+    public InputField sztucce6;
+    public InputField sztucce7;
+    public InputField sztucce8;
+    public InputField sztucce9;
+    public InputField sztucce10;
+    public InputField sztucce11;
+    public InputField sztucce12;
+    public InputField sztucce13;
+    public InputField sztucce14;
+    public InputField sztucce15;
+    public InputField sztucce16;
+    public InputField sztucce17;
+
+    public GameObject lyzka_zupa;
+    public GameObject noz;
+    public GameObject widelec;
+
+    public void sztucce_proste()
+    {
+//        obiekt_wyswietl(lyzka_zupa, sztucce1.text);
+    }
+
+    public void sztucce_proste_chec()
+    {
+        if (nazwa_uroczystosci == "Walentynki")
+        {
+            if (sztucce1.text == "3" && sztucce2.text == "2" && sztucce3.text == "1" && sztucce5.text == "6")
+            {
+                if (sztucce4.interactable == false && sztucce6.interactable == false && sztucce7.interactable == false && sztucce8.interactable == false && sztucce9.interactable == false && sztucce10.interactable == false && sztucce11.interactable == false && sztucce12.interactable == false && sztucce13.interactable == false && sztucce14.interactable == false && sztucce15.interactable == false && sztucce16.interactable == false && sztucce17.interactable == false) 
+                //koneic gry
+            }
+        }
+    }
 }
