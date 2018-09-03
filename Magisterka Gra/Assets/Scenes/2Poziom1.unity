@@ -18774,7 +18774,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1025882547
 RectTransform:
   m_ObjectHideFlags: 0
@@ -27470,6 +27470,10 @@ MonoBehaviour:
   sztucce14: {fileID: 0}
   sztucce15: {fileID: 0}
   sztucce16: {fileID: 0}
+  sztucce17: {fileID: 0}
+  lyzka_zupa: {fileID: 0}
+  noz: {fileID: 0}
+  widelec: {fileID: 0}
 --- !u!114 &1430363619
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35186,7 +35190,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1840449353
 RectTransform:
   m_ObjectHideFlags: 0

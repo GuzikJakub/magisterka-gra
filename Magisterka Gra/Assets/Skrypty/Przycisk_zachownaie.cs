@@ -161,13 +161,15 @@ public class Przycisk_zachownaie : MonoBehaviour
             scena11_srodek_proste.SetActive(false);
             scena10.SetActive(true);
         }
-        else if (licznik_scen == 11)
+        else if (licznik_scen == 12)
         {
             licznik_scen--;
+            ilosc_punktow = ilosc_punktow - 2;
             scena12.SetActive(false);
             scena11.SetActive(true);
         }
         punkty.GetComponent<UnityEngine.UI.Text>().text = ilosc_punktow.ToString();
+        Debug.Log(licznik_scen);
     }
 
     public void get_ilosc_osob()
@@ -1252,7 +1254,6 @@ public class Przycisk_zachownaie : MonoBehaviour
 
     public GameObject wino_biale;
     public GameObject wino_czerwone;
-    Random losowe = new Random();
     public void szklo_wyswietl_proste()
     {
         obiekt_wyswietl(wino_biale, szklo1.text);
@@ -1321,7 +1322,10 @@ public class Przycisk_zachownaie : MonoBehaviour
                     Debug.Log("JESTEM");
                     if (szklo5.interactable == false && szklo6.interactable == false && szklo7.interactable == false && szklo8.interactable == false && szklo9.interactable == false)
                     {
+                        ilosc_punktow = ilosc_punktow + 2;
+                        punkty.GetComponent<UnityEngine.UI.Text>().text = ilosc_punktow.ToString();
                         Debug.Log("JESTEM");
+                        licznik_scen++;
                         scena11.SetActive(false);
                         scena12.SetActive(true);
                     }
@@ -1375,8 +1379,11 @@ public class Przycisk_zachownaie : MonoBehaviour
         {
             if (sztucce1.text == "3" && sztucce2.text == "2" && sztucce3.text == "1" && sztucce5.text == "6")
             {
-                if (sztucce4.interactable == false && sztucce6.interactable == false && sztucce7.interactable == false && sztucce8.interactable == false && sztucce9.interactable == false && sztucce10.interactable == false && sztucce11.interactable == false && sztucce12.interactable == false && sztucce13.interactable == false && sztucce14.interactable == false && sztucce15.interactable == false && sztucce16.interactable == false && sztucce17.interactable == false) 
-                //koneic gry
+                if (sztucce4.interactable == false && sztucce6.interactable == false && sztucce7.interactable == false && sztucce8.interactable == false && sztucce9.interactable == false && sztucce10.interactable == false && sztucce11.interactable == false && sztucce12.interactable == false && sztucce13.interactable == false && sztucce14.interactable == false && sztucce15.interactable == false && sztucce16.interactable == false && sztucce17.interactable == false)
+                {
+                    ilosc_punktow = ilosc_punktow + 3;
+                    punkty.GetComponent<UnityEngine.UI.Text>().text = ilosc_punktow.ToString();
+                }
             }
         }
     }
