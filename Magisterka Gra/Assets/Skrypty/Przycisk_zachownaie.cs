@@ -1326,6 +1326,7 @@ public class Przycisk_zachownaie : MonoBehaviour
                         punkty.GetComponent<UnityEngine.UI.Text>().text = ilosc_punktow.ToString();
                         Debug.Log("JESTEM");
                         licznik_scen++;
+                        licznik_szklo = 0;
                         scena11.SetActive(false);
                         scena12.SetActive(true);
                     }
