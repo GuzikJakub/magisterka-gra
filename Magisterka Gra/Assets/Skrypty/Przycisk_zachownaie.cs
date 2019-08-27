@@ -84,7 +84,10 @@ public class Przycisk_zachownaie : MonoBehaviour
     {
         if(licznik_scen == 2)
         {
-            zamknij();
+            licznik_scen--;
+            tekst_uroczystosc.SetActive(false);
+            scena2.SetActive(false);
+            scena1.SetActive(true);
         }
         else if(licznik_scen == 3)
         {
@@ -182,9 +185,40 @@ public class Przycisk_zachownaie : MonoBehaviour
 
     public void zapisz_scena()
     {
-        licznik_scen++;
-        scena2.SetActive(false);
-        scena3.SetActive(true);
+        if (ilosc_osob_l == "1")
+        {
+            powiadomienie_blad();
+        }
+        else if (ilosc_osob_l == "0")
+        {
+            powiadomienie_blad();
+        }
+        else
+        {
+            if (nazwa_uroczystosci == "Wesele")
+            {
+                if (ilosc_osob_l == "2")
+                {
+                    powiadomienie_blad();
+                }
+                else if (ilosc_osob_l == "3")
+                {
+                    powiadomienie_blad();
+                }
+                else
+                {
+                    licznik_scen++;
+                    scena2.SetActive(false);
+                    scena3.SetActive(true);
+                }
+            }
+            else
+            {
+                licznik_scen++;
+                scena2.SetActive(false);
+                scena3.SetActive(true);
+            }
+        }
     }
 
     public string nazwa_sali;
@@ -275,6 +309,8 @@ public class Przycisk_zachownaie : MonoBehaviour
 
     public bool uroczystosc_warunki_sala(string uroczystosc)
     {
+        int x = 0;
+        x = int.Parse(ilosc_osob_l);
         if (uroczystosc == "Walentynki")
         {
             if (ilosc_osob_l == "2" || ilosc_osob_l == "4")
@@ -283,6 +319,13 @@ public class Przycisk_zachownaie : MonoBehaviour
                 {
                     return true;
                 }
+            }
+        }
+        else if (uroczystosc != "")
+        {
+            if (x <= 16 & nazwa_sali == "Sala 4")
+            {
+                return true;
             }
         }
         return false;

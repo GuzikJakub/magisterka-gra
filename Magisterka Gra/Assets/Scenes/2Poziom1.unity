@@ -6990,7 +6990,7 @@ GameObject:
   - component: {fileID: 318306438}
   - component: {fileID: 318306437}
   m_Layer: 5
-  m_Name: Panel_gora (1)
+  m_Name: Panel_bok_kolor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
