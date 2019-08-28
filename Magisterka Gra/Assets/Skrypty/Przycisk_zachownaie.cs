@@ -108,7 +108,7 @@ public class Przycisk_zachownaie : MonoBehaviour
             licznik_scen--;
             ilosc_punktow = ilosc_punktow - 1;
 //            punkty.GetComponent<UnityEngine.UI.Text>().text = ilosc_punktow.ToString();
-            scena5.SetActive(false);
+            scena6.SetActive(false);
             scena4.SetActive(true);
         }
         else if (licznik_scen == 6)
@@ -116,8 +116,8 @@ public class Przycisk_zachownaie : MonoBehaviour
             ilosc_punktow = ilosc_punktow - 1;
 //            punkty.GetComponent<UnityEngine.UI.Text>().text = ilosc_punktow.ToString();
             licznik_scen--;
-            scena6.SetActive(false);
-            scena5.SetActive(true);
+            scena5.SetActive(false);
+            scena6.SetActive(true);
         }
         else if (licznik_scen == 7)
         {
@@ -125,7 +125,7 @@ public class Przycisk_zachownaie : MonoBehaviour
 //            punkty.GetComponent<UnityEngine.UI.Text>().text = ilosc_punktow.ToString();
             licznik_scen--;
             scena7.SetActive(false);
-            scena6.SetActive(true);
+            scena5.SetActive(true);
         }
         else if (licznik_scen == 8) // inna
         {
@@ -234,7 +234,7 @@ public class Przycisk_zachownaie : MonoBehaviour
         {
             if (uroczystosc_warunki_sala(nazwa_uroczystosci) == true)
             {
-                max_ilosc_osob = 15;
+                max_ilosc_osob = 160;
                 widok_sala1.SetActive(true);
                 widok_sala2.SetActive(false);
                 widok_sala3.SetActive(false);
@@ -252,7 +252,7 @@ public class Przycisk_zachownaie : MonoBehaviour
         {
             if (uroczystosc_warunki_sala(nazwa_uroczystosci) == true)
             {
-                max_ilosc_osob = 8;
+                max_ilosc_osob = 110;
                 widok_sala1.SetActive(false);
                 widok_sala2.SetActive(true);
                 widok_sala3.SetActive(false);
@@ -268,7 +268,7 @@ public class Przycisk_zachownaie : MonoBehaviour
         {
             if (uroczystosc_warunki_sala(nazwa_uroczystosci) == true)
             {
-                max_ilosc_osob = 4;
+                max_ilosc_osob = 36;
                 widok_sala1.SetActive(false);
                 widok_sala2.SetActive(false);
                 widok_sala3.SetActive(true);
@@ -284,7 +284,7 @@ public class Przycisk_zachownaie : MonoBehaviour
         {
             if (uroczystosc_warunki_sala(nazwa_uroczystosci) == true)
             {
-                max_ilosc_osob = 2;
+                max_ilosc_osob = 16;
                 widok_sala1.SetActive(false);
                 widok_sala2.SetActive(false);
                 widok_sala3.SetActive(false);
@@ -326,6 +326,22 @@ public class Przycisk_zachownaie : MonoBehaviour
             if (x <= 16 & nazwa_sali == "Sala 4")
             {
                 return true;
+            }
+            else if (x > 16 & x <= 36 & nazwa_sali == "Sala 3")
+            {
+                return true;
+            }
+            else if (x > 36 & x <= 110 & nazwa_sali == "Sala 2")
+            {
+                return true;
+            }
+            else if(x > 110 & x <= 160 & nazwa_sali == "Sala 1")
+            {
+                return true;
+            }
+            else
+            {
+                return false;
             }
         }
         return false;
@@ -413,7 +429,7 @@ public class Przycisk_zachownaie : MonoBehaviour
             punkty.GetComponent<UnityEngine.UI.Text>().text = ilosc_punktow.ToString();
             Debug.Log("JESTEM");
             scena4.SetActive(false);
-            scena5.SetActive(true);
+            scena6.SetActive(true);
             licznik_scen++;
         }
     }
@@ -449,6 +465,29 @@ public class Przycisk_zachownaie : MonoBehaviour
         if (nazwa_uroczystosci == "Walentynki")
         {
             if (nazwa_stolu_tmp == "Stol kwadratowy")
+            {
+                return true;
+            }
+        }
+        else if (nazwa_uroczystosci == "Wesele")
+        {
+            if (nazwa_stolu_tmp == "Stol kwadratowy" || nazwa_stolu_tmp == "Stol prostokatny")
+            {
+                return true;
+            }
+        }
+        else if (nazwa_uroczystosci != "")
+        {
+            int x = 0;
+            x = int.Parse(ilosc_osob_l);
+            if (nazwa_stolu_tmp == "Stol okragly 70" || nazwa_stolu_tmp == "Stol okragly 90")
+            {
+                if (x<=100)
+                {
+                    return true;
+                }
+            }
+            else
             {
                 return true;
             }
@@ -541,7 +580,7 @@ public class Przycisk_zachownaie : MonoBehaviour
         {
             licznik_scen++;
             scena5.SetActive(false);
-            scena6.SetActive(true);
+            scena7.SetActive(true);
         }
         else
         {
@@ -632,7 +671,7 @@ public class Przycisk_zachownaie : MonoBehaviour
             punkty.GetComponent<UnityEngine.UI.Text>().text = ilosc_punktow.ToString();
             Debug.Log("JESTEM");
             scena6.SetActive(false);
-            scena7.SetActive(true);
+            scena5.SetActive(true);
             licznik_scen++;
         }
     }
