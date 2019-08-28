@@ -379,10 +379,10 @@ public class Przycisk_zachownaie : MonoBehaviour
             if (stol_warunki() == true)
             {
                 max_ilosc_stolow = 4;
-                widok_stol1.SetActive(false);
+            /*    widok_stol1.SetActive(false);
                 widok_stol2.SetActive(true);
                 widok_stol3.SetActive(false);
-                widok_stol4.SetActive(false);
+                widok_stol4.SetActive(false);*/
                 czy_ok = true;
             }
             else
@@ -395,10 +395,10 @@ public class Przycisk_zachownaie : MonoBehaviour
             if (stol_warunki() == true)
             {
                 max_ilosc_stolow = 2;
-                widok_stol1.SetActive(false);
+                /*widok_stol1.SetActive(false);
                 widok_stol2.SetActive(false);
                 widok_stol3.SetActive(true);
-                widok_stol4.SetActive(false);
+                widok_stol4.SetActive(false);*/
                 czy_ok = true;
             }
             else
@@ -411,11 +411,11 @@ public class Przycisk_zachownaie : MonoBehaviour
             if (stol_warunki() == true)
             {
                 max_ilosc_stolow = 4;
-                widok_stol1.SetActive(false);
+                /*widok_stol1.SetActive(false);
                 widok_stol2.SetActive(false);
                 widok_stol3.SetActive(false);
                 widok_stol4.SetActive(true);
-
+                */
                 czy_ok = true;
             }
             else
@@ -427,7 +427,6 @@ public class Przycisk_zachownaie : MonoBehaviour
         {
             ilosc_punktow = ilosc_punktow + 1;
             punkty.GetComponent<UnityEngine.UI.Text>().text = ilosc_punktow.ToString();
-            Debug.Log("JESTEM");
             scena4.SetActive(false);
             scena6.SetActive(true);
             licznik_scen++;
@@ -515,11 +514,11 @@ public class Przycisk_zachownaie : MonoBehaviour
             {
                 pomoc_text.GetComponent<UnityEngine.UI.Text>().text = "Wybierając uroczystość " + nazwa_uroczystosci + " dla " + ilosc_osob_l + "osób, pamiętaj o dobrze odpowiedniego stolika. Takiej osoby chciałby siedzieć naprzeciwko siebie oraz jak najbardziej blisko. Rozdysponuj stolikami tak, aby w przypadku mniejszej ilości osób na jeden stolik, takie osoby dostawały mniejsze stoliki.";
             }
-            if (licznik_scen == 5)
+            if (licznik_scen == 6)
             {
                 pomoc_text.GetComponent<UnityEngine.UI.Text>().text = "Wybrałeś uroczystość " + nazwa_uroczystosci + " dla " + ilosc_osob_l +  "osób. Stoliki, na którym siąda goście są dla " + max_ilosc_osob + " osób. Przelicz jeszcze raz ilość stolików!";
             }
-            if (licznik_scen == 6)
+            if (licznik_scen == 5)
             {
                 pomoc_text.GetComponent<UnityEngine.UI.Text>().text = "Wybraleś uroczystość " + nazwa_uroczystosci + ". Dla romantycznej kolacji, najlepiej, żeby stoły były trochę od siebie oddalone. Dajmy ludziom trochę prywatności :)";
             }
@@ -680,12 +679,65 @@ public class Przycisk_zachownaie : MonoBehaviour
     {
         if (nazwa_uroczystosci == "Walentynki")
         {
-            Debug.Log("1");
             if (ustawienie_stolu == "Pojedyncze stoly")
             {
-                Debug.Log("2");
                 return true;
             }
+        }
+        else if (nazwa_uroczystosci == "Wesele")
+        {
+            if (ustawienie_stolu == "Blok" || ustawienie_stolu == "Litera U")
+            {
+                return true;
+            }
+        }
+        else if (nazwa_uroczystosci != "")
+        {
+            int x = 0;
+            x = int.Parse(ilosc_osob_l);
+            if (nazwa_stolu_tmp == "Stol kwadratowy" || nazwa_stolu_tmp == "Stol okragly 70")
+            {
+                if (x < 10 & ustawienie_stolu == "Litera T")
+                {
+                    return false;
+                }
+                else if (x < 12 & ustawienie_stolu == "Litera U")
+                {
+                    return false;
+                }
+                else if (x < 18 & ustawienie_stolu == "Litera E")
+                {
+                    return false;
+                }
+                else
+                {
+                    return true;
+                }
+            }
+            else if (nazwa_stolu_tmp == "Stol prostokatny" || nazwa_stolu_tmp == "Stol okragly 90")
+            {
+                if (x < 9 & ustawienie_stolu == "Blok")
+                {
+                    return false;
+                }
+                else if (x < 13 & ustawienie_stolu == "Litera T")
+                {
+                    return false;
+                }
+                else if (x < 18 & ustawienie_stolu == "Litera U")
+                {
+                    return false;
+                }
+                else if (x < 30 & ustawienie_stolu == "Litera E")
+                {
+                    return false;
+                }
+                else
+                {
+                    return true;
+                }
+            }
+            return true;
         }
         return false;
     }
