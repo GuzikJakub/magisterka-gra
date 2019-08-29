@@ -26,10 +26,12 @@ public class Przycisk_zachownaie : MonoBehaviour
     public InputField ilosc_stolow_get;
 
     public int max_ilosc_stolow;
-    public GameObject widok_sala1;
-    public GameObject widok_sala2;
-    public GameObject widok_sala3;
-    public GameObject widok_sala4;
+    public Sprite widok_sala1;
+    public Sprite widok_sala2;
+    public Sprite widok_sala3;
+    public Sprite widok_sala4;
+    public Sprite widok_sala_white;
+    public GameObject widok_sali;
 
     public int max_ilosc_osob;
     public GameObject widok_stol1;
@@ -98,7 +100,8 @@ public class Przycisk_zachownaie : MonoBehaviour
         else if (licznik_scen == 4)
         {
             ilosc_punktow = ilosc_punktow - 2;
-//            punkty.GetComponent<UnityEngine.UI.Text>().text = ilosc_punktow.ToString();
+            widok_sali.GetComponent<SpriteRenderer>().sprite = widok_sala_white;
+            //            punkty.GetComponent<UnityEngine.UI.Text>().text = ilosc_punktow.ToString();
             licznik_scen--;
             scena4.SetActive(false);
             scena3.SetActive(true);
@@ -107,7 +110,7 @@ public class Przycisk_zachownaie : MonoBehaviour
         {
             licznik_scen--;
             ilosc_punktow = ilosc_punktow - 1;
-//            punkty.GetComponent<UnityEngine.UI.Text>().text = ilosc_punktow.ToString();
+            //            punkty.GetComponent<UnityEngine.UI.Text>().text = ilosc_punktow.ToString();
             scena6.SetActive(false);
             scena4.SetActive(true);
         }
@@ -235,10 +238,10 @@ public class Przycisk_zachownaie : MonoBehaviour
             if (uroczystosc_warunki_sala(nazwa_uroczystosci) == true)
             {
                 max_ilosc_osob = 160;
-                widok_sala1.SetActive(true);
-                widok_sala2.SetActive(false);
-                widok_sala3.SetActive(false);
-                widok_sala4.SetActive(false);
+        //        widok_sala1.SetActive(true);
+         //       widok_sala2.SetActive(false);
+         //       widok_sala3.SetActive(false);
+        //        widok_sala4.SetActive(false);
                 //jeżeli kilka to dodać ifa z boolenem, że już wykorzystane (podczas cofania)
                 czy_kolejna = true;
             }
@@ -253,10 +256,10 @@ public class Przycisk_zachownaie : MonoBehaviour
             if (uroczystosc_warunki_sala(nazwa_uroczystosci) == true)
             {
                 max_ilosc_osob = 110;
-                widok_sala1.SetActive(false);
-                widok_sala2.SetActive(true);
-                widok_sala3.SetActive(false);
-                widok_sala4.SetActive(false);
+         //       widok_sala1.SetActive(false);
+          //      widok_sala2.SetActive(true);
+          //      widok_sala3.SetActive(false);
+          //      widok_sala4.SetActive(false);
                 czy_kolejna = true;
             }
             else
@@ -269,10 +272,10 @@ public class Przycisk_zachownaie : MonoBehaviour
             if (uroczystosc_warunki_sala(nazwa_uroczystosci) == true)
             {
                 max_ilosc_osob = 36;
-                widok_sala1.SetActive(false);
-                widok_sala2.SetActive(false);
-                widok_sala3.SetActive(true);
-                widok_sala4.SetActive(false);
+         //       widok_sala1.SetActive(false);
+         //       widok_sala2.SetActive(false);
+         //       widok_sala3.SetActive(true);
+         //       widok_sala4.SetActive(false);
                 czy_kolejna = true;
             }
             else
@@ -285,10 +288,11 @@ public class Przycisk_zachownaie : MonoBehaviour
             if (uroczystosc_warunki_sala(nazwa_uroczystosci) == true)
             {
                 max_ilosc_osob = 16;
-                widok_sala1.SetActive(false);
-                widok_sala2.SetActive(false);
-                widok_sala3.SetActive(false);
-                widok_sala4.SetActive(true);
+                //       widok_sala1.SetActive(false);
+                //        widok_sala2.SetActive(false);
+                //       widok_sala3.SetActive(false);
+                //      widok_sala4.SetActive(true);
+                widok_sali.GetComponent<SpriteRenderer>().sprite = widok_sala4;
                 czy_kolejna = true;
             }
             else
