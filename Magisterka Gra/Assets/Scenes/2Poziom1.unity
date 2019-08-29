@@ -31051,9 +31051,9 @@ MonoBehaviour:
   ilosc_osob: {fileID: 574313502}
   ilosc_stolow_get: {fileID: 1848165175}
   max_ilosc_stolow: 0
-  widok_sala1: {fileID: 454989447}
-  widok_sala2: {fileID: 977292097}
-  widok_sala3: {fileID: 1680388632}
+  widok_sala1: {fileID: 21300000, guid: 44479542f746c994a96854ccfc933d86, type: 3}
+  widok_sala2: {fileID: 21300000, guid: f7a2e486f7cd2284d812de4ccfec8804, type: 3}
+  widok_sala3: {fileID: 21300000, guid: 32d26d8005c21794d8d85489cf49a835, type: 3}
   widok_sala4: {fileID: 21300000, guid: 68a4f5bb17a499840ad0c12ac88f8ffd, type: 3}
   widok_sala_white: {fileID: 21300000, guid: acb0907f45cc13a459b18277626d24a0, type: 3}
   widok_sali: {fileID: 1352177606}
