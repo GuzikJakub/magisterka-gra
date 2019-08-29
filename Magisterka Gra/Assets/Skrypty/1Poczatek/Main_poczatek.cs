@@ -19,7 +19,8 @@ public class Main_poczatek : MonoBehaviour {
     IEnumerator Przycisk()
     {
         yield return new WaitForSeconds(3);
-        napis.SetActive(false);
+ //       napis.SetActive(false);
+        napis.GetComponent<UnityEngine.UI.Text>().text = "Wybierz poziom";
         przycisk1.SetActive(true);
         przycisk2.SetActive(true);
     }
