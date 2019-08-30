@@ -110,6 +110,10 @@ public class Przycisk_zachownaie : MonoBehaviour
         {
             licznik_scen--;
             ilosc_punktow = ilosc_punktow - 1;
+            widok_stol1.SetActive(false);
+            widok_stol2.SetActive(false);
+            widok_stol3.SetActive(false);
+            widok_stol4.SetActive(false);
             //            punkty.GetComponent<UnityEngine.UI.Text>().text = ilosc_punktow.ToString();
             scena6.SetActive(false);
             scena4.SetActive(true);
@@ -182,6 +186,12 @@ public class Przycisk_zachownaie : MonoBehaviour
     {
 
         ilosc_osob_l = ilosc_osob.text;
+        int x = 0;
+        x = int.Parse(ilosc_osob_l);
+        if (nazwa_uroczystosci == "Walentynki" & (x == 3 || x == 1 || x > 4))
+        {
+            powiadomienie_blad();
+        }
         Debug.Log(ilosc_osob_l);
 
     }
@@ -352,11 +362,7 @@ public class Przycisk_zachownaie : MonoBehaviour
             if (stol_warunki() == true)
             {
                 max_ilosc_stolow = 2;
-            /*    widok_stol1.SetActive(true); //zmienic to -> znikaja przyciski
-                widok_stol2.SetActive(false);
-                widok_stol3.SetActive(false);
-                widok_stol4.SetActive(false);*/
-                //jeżeli kilka to dodać ifa z boolenem, że już wykorzystane (podczas cofania)
+                widok_stol1.SetActive(true);
                 czy_ok = true;
             }
             else
@@ -369,10 +375,7 @@ public class Przycisk_zachownaie : MonoBehaviour
             if (stol_warunki() == true)
             {
                 max_ilosc_stolow = 4;
-            /*    widok_stol1.SetActive(false);
                 widok_stol2.SetActive(true);
-                widok_stol3.SetActive(false);
-                widok_stol4.SetActive(false);*/
                 czy_ok = true;
             }
             else
@@ -385,10 +388,7 @@ public class Przycisk_zachownaie : MonoBehaviour
             if (stol_warunki() == true)
             {
                 max_ilosc_stolow = 2;
-                /*widok_stol1.SetActive(false);
-                widok_stol2.SetActive(false);
                 widok_stol3.SetActive(true);
-                widok_stol4.SetActive(false);*/
                 czy_ok = true;
             }
             else
@@ -401,11 +401,7 @@ public class Przycisk_zachownaie : MonoBehaviour
             if (stol_warunki() == true)
             {
                 max_ilosc_stolow = 4;
-                /*widok_stol1.SetActive(false);
-                widok_stol2.SetActive(false);
-                widok_stol3.SetActive(false);
                 widok_stol4.SetActive(true);
-                */
                 czy_ok = true;
             }
             else
