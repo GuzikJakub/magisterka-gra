@@ -10,6 +10,7 @@ public class TextAnim : MonoBehaviour
     public GameObject scena;
     public GameObject scena1;
     public GameObject scenaown;
+    public GameObject tables_all;
 
     void Start()
     {
@@ -33,5 +34,6 @@ public class TextAnim : MonoBehaviour
         scena.SetActive(true);
         scena1.SetActive(true);
         scenaown.SetActive(false);
+        tables_all.SetActive(true);
     }
 }

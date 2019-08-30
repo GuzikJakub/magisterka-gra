@@ -25,6 +25,8 @@ public class Przycisk_zachownaie : MonoBehaviour
     public InputField ilosc_osob;
     public InputField ilosc_stolow_get;
 
+    public GameObject tables_all;
+
     public int max_ilosc_stolow;
     public Sprite widok_sala1;
     public Sprite widok_sala2;
@@ -34,6 +36,7 @@ public class Przycisk_zachownaie : MonoBehaviour
     public GameObject widok_sali;
 
     public int max_ilosc_osob;
+    public GameObject widok_stol_all;
     public GameObject widok_stol1;
     public GameObject widok_stol2;
     public GameObject widok_stol3;
@@ -51,6 +54,11 @@ public class Przycisk_zachownaie : MonoBehaviour
     //    string nazwa_sali;
 
     public string nazwa_uroczystosci;
+
+    public Sprite okragly70;
+    public Sprite okragly90;
+    public Sprite kwadrat;
+    public Sprite prostokat;
 
     public void wybor_uroczystosci()
     {
@@ -110,10 +118,12 @@ public class Przycisk_zachownaie : MonoBehaviour
         {
             licznik_scen--;
             ilosc_punktow = ilosc_punktow - 1;
-            widok_stol1.SetActive(false);
-            widok_stol2.SetActive(false);
-            widok_stol3.SetActive(false);
-            widok_stol4.SetActive(false);
+            tables_all.SetActive(true);
+            widok_stol_all.SetActive(false);
+            //widok_stol1.SetActive(false);
+            //widok_stol2.SetActive(false);
+            //widok_stol3.SetActive(false);
+            //widok_stol4.SetActive(false);
             //            punkty.GetComponent<UnityEngine.UI.Text>().text = ilosc_punktow.ToString();
             scena6.SetActive(false);
             scena4.SetActive(true);
@@ -362,7 +372,18 @@ public class Przycisk_zachownaie : MonoBehaviour
             if (stol_warunki() == true)
             {
                 max_ilosc_stolow = 2;
-                widok_stol1.SetActive(true);
+                widok_stol1.transform.position = new Vector3(411.0f, 144.6f, 0.0f);
+                widok_stol1.transform.localScale = new Vector3(20.0f, 20.0f, 1.0f);
+                widok_stol1.GetComponent<SpriteRenderer>().sprite = kwadrat;
+                widok_stol2.transform.position = new Vector3(622.25f, 144.6f, 0.0f);
+                widok_stol2.transform.localScale = new Vector3(20.0f, 20.0f, 1.0f);
+                widok_stol2.GetComponent<SpriteRenderer>().sprite = kwadrat;
+                widok_stol3.transform.position = new Vector3(514.25f, 218.1f, 0.0f);
+                widok_stol3.transform.localScale = new Vector3(20.0f, 20.0f, 1.0f);
+                widok_stol3.GetComponent<SpriteRenderer>().sprite = kwadrat;
+                widok_stol4.transform.position = new Vector3(734.0f, 218.1f, 0.0f);
+                widok_stol4.transform.localScale = new Vector3(20.0f, 20.0f, 1.0f);
+                widok_stol4.GetComponent<SpriteRenderer>().sprite = kwadrat;
                 czy_ok = true;
             }
             else
@@ -375,7 +396,18 @@ public class Przycisk_zachownaie : MonoBehaviour
             if (stol_warunki() == true)
             {
                 max_ilosc_stolow = 4;
-                widok_stol2.SetActive(true);
+                widok_stol1.transform.position = new Vector3(415.8f, 168.8f, 0.0f);
+                widok_stol1.transform.localScale = new Vector3(24.0f, 24.0f, 1.0f);
+                widok_stol1.GetComponent<SpriteRenderer>().sprite = prostokat;
+                widok_stol2.transform.position = new Vector3(648.8f, 168.8f, 0.0f);
+                widok_stol2.transform.localScale = new Vector3(24.0f, 24.0f, 1.0f);
+                widok_stol2.GetComponent<SpriteRenderer>().sprite = prostokat;
+                widok_stol3.transform.position = new Vector3(519.3f, 247.2f, 0.0f);
+                widok_stol3.transform.localScale = new Vector3(24.0f, 24.0f, 1.0f);
+                widok_stol3.GetComponent<SpriteRenderer>().sprite = prostokat;
+                widok_stol4.transform.position = new Vector3(731.2f, 247.2f, 0.0f);
+                widok_stol4.transform.localScale = new Vector3(24.0f, 24.0f, 1.0f);
+                widok_stol4.GetComponent<SpriteRenderer>().sprite = prostokat;
                 czy_ok = true;
             }
             else
@@ -388,7 +420,18 @@ public class Przycisk_zachownaie : MonoBehaviour
             if (stol_warunki() == true)
             {
                 max_ilosc_stolow = 2;
-                widok_stol3.SetActive(true);
+                widok_stol1.transform.position = new Vector3(428.3f, 135.0f, 0.0f);
+                widok_stol1.transform.localScale = new Vector3(13.0f, 13.0f, 1.0f);
+                widok_stol1.GetComponent<SpriteRenderer>().sprite = okragly70;
+                widok_stol2.transform.position = new Vector3(628.6f, 135.0f, 0.0f);
+                widok_stol2.transform.localScale = new Vector3(13.0f, 13.0f, 1.0f);
+                widok_stol2.GetComponent<SpriteRenderer>().sprite = okragly70;
+                widok_stol3.transform.position = new Vector3(529.9f, 209.5f, 0.0f);
+                widok_stol3.transform.localScale = new Vector3(13.0f, 13.0f, 1.0f);
+                widok_stol3.GetComponent<SpriteRenderer>().sprite = okragly70;
+                widok_stol4.transform.position = new Vector3(747.6f, 209.5f, 0.0f);
+                widok_stol4.transform.localScale = new Vector3(13.0f, 13.0f, 1.0f);
+                widok_stol4.GetComponent<SpriteRenderer>().sprite = okragly70;
                 czy_ok = true;
             }
             else
@@ -401,7 +444,18 @@ public class Przycisk_zachownaie : MonoBehaviour
             if (stol_warunki() == true)
             {
                 max_ilosc_stolow = 4;
-                widok_stol4.SetActive(true);
+                widok_stol1.transform.position = new Vector3(416.7f, 131.2f, 0.0f);
+                widok_stol1.transform.localScale = new Vector3(14.0f, 14.0f, 1.0f);
+                widok_stol1.GetComponent<SpriteRenderer>().sprite = okragly90;
+                widok_stol2.transform.position = new Vector3(629.6f, 131.2f, 0.0f);
+                widok_stol2.transform.localScale = new Vector3(14.0f, 14.0f, 1.0f);
+                widok_stol2.GetComponent<SpriteRenderer>().sprite = okragly90;
+                widok_stol3.transform.position = new Vector3(529.0f, 214.4f, 0.0f);
+                widok_stol3.transform.localScale = new Vector3(14.0f, 14.0f, 1.0f);
+                widok_stol3.GetComponent<SpriteRenderer>().sprite = okragly90;
+                widok_stol4.transform.position = new Vector3(745.7f, 214.4f, 0.0f);
+                widok_stol4.transform.localScale = new Vector3(14.0f, 14.0f, 1.0f);
+                widok_stol4.GetComponent<SpriteRenderer>().sprite = okragly90;
                 czy_ok = true;
             }
             else
@@ -413,6 +467,8 @@ public class Przycisk_zachownaie : MonoBehaviour
         {
             ilosc_punktow = ilosc_punktow + 1;
             punkty.GetComponent<UnityEngine.UI.Text>().text = ilosc_punktow.ToString();
+            tables_all.SetActive(false);
+            widok_stol_all.SetActive(true);
             scena4.SetActive(false);
             scena6.SetActive(true);
             licznik_scen++;
