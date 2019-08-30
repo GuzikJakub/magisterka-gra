@@ -41,6 +41,7 @@ public class Przycisk_zachownaie : MonoBehaviour
     public GameObject widok_stol2;
     public GameObject widok_stol3;
     public GameObject widok_stol4;
+    public GameObject widok_stol5;
 
     public GameObject punkty;
     public int ilosc_punktow;
@@ -630,15 +631,11 @@ public class Przycisk_zachownaie : MonoBehaviour
         
     }
 
-    public GameObject ustawienie1;
-    public GameObject ustawienie2;
-    public GameObject ustawienie3;
-    public GameObject ustawienie4;
-    public GameObject ustawienie5;
     string ustawienie_stolu;
 
     public void wybor_ustawienie_stolow()
     {
+        widok_stol5.SetActive(false);
         var tekst = EventSystem.current.currentSelectedGameObject.name;
         ustawienie_stolu = tekst.ToString();
         Debug.Log(tekst);
@@ -674,7 +671,6 @@ public class Przycisk_zachownaie : MonoBehaviour
                     widok_stol2.transform.position = new Vector3(629.6f, 131.2f, 0.0f);
                     widok_stol3.transform.position = new Vector3(529.0f, 214.4f, 0.0f);
                     widok_stol4.transform.position = new Vector3(745.7f, 214.4f, 0.0f);
-                    czy_ok = true;
                 }
                 czy_ok = true;
             }
@@ -726,6 +722,39 @@ public class Przycisk_zachownaie : MonoBehaviour
         {
             if (ustawienie_warunki() == true)
             {
+                widok_stol5.SetActive(true);
+                if (nazwa_stolu_tmp == "Stol kwadratowy")
+                {
+                    widok_stol1.transform.position = new Vector3(502.0f, 193.9f, 0.0f);
+                    widok_stol2.transform.position = new Vector3(558.3f, 188.9f, 0.0f);
+                    widok_stol3.transform.position = new Vector3(615.3f, 183.0f, 0.0f);
+                    widok_stol4.transform.position = new Vector3(518.2f, 175.8f, 0.0f);
+                    widok_stol5.transform.position = new Vector3(477.9f, 164.1f, 0.0f);
+                }
+                else if (nazwa_stolu_tmp == "Stol prostokatny")
+                {
+                    widok_stol1.transform.position = new Vector3(570.5f, 219.8f, 0.0f);
+                    widok_stol2.transform.position = new Vector3(608.7f, 205.6f, 0.0f);
+                    widok_stol3.transform.position = new Vector3(646.0f, 190.5f, 0.0f);
+                    widok_stol4.transform.position = new Vector3(560.1f, 201.7f, 0.0f);
+                    widok_stol5.transform.position = new Vector3(512.1f, 196.6f, 0.0f);
+                }
+                else if (nazwa_stolu_tmp == "Stol okragly 70")
+                {
+                    widok_stol1.transform.position = new Vector3(593.1f, 192.2f, 0.0f);
+                    widok_stol2.transform.position = new Vector3(662.2f, 183.2f, 0.0f);
+                    widok_stol3.transform.position = new Vector3(727.8f, 173.8f, 0.0f);
+                    widok_stol4.transform.position = new Vector3(587.6f, 177.5f, 0.0f);
+                    widok_stol5.transform.position = new Vector3(501.3f, 173.2f, 0.0f);
+                }
+                else if (nazwa_stolu_tmp == "Stol okragly 90")
+                {
+                    widok_stol1.transform.position = new Vector3(554.8f, 192.2f, 0.0f);
+                    widok_stol2.transform.position = new Vector3(650.6f, 183.9f, 0.0f);
+                    widok_stol3.transform.position = new Vector3(750.4f, 173.8f, 0.0f);
+                    widok_stol4.transform.position = new Vector3(563.5f, 172.5f, 0.0f);
+                    widok_stol5.transform.position = new Vector3(481.4f, 161.6f, 0.0f);
+                }
                 czy_ok = true;
             }
             else
