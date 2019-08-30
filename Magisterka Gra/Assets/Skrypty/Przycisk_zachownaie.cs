@@ -645,14 +645,37 @@ public class Przycisk_zachownaie : MonoBehaviour
         bool czy_ok = false;
         if (tekst == "Pojedyncze stoly")
         {
-            //          Debug.Log("1");
             if (ustawienie_warunki() == true)
             {
-           /*     ustawienie1.SetActive(true);
-                ustawienie2.SetActive(false);
-                ustawienie3.SetActive(false);
-                ustawienie4.SetActive(false);
-                ustawienie5.SetActive(false);*/
+                if (nazwa_stolu_tmp == "Stol kwadratowy")
+                {
+                    widok_stol1.transform.position = new Vector3(411.0f, 144.6f, 0.0f);
+                    widok_stol2.transform.position = new Vector3(622.25f, 144.6f, 0.0f);
+                    widok_stol3.transform.position = new Vector3(514.25f, 218.1f, 0.0f);
+                    widok_stol4.transform.position = new Vector3(734.0f, 218.1f, 0.0f);
+                }
+                else if (nazwa_stolu_tmp == "Stol prostokatny")
+                {
+                    widok_stol1.transform.position = new Vector3(415.8f, 168.8f, 0.0f);
+                    widok_stol2.transform.position = new Vector3(648.8f, 168.8f, 0.0f);
+                    widok_stol3.transform.position = new Vector3(519.3f, 247.2f, 0.0f);
+                    widok_stol4.transform.position = new Vector3(731.2f, 247.2f, 0.0f);
+                }
+                else if (nazwa_stolu_tmp == "Stol okragly 70")
+                {
+                    widok_stol1.transform.position = new Vector3(428.3f, 135.0f, 0.0f);
+                    widok_stol2.transform.position = new Vector3(628.6f, 135.0f, 0.0f);
+                    widok_stol3.transform.position = new Vector3(529.9f, 209.5f, 0.0f);
+                    widok_stol4.transform.position = new Vector3(747.6f, 209.5f, 0.0f);
+                }
+                else if (nazwa_stolu_tmp == "Stol okragly 90")
+                {
+                    widok_stol1.transform.position = new Vector3(416.7f, 131.2f, 0.0f);
+                    widok_stol2.transform.position = new Vector3(629.6f, 131.2f, 0.0f);
+                    widok_stol3.transform.position = new Vector3(529.0f, 214.4f, 0.0f);
+                    widok_stol4.transform.position = new Vector3(745.7f, 214.4f, 0.0f);
+                    czy_ok = true;
+                }
                 czy_ok = true;
             }
             else
@@ -664,6 +687,34 @@ public class Przycisk_zachownaie : MonoBehaviour
         {
             if (ustawienie_warunki() == true)
             {
+                if (nazwa_stolu_tmp == "Stol kwadratowy")
+                {
+                    widok_stol1.transform.position = new Vector3(424.5f, 180.5f, 0.0f);
+                    widok_stol2.transform.position = new Vector3(483.87f, 175.45f, 0.0f);
+                    widok_stol3.transform.position = new Vector3(541.17f, 170.05f, 0.0f);
+                    widok_stol4.transform.position = new Vector3(598.27f, 165.55f, 0.0f);
+                }
+                else if (nazwa_stolu_tmp == "Stol prostokatny")
+                {
+                    widok_stol1.transform.position = new Vector3(502.0f, 193.9f, 0.0f);
+                    widok_stol2.transform.position = new Vector3(526.8f, 184.5f, 0.0f);
+                    widok_stol3.transform.position = new Vector3(556.6f, 172.7f, 0.0f);
+                    widok_stol4.transform.position = new Vector3(588.0f, 161.8f, 0.0f);
+                }
+                else if (nazwa_stolu_tmp == "Stol okragly 70")
+                {
+                    widok_stol1.transform.position = new Vector3(742.7f, 174.1f, 0.0f);
+                    widok_stol2.transform.position = new Vector3(638.9f, 172.3f, 0.0f);
+                    widok_stol3.transform.position = new Vector3(539.3f, 168.2f, 0.0f);
+                    widok_stol4.transform.position = new Vector3(440.8f, 166.9f, 0.0f);
+                }
+                else if (nazwa_stolu_tmp == "Stol okragly 90")
+                {
+                    widok_stol1.transform.position = new Vector3(778.6f, 174.1f, 0.0f);
+                    widok_stol2.transform.position = new Vector3(669.6f, 172.3f, 0.0f);
+                    widok_stol3.transform.position = new Vector3(557.9f, 168.2f, 0.0f);
+                    widok_stol4.transform.position = new Vector3(440.8f, 166.9f, 0.0f);
+                }
                 czy_ok = true;
             }
             else
