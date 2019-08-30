@@ -42,6 +42,8 @@ public class Przycisk_zachownaie : MonoBehaviour
     public GameObject widok_stol3;
     public GameObject widok_stol4;
     public GameObject widok_stol5;
+    public GameObject widok_stol6;
+    public GameObject widok_stol7;
 
     public GameObject punkty;
     public int ilosc_punktow;
@@ -121,6 +123,9 @@ public class Przycisk_zachownaie : MonoBehaviour
             ilosc_punktow = ilosc_punktow - 1;
             tables_all.SetActive(true);
             widok_stol_all.SetActive(false);
+            widok_stol5.SetActive(false);
+            widok_stol6.SetActive(false);
+            widok_stol7.SetActive(false);
             //widok_stol1.SetActive(false);
             //widok_stol2.SetActive(false);
             //widok_stol3.SetActive(false);
@@ -385,6 +390,12 @@ public class Przycisk_zachownaie : MonoBehaviour
                 widok_stol4.transform.position = new Vector3(734.0f, 218.1f, 0.0f);
                 widok_stol4.transform.localScale = new Vector3(20.0f, 20.0f, 1.0f);
                 widok_stol4.GetComponent<SpriteRenderer>().sprite = kwadrat;
+                widok_stol5.transform.localScale = new Vector3(20.0f, 20.0f, 1.0f);
+                widok_stol5.GetComponent<SpriteRenderer>().sprite = kwadrat;
+                widok_stol6.transform.localScale = new Vector3(20.0f, 20.0f, 1.0f);
+                widok_stol6.GetComponent<SpriteRenderer>().sprite = kwadrat;
+                widok_stol7.transform.localScale = new Vector3(20.0f, 20.0f, 1.0f);
+                widok_stol7.GetComponent<SpriteRenderer>().sprite = kwadrat;
                 czy_ok = true;
             }
             else
@@ -409,6 +420,12 @@ public class Przycisk_zachownaie : MonoBehaviour
                 widok_stol4.transform.position = new Vector3(731.2f, 247.2f, 0.0f);
                 widok_stol4.transform.localScale = new Vector3(24.0f, 24.0f, 1.0f);
                 widok_stol4.GetComponent<SpriteRenderer>().sprite = prostokat;
+                widok_stol5.transform.localScale = new Vector3(24.0f, 24.0f, 1.0f);
+                widok_stol5.GetComponent<SpriteRenderer>().sprite = prostokat;
+                widok_stol6.transform.localScale = new Vector3(24.0f, 24.0f, 1.0f);
+                widok_stol6.GetComponent<SpriteRenderer>().sprite = prostokat;
+                widok_stol7.transform.localScale = new Vector3(24.0f, 24.0f, 1.0f);
+                widok_stol7.GetComponent<SpriteRenderer>().sprite = prostokat;
                 czy_ok = true;
             }
             else
@@ -433,6 +450,12 @@ public class Przycisk_zachownaie : MonoBehaviour
                 widok_stol4.transform.position = new Vector3(747.6f, 209.5f, 0.0f);
                 widok_stol4.transform.localScale = new Vector3(13.0f, 13.0f, 1.0f);
                 widok_stol4.GetComponent<SpriteRenderer>().sprite = okragly70;
+                widok_stol5.transform.localScale = new Vector3(13.0f, 13.0f, 1.0f);
+                widok_stol5.GetComponent<SpriteRenderer>().sprite = okragly70;
+                widok_stol6.transform.localScale = new Vector3(13.0f, 13.0f, 1.0f);
+                widok_stol6.GetComponent<SpriteRenderer>().sprite = okragly70;
+                widok_stol7.transform.localScale = new Vector3(13.0f, 13.0f, 1.0f);
+                widok_stol7.GetComponent<SpriteRenderer>().sprite = okragly70;
                 czy_ok = true;
             }
             else
@@ -457,6 +480,12 @@ public class Przycisk_zachownaie : MonoBehaviour
                 widok_stol4.transform.position = new Vector3(745.7f, 214.4f, 0.0f);
                 widok_stol4.transform.localScale = new Vector3(14.0f, 14.0f, 1.0f);
                 widok_stol4.GetComponent<SpriteRenderer>().sprite = okragly90;
+                widok_stol5.transform.localScale = new Vector3(14.0f, 14.0f, 1.0f);
+                widok_stol5.GetComponent<SpriteRenderer>().sprite = okragly90;
+                widok_stol6.transform.localScale = new Vector3(14.0f, 14.0f, 1.0f);
+                widok_stol6.GetComponent<SpriteRenderer>().sprite = okragly90;
+                widok_stol7.transform.localScale = new Vector3(14.0f, 14.0f, 1.0f);
+                widok_stol7.GetComponent<SpriteRenderer>().sprite = okragly90;
                 czy_ok = true;
             }
             else
@@ -635,7 +664,9 @@ public class Przycisk_zachownaie : MonoBehaviour
 
     public void wybor_ustawienie_stolow()
     {
-        widok_stol5.SetActive(false);
+//        widok_stol5.SetActive(false);
+//        widok_stol6.SetActive(false);
+//        widok_stol7.SetActive(false);
         var tekst = EventSystem.current.currentSelectedGameObject.name;
         ustawienie_stolu = tekst.ToString();
         Debug.Log(tekst);
@@ -644,6 +675,9 @@ public class Przycisk_zachownaie : MonoBehaviour
         {
             if (ustawienie_warunki() == true)
             {
+                widok_stol5.SetActive(false);
+                widok_stol6.SetActive(false);
+                widok_stol7.SetActive(false);
                 if (nazwa_stolu_tmp == "Stol kwadratowy")
                 {
                     widok_stol1.transform.position = new Vector3(411.0f, 144.6f, 0.0f);
@@ -683,6 +717,9 @@ public class Przycisk_zachownaie : MonoBehaviour
         {
             if (ustawienie_warunki() == true)
             {
+                widok_stol5.SetActive(false);
+                widok_stol6.SetActive(false);
+                widok_stol7.SetActive(false);
                 if (nazwa_stolu_tmp == "Stol kwadratowy")
                 {
                     widok_stol1.transform.position = new Vector3(424.5f, 180.5f, 0.0f);
@@ -723,6 +760,8 @@ public class Przycisk_zachownaie : MonoBehaviour
             if (ustawienie_warunki() == true)
             {
                 widok_stol5.SetActive(true);
+                widok_stol6.SetActive(false);
+                widok_stol7.SetActive(false);
                 if (nazwa_stolu_tmp == "Stol kwadratowy")
                 {
                     widok_stol1.transform.position = new Vector3(502.0f, 193.9f, 0.0f);
@@ -766,7 +805,41 @@ public class Przycisk_zachownaie : MonoBehaviour
         {
             if (ustawienie_warunki() == true)
             {
-
+                widok_stol5.SetActive(true);
+                widok_stol6.SetActive(false);
+                widok_stol7.SetActive(false);
+                if (nazwa_stolu_tmp == "Stol kwadratowy")
+                {
+                    widok_stol1.transform.position = new Vector3(516.0f, 216.8f, 0.0f);
+                    widok_stol2.transform.position = new Vector3(573.6f, 213.3f, 0.0f);
+                    widok_stol3.transform.position = new Vector3(637.6f, 209.6f, 0.0f);
+                    widok_stol4.transform.position = new Vector3(470.5f, 207.4f, 0.0f);
+                    widok_stol5.transform.position = new Vector3(601.3f, 195.7f, 0.0f);
+                }
+                else if (nazwa_stolu_tmp == "Stol prostokatny")
+                {
+                    widok_stol1.transform.position = new Vector3(666.0f, 218.4f, 0.0f);
+                    widok_stol2.transform.position = new Vector3(611.7f, 216.5f, 0.0f);
+                    widok_stol3.transform.position = new Vector3(554.2f, 215.9f, 0.0f);
+                    widok_stol4.transform.position = new Vector3(723.0f, 201.0f, 0.0f);
+                    widok_stol5.transform.position = new Vector3(590.9f, 199.7f, 0.0f);
+                }
+                else if (nazwa_stolu_tmp == "Stol okragly 70")
+                {
+                    widok_stol1.transform.position = new Vector3(666.0f, 218.4f, 0.0f);
+                    widok_stol2.transform.position = new Vector3(568.9f, 215.7f, 0.0f);
+                    widok_stol3.transform.position = new Vector3(472.4f, 212.7f, 0.0f);
+                    widok_stol4.transform.position = new Vector3(738.0f, 208.9f, 0.0f);
+                    widok_stol5.transform.position = new Vector3(536.9f, 202.9f, 0.0f);
+                }
+                else if (nazwa_stolu_tmp == "Stol okragly 90")
+                {
+                    widok_stol1.transform.position = new Vector3(666.8f, 218.4f, 0.0f);
+                    widok_stol2.transform.position = new Vector3(553.8f, 215.7f, 0.0f);
+                    widok_stol3.transform.position = new Vector3(452.6f, 212.7f, 0.0f);
+                    widok_stol4.transform.position = new Vector3(738.0f, 205.7f, 0.0f);
+                    widok_stol5.transform.position = new Vector3(506.0f, 195.8f, 0.0f);
+                }
                 czy_ok = true;
             }
             else
@@ -778,7 +851,49 @@ public class Przycisk_zachownaie : MonoBehaviour
         {
             if (ustawienie_warunki() == true)
             {
-
+                widok_stol5.SetActive(true);
+                widok_stol6.SetActive(true);
+                widok_stol7.SetActive(true);
+                if (nazwa_stolu_tmp == "Stol kwadratowy")
+                {
+                    widok_stol1.transform.position = new Vector3(600.9f, 218.4f, 0.0f);
+                    widok_stol2.transform.position = new Vector3(559.3f, 204.6f, 0.0f);
+                    widok_stol3.transform.position = new Vector3(516.8f, 193.7f, 0.0f);
+                    widok_stol4.transform.position = new Vector3(653.9f, 213.7f, 0.0f);
+                    widok_stol5.transform.position = new Vector3(473.4f, 182.3f, 0.0f);
+                    widok_stol6.transform.position = new Vector3(598.0f, 195.0f, 0.0f);
+                    widok_stol7.transform.position = new Vector3(528.2f, 172.8f, 0.0f);
+                }
+                else if (nazwa_stolu_tmp == "Stol prostokatny")
+                {
+                    widok_stol1.transform.position = new Vector3(579.4f, 243.0f, 0.0f);
+                    widok_stol2.transform.position = new Vector3(624.3f, 227.6f, 0.0f);
+                    widok_stol3.transform.position = new Vector3(665.9f, 210.4f, 0.0f);
+                    widok_stol4.transform.position = new Vector3(707.8f, 194.7f, 0.0f);
+                    widok_stol5.transform.position = new Vector3(523.3f, 241.0f, 0.0f);
+                    widok_stol6.transform.position = new Vector3(587.7f, 219.6f, 0.0f);
+                    widok_stol7.transform.position = new Vector3(654.3f, 186.2f, 0.0f);
+                }
+                else if (nazwa_stolu_tmp == "Stol okragly 70")
+                {
+                    widok_stol1.transform.position = new Vector3(724.7f, 218.4f, 0.0f);
+                    widok_stol2.transform.position = new Vector3(612.5f, 215.7f, 0.0f);
+                    widok_stol3.transform.position = new Vector3(511.3f, 212.7f, 0.0f);
+                    widok_stol4.transform.position = new Vector3(796.7f, 208.9f, 0.0f);
+                    widok_stol5.transform.position = new Vector3(396.5f, 207.7f, 0.0f);
+                    widok_stol6.transform.position = new Vector3(448.1f, 193.4f, 0.0f);
+                    widok_stol7.transform.position = new Vector3(618.6f, 205.3f, 0.0f);
+                }
+                else if (nazwa_stolu_tmp == "Stol okragly 90")
+                {
+                    widok_stol1.transform.position = new Vector3(724.7f, 218.4f, 0.0f);
+                    widok_stol2.transform.position = new Vector3(612.5f, 215.7f, 0.0f);
+                    widok_stol3.transform.position = new Vector3(511.3f, 212.7f, 0.0f);
+                    widok_stol4.transform.position = new Vector3(796.7f, 205.7f, 0.0f);
+                    widok_stol5.transform.position = new Vector3(396.5f, 207.7f, 0.0f);
+                    widok_stol6.transform.position = new Vector3(448.1f, 190.2f, 0.0f);
+                    widok_stol7.transform.position = new Vector3(618.6f, 201.3f, 0.0f);
+                }
                 czy_ok = true;
             }
             else
