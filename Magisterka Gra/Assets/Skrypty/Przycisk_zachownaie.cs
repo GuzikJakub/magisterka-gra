@@ -58,6 +58,9 @@ public class Przycisk_zachownaie : MonoBehaviour
 
     public string nazwa_uroczystosci;
 
+    public GameObject menu;
+    public GameObject menu_zatwierdz;
+
     public Sprite okragly70;
     public Sprite okragly90;
     public Sprite kwadrat;
@@ -1310,6 +1313,8 @@ public class Przycisk_zachownaie : MonoBehaviour
     int licznik_punkty;
     public void zatwierdz_bielizna()
     {
+        menu.SetActive(false);
+        menu_zatwierdz.SetActive(false);
         licznik_punkty = 0;
         if (obrus_chec == true)
         {
@@ -1363,11 +1368,8 @@ public class Przycisk_zachownaie : MonoBehaviour
         //kod do sprawdzenia czy dobre rzeczy został wybrane
     }
 
-    public GameObject menu1;
-    public GameObject menu2;
-    public GameObject menu3;
-    public GameObject menu4;
     string nazwa_menu;
+    public GameObject menu_teskst;
 
     public void sprawdz_menu()
     {
@@ -1375,10 +1377,32 @@ public class Przycisk_zachownaie : MonoBehaviour
         nazwa_menu = tekst.ToString();
         //        nazwa_sali = tekst.ToString();
         Debug.Log(tekst);
-        bool czy_kolejna = false;
+        menu.SetActive(true);
+        menu_zatwierdz.SetActive(true);
         if (tekst == "Romantyczna kolacja")
         {
-            Debug.Log("JESSSST");
+            menu_teskst.GetComponent<UnityEngine.UI.Text>().text = "Romantyczna kolacja \n heuheuheue";
+        }
+        else if (tekst == "Menu codzienne")
+        {
+            menu_teskst.GetComponent<UnityEngine.UI.Text>().text = "menu codzienne \n heuheuheue";
+        }
+        else if (tekst == "Obiad wystawny")
+        {
+            menu_teskst.GetComponent<UnityEngine.UI.Text>().text = "obiad wystawny \n heuheuheue";
+        }
+        else if (tekst == "Oferta rozszerzona")
+        {
+            menu_teskst.GetComponent<UnityEngine.UI.Text>().text = "rozszerzone dla burzujow \n heuheuheue";
+        }
+    }
+
+    public void zatwiedz_menu()
+    {
+        bool czy_kolejna = false;
+        if (nazwa_menu == "Romantyczna kolacja")
+        {
+//            Debug.Log("JESSSST");
             Debug.Log(menu_warunki());
             if (menu_warunki() == true)
             {
@@ -1391,7 +1415,7 @@ public class Przycisk_zachownaie : MonoBehaviour
                 powiadomienie_blad();
             }
         }
-        else if (tekst == "Menu codzienne")
+        else if (nazwa_menu == "Menu codzienne")
         {
             if (menu_warunki() == true)
             {
@@ -1402,7 +1426,7 @@ public class Przycisk_zachownaie : MonoBehaviour
                 powiadomienie_blad();
             }
         }
-        else if (tekst == "Obiad wystawny")
+        else if (nazwa_menu == "Obiad wystawny")
         {
             if (menu_warunki() == true)
             {
@@ -1413,7 +1437,7 @@ public class Przycisk_zachownaie : MonoBehaviour
                 powiadomienie_blad();
             }
         }
-        else if (tekst == "Oferta rozszerzona")
+        else if (nazwa_menu == "Oferta rozszerzona")
         {
             if (menu_warunki() == true)
             {
