@@ -364,7 +364,9 @@ public class Przycisk_zachownaie : MonoBehaviour
     }
 
     string nazwa_stolu_tmp; 
-
+    int dodatkowa_ilosc_osob;
+    int dodatkowa_ilosc_stolow;
+    int podstawowa_ilosc_osob;
     public void wybor_stolu()
     {
         var tekst = EventSystem.current.currentSelectedGameObject.name;
@@ -377,7 +379,7 @@ public class Przycisk_zachownaie : MonoBehaviour
   //          Debug.Log("1");
             if (stol_warunki() == true)
             {
-                max_ilosc_stolow = 2;
+                podstawowa_ilosc_osob = 2;
                 widok_stol1.transform.position = new Vector3(411.0f, 144.6f, 0.0f);
                 widok_stol1.transform.localScale = new Vector3(20.0f, 20.0f, 1.0f);
                 widok_stol1.GetComponent<SpriteRenderer>().sprite = kwadrat;
@@ -407,7 +409,7 @@ public class Przycisk_zachownaie : MonoBehaviour
         {
             if (stol_warunki() == true)
             {
-                max_ilosc_stolow = 4;
+                podstawowa_ilosc_osob = 4;
                 widok_stol1.transform.position = new Vector3(415.8f, 168.8f, 0.0f);
                 widok_stol1.transform.localScale = new Vector3(24.0f, 24.0f, 1.0f);
                 widok_stol1.GetComponent<SpriteRenderer>().sprite = prostokat;
@@ -437,7 +439,7 @@ public class Przycisk_zachownaie : MonoBehaviour
         {
             if (stol_warunki() == true)
             {
-                max_ilosc_stolow = 2;
+                podstawowa_ilosc_osob = 2;
                 widok_stol1.transform.position = new Vector3(428.3f, 135.0f, 0.0f);
                 widok_stol1.transform.localScale = new Vector3(13.0f, 13.0f, 1.0f);
                 widok_stol1.GetComponent<SpriteRenderer>().sprite = okragly70;
@@ -467,7 +469,7 @@ public class Przycisk_zachownaie : MonoBehaviour
         {
             if (stol_warunki() == true)
             {
-                max_ilosc_stolow = 4;
+                podstawowa_ilosc_osob = 4;
                 widok_stol1.transform.position = new Vector3(416.7f, 131.2f, 0.0f);
                 widok_stol1.transform.localScale = new Vector3(14.0f, 14.0f, 1.0f);
                 widok_stol1.GetComponent<SpriteRenderer>().sprite = okragly90;
@@ -505,6 +507,351 @@ public class Przycisk_zachownaie : MonoBehaviour
         }
     }
 
+    string ustawienie_stolu;
+
+    public void wybor_ustawienie_stolow()
+    {
+//        widok_stol5.SetActive(false);
+//        widok_stol6.SetActive(false);
+//        widok_stol7.SetActive(false);
+        var tekst = EventSystem.current.currentSelectedGameObject.name;
+        ustawienie_stolu = tekst.ToString();
+        Debug.Log(tekst);
+        bool czy_ok = false;
+        if (tekst == "Pojedyncze stoly")
+        {
+            if (ustawienie_warunki() == true)
+            {
+                dodatkowa_ilosc_osob = 0;
+                dodatkowa_ilosc_stolow = 0;
+                widok_stol5.SetActive(false);
+                widok_stol6.SetActive(false);
+                widok_stol7.SetActive(false);
+                if (nazwa_stolu_tmp == "Stol kwadratowy")
+                {
+                    widok_stol1.transform.position = new Vector3(411.0f, 144.6f, 0.0f);
+                    widok_stol2.transform.position = new Vector3(622.25f, 144.6f, 0.0f);
+                    widok_stol3.transform.position = new Vector3(514.25f, 218.1f, 0.0f);
+                    widok_stol4.transform.position = new Vector3(734.0f, 218.1f, 0.0f);
+                }
+                else if (nazwa_stolu_tmp == "Stol prostokatny")
+                {
+                    widok_stol1.transform.position = new Vector3(415.8f, 168.8f, 0.0f);
+                    widok_stol2.transform.position = new Vector3(648.8f, 168.8f, 0.0f);
+                    widok_stol3.transform.position = new Vector3(519.3f, 247.2f, 0.0f);
+                    widok_stol4.transform.position = new Vector3(731.2f, 247.2f, 0.0f);
+                }
+                else if (nazwa_stolu_tmp == "Stol okragly 70")
+                {
+                    widok_stol1.transform.position = new Vector3(428.3f, 135.0f, 0.0f);
+                    widok_stol2.transform.position = new Vector3(628.6f, 135.0f, 0.0f);
+                    widok_stol3.transform.position = new Vector3(529.9f, 209.5f, 0.0f);
+                    widok_stol4.transform.position = new Vector3(747.6f, 209.5f, 0.0f);
+                }
+                else if (nazwa_stolu_tmp == "Stol okragly 90")
+                {
+                    widok_stol1.transform.position = new Vector3(416.7f, 131.2f, 0.0f);
+                    widok_stol2.transform.position = new Vector3(629.6f, 131.2f, 0.0f);
+                    widok_stol3.transform.position = new Vector3(529.0f, 214.4f, 0.0f);
+                    widok_stol4.transform.position = new Vector3(745.7f, 214.4f, 0.0f);
+                }
+                czy_ok = true;
+            }
+            else
+            {
+                powiadomienie_blad();
+            }
+        }
+        else if (tekst == "Blok")
+        {
+            if (ustawienie_warunki() == true)
+            {
+                dodatkowa_ilosc_osob = 6;
+                dodatkowa_ilosc_stolow = 2;
+                widok_stol5.SetActive(false);
+                widok_stol6.SetActive(false);
+                widok_stol7.SetActive(false);
+                if (nazwa_stolu_tmp == "Stol kwadratowy")
+                {
+                    podstawowa_ilosc_osob = 2;
+                    widok_stol1.transform.position = new Vector3(424.5f, 180.5f, 0.0f);
+                    widok_stol2.transform.position = new Vector3(483.87f, 175.45f, 0.0f);
+                    widok_stol3.transform.position = new Vector3(541.17f, 170.05f, 0.0f);
+                    widok_stol4.transform.position = new Vector3(598.27f, 165.55f, 0.0f);
+                }
+                else if (nazwa_stolu_tmp == "Stol prostokatny")
+                {
+                    podstawowa_ilosc_osob = 3;
+                    widok_stol1.transform.position = new Vector3(502.0f, 193.9f, 0.0f);
+                    widok_stol2.transform.position = new Vector3(526.8f, 184.5f, 0.0f);
+                    widok_stol3.transform.position = new Vector3(556.6f, 172.7f, 0.0f);
+                    widok_stol4.transform.position = new Vector3(588.0f, 161.8f, 0.0f);
+                }
+                else if (nazwa_stolu_tmp == "Stol okragly 70")
+                {
+                    podstawowa_ilosc_osob = 2;
+                    widok_stol1.transform.position = new Vector3(742.7f, 174.1f, 0.0f);
+                    widok_stol2.transform.position = new Vector3(638.9f, 172.3f, 0.0f);
+                    widok_stol3.transform.position = new Vector3(539.3f, 168.2f, 0.0f);
+                    widok_stol4.transform.position = new Vector3(440.8f, 166.9f, 0.0f);
+                }
+                else if (nazwa_stolu_tmp == "Stol okragly 90")
+                {
+                    podstawowa_ilosc_osob = 3;
+                    widok_stol1.transform.position = new Vector3(778.6f, 174.1f, 0.0f);
+                    widok_stol2.transform.position = new Vector3(669.6f, 172.3f, 0.0f);
+                    widok_stol3.transform.position = new Vector3(557.9f, 168.2f, 0.0f);
+                    widok_stol4.transform.position = new Vector3(440.8f, 166.9f, 0.0f);
+                }
+                czy_ok = true;
+            }
+            else
+            {
+                powiadomienie_blad();
+            }
+        }
+        else if (tekst == "Litera T")
+        {
+            if (ustawienie_warunki() == true)
+            {
+                dodatkowa_ilosc_osob = 10;
+                dodatkowa_ilosc_stolow = 4;
+                widok_stol5.SetActive(true);
+                widok_stol6.SetActive(false);
+                widok_stol7.SetActive(false);
+                if (nazwa_stolu_tmp == "Stol kwadratowy")
+                {
+                    podstawowa_ilosc_osob = 2;
+                    widok_stol1.transform.position = new Vector3(502.0f, 193.9f, 0.0f);
+                    widok_stol2.transform.position = new Vector3(558.3f, 188.9f, 0.0f);
+                    widok_stol3.transform.position = new Vector3(615.3f, 183.0f, 0.0f);
+                    widok_stol4.transform.position = new Vector3(518.2f, 175.8f, 0.0f);
+                    widok_stol5.transform.position = new Vector3(477.9f, 164.1f, 0.0f);
+                }
+                else if (nazwa_stolu_tmp == "Stol prostokatny")
+                {
+                    podstawowa_ilosc_osob = 3;
+                    widok_stol1.transform.position = new Vector3(570.5f, 219.8f, 0.0f);
+                    widok_stol2.transform.position = new Vector3(608.7f, 205.6f, 0.0f);
+                    widok_stol3.transform.position = new Vector3(646.0f, 190.5f, 0.0f);
+                    widok_stol4.transform.position = new Vector3(560.1f, 201.7f, 0.0f);
+                    widok_stol5.transform.position = new Vector3(512.1f, 196.6f, 0.0f);
+                }
+                else if (nazwa_stolu_tmp == "Stol okragly 70")
+                {
+                    podstawowa_ilosc_osob = 2;
+                    widok_stol1.transform.position = new Vector3(593.1f, 192.2f, 0.0f);
+                    widok_stol2.transform.position = new Vector3(662.2f, 183.2f, 0.0f);
+                    widok_stol3.transform.position = new Vector3(727.8f, 173.8f, 0.0f);
+                    widok_stol4.transform.position = new Vector3(587.6f, 177.5f, 0.0f);
+                    widok_stol5.transform.position = new Vector3(501.3f, 173.2f, 0.0f);
+                }
+                else if (nazwa_stolu_tmp == "Stol okragly 90")
+                {
+                    podstawowa_ilosc_osob = 3;
+                    widok_stol1.transform.position = new Vector3(554.8f, 192.2f, 0.0f);
+                    widok_stol2.transform.position = new Vector3(650.6f, 183.9f, 0.0f);
+                    widok_stol3.transform.position = new Vector3(750.4f, 173.8f, 0.0f);
+                    widok_stol4.transform.position = new Vector3(563.5f, 172.5f, 0.0f);
+                    widok_stol5.transform.position = new Vector3(481.4f, 161.6f, 0.0f);
+                }
+                czy_ok = true;
+            }
+            else
+            {
+                powiadomienie_blad();
+            }
+        }
+        else if (tekst == "Litera U")
+        {
+            dodatkowa_ilosc_osob = 6;
+            dodatkowa_ilosc_stolow = 2;
+            if (ustawienie_warunki() == true)
+            {
+                widok_stol5.SetActive(true);
+                widok_stol6.SetActive(false);
+                widok_stol7.SetActive(false);
+                if (nazwa_stolu_tmp == "Stol kwadratowy")
+                {
+                    podstawowa_ilosc_osob = 2;
+                    widok_stol1.transform.position = new Vector3(516.0f, 216.8f, 0.0f);
+                    widok_stol2.transform.position = new Vector3(573.6f, 213.3f, 0.0f);
+                    widok_stol3.transform.position = new Vector3(637.6f, 209.6f, 0.0f);
+                    widok_stol4.transform.position = new Vector3(470.5f, 207.4f, 0.0f);
+                    widok_stol5.transform.position = new Vector3(601.3f, 195.7f, 0.0f);
+                }
+                else if (nazwa_stolu_tmp == "Stol prostokatny")
+                {
+                    podstawowa_ilosc_osob = 3;
+                    widok_stol1.transform.position = new Vector3(666.0f, 218.4f, 0.0f);
+                    widok_stol2.transform.position = new Vector3(611.7f, 216.5f, 0.0f);
+                    widok_stol3.transform.position = new Vector3(554.2f, 215.9f, 0.0f);
+                    widok_stol4.transform.position = new Vector3(723.0f, 201.0f, 0.0f);
+                    widok_stol5.transform.position = new Vector3(590.9f, 199.7f, 0.0f);
+                }
+                else if (nazwa_stolu_tmp == "Stol okragly 70")
+                {
+                    podstawowa_ilosc_osob = 2;
+                    widok_stol1.transform.position = new Vector3(666.0f, 218.4f, 0.0f);
+                    widok_stol2.transform.position = new Vector3(568.9f, 215.7f, 0.0f);
+                    widok_stol3.transform.position = new Vector3(472.4f, 212.7f, 0.0f);
+                    widok_stol4.transform.position = new Vector3(738.0f, 208.9f, 0.0f);
+                    widok_stol5.transform.position = new Vector3(536.9f, 202.9f, 0.0f);
+                }
+                else if (nazwa_stolu_tmp == "Stol okragly 90")
+                {
+                    podstawowa_ilosc_osob = 3;
+                    widok_stol1.transform.position = new Vector3(666.8f, 218.4f, 0.0f);
+                    widok_stol2.transform.position = new Vector3(553.8f, 215.7f, 0.0f);
+                    widok_stol3.transform.position = new Vector3(452.6f, 212.7f, 0.0f);
+                    widok_stol4.transform.position = new Vector3(738.0f, 205.7f, 0.0f);
+                    widok_stol5.transform.position = new Vector3(506.0f, 195.8f, 0.0f);
+                }
+                czy_ok = true;
+            }
+            else
+            {
+                powiadomienie_blad();
+            }
+        }
+        else if (tekst == "Litera E")
+        {
+            if (ustawienie_warunki() == true)
+            {
+                dodatkowa_ilosc_osob = 10;
+                dodatkowa_ilosc_stolow = 4;
+                widok_stol5.SetActive(true);
+                widok_stol6.SetActive(true);
+                widok_stol7.SetActive(true);
+                if (nazwa_stolu_tmp == "Stol kwadratowy")
+                {
+                    podstawowa_ilosc_osob = 2;
+                    widok_stol1.transform.position = new Vector3(600.9f, 218.4f, 0.0f);
+                    widok_stol2.transform.position = new Vector3(559.3f, 204.6f, 0.0f);
+                    widok_stol3.transform.position = new Vector3(516.8f, 193.7f, 0.0f);
+                    widok_stol4.transform.position = new Vector3(653.9f, 213.7f, 0.0f);
+                    widok_stol5.transform.position = new Vector3(473.4f, 182.3f, 0.0f);
+                    widok_stol6.transform.position = new Vector3(598.0f, 195.0f, 0.0f);
+                    widok_stol7.transform.position = new Vector3(528.2f, 172.8f, 0.0f);
+                }
+                else if (nazwa_stolu_tmp == "Stol prostokatny")
+                {
+                    podstawowa_ilosc_osob = 3;
+                    widok_stol1.transform.position = new Vector3(579.4f, 243.0f, 0.0f);
+                    widok_stol2.transform.position = new Vector3(624.3f, 227.6f, 0.0f);
+                    widok_stol3.transform.position = new Vector3(665.9f, 210.4f, 0.0f);
+                    widok_stol4.transform.position = new Vector3(707.8f, 194.7f, 0.0f);
+                    widok_stol5.transform.position = new Vector3(523.3f, 241.0f, 0.0f);
+                    widok_stol6.transform.position = new Vector3(587.7f, 219.6f, 0.0f);
+                    widok_stol7.transform.position = new Vector3(654.3f, 186.2f, 0.0f);
+                }
+                else if (nazwa_stolu_tmp == "Stol okragly 70")
+                {
+                    podstawowa_ilosc_osob = 2;
+                    widok_stol1.transform.position = new Vector3(724.7f, 218.4f, 0.0f);
+                    widok_stol2.transform.position = new Vector3(612.5f, 215.7f, 0.0f);
+                    widok_stol3.transform.position = new Vector3(511.3f, 212.7f, 0.0f);
+                    widok_stol4.transform.position = new Vector3(796.7f, 208.9f, 0.0f);
+                    widok_stol5.transform.position = new Vector3(396.5f, 207.7f, 0.0f);
+                    widok_stol6.transform.position = new Vector3(448.1f, 193.4f, 0.0f);
+                    widok_stol7.transform.position = new Vector3(618.6f, 205.3f, 0.0f);
+                }
+                else if (nazwa_stolu_tmp == "Stol okragly 90")
+                {
+                    podstawowa_ilosc_osob = 3;
+                    widok_stol1.transform.position = new Vector3(724.7f, 218.4f, 0.0f);
+                    widok_stol2.transform.position = new Vector3(612.5f, 215.7f, 0.0f);
+                    widok_stol3.transform.position = new Vector3(511.3f, 212.7f, 0.0f);
+                    widok_stol4.transform.position = new Vector3(796.7f, 205.7f, 0.0f);
+                    widok_stol5.transform.position = new Vector3(396.5f, 207.7f, 0.0f);
+                    widok_stol6.transform.position = new Vector3(448.1f, 190.2f, 0.0f);
+                    widok_stol7.transform.position = new Vector3(618.6f, 201.3f, 0.0f);
+                }
+                czy_ok = true;
+            }
+            else
+            {
+                powiadomienie_blad();
+            }
+        }
+        if (czy_ok == true)
+        {
+            ilosc_punktow = ilosc_punktow + 1;
+            punkty.GetComponent<UnityEngine.UI.Text>().text = ilosc_punktow.ToString();
+            Debug.Log("JESTEM");
+            scena6.SetActive(false);
+            scena5.SetActive(true);
+            licznik_scen++;
+        }
+    }
+
+    bool ustawienie_warunki()
+    {
+        if (nazwa_uroczystosci == "Walentynki")
+        {
+            if (ustawienie_stolu == "Pojedyncze stoly")
+            {
+                return true;
+            }
+        }
+        else if (nazwa_uroczystosci == "Wesele")
+        {
+            if (ustawienie_stolu == "Blok" || ustawienie_stolu == "Litera U")
+            {
+                return true;
+            }
+        }
+        else if (nazwa_uroczystosci != "")
+        {
+            int x = 0;
+            x = int.Parse(ilosc_osob_l);
+            if (nazwa_stolu_tmp == "Stol kwadratowy" || nazwa_stolu_tmp == "Stol okragly 70")
+            {
+                if (x < 10 & ustawienie_stolu == "Litera T")
+                {
+                    return false;
+                }
+                else if (x < 12 & ustawienie_stolu == "Litera U")
+                {
+                    return false;
+                }
+                else if (x < 18 & ustawienie_stolu == "Litera E")
+                {
+                    return false;
+                }
+                else
+                {
+                    return true;
+                }
+            }
+            else if (nazwa_stolu_tmp == "Stol prostokatny" || nazwa_stolu_tmp == "Stol okragly 90")
+            {
+                if (x < 9 & ustawienie_stolu == "Blok")
+                {
+                    return false;
+                }
+                else if (x < 13 & ustawienie_stolu == "Litera T")
+                {
+                    return false;
+                }
+                else if (x < 18 & ustawienie_stolu == "Litera U")
+                {
+                    return false;
+                }
+                else if (x < 30 & ustawienie_stolu == "Litera E")
+                {
+                    return false;
+                }
+                else
+                {
+                    return true;
+                }
+            }
+            return true;
+        }
+        return false;
+    }
+
     bool ilosc_stolow_dalej;
 
     public void get_ilosc_stolow()
@@ -519,9 +866,13 @@ public class Przycisk_zachownaie : MonoBehaviour
         int.TryParse(ilosc_osob_l, out ilosc_osob_tmp);
         int.TryParse(ile_stolow, out ile_stolow_tmp);
 
-        wynik_tmp = ile_stolow_tmp * max_ilosc_stolow;
-        int wynik_tmp2 = ile_stolow_tmp * (max_ilosc_stolow - 1);
-
+//        wynik_tmp = ile_stolow_tmp * max_ilosc_stolow;
+//        int wynik_tmp2 = ile_stolow_tmp * (max_ilosc_stolow - 1);
+        wynik_tmp = podstawowa_ilosc_osob * (ile_stolow_tmp - dodatkowa_ilosc_stolow) + dodatkowa_ilosc_osob;
+        int wynik_tmp2 = podstawowa_ilosc_osob * (ile_stolow_tmp - dodatkowa_ilosc_stolow - 1) + dodatkowa_ilosc_osob;
+        Debug.Log(ilosc_osob_tmp);
+        Debug.Log(wynik_tmp);
+        Debug.Log(wynik_tmp2);
         if(ilosc_osob_tmp <= wynik_tmp && ilosc_osob_tmp > wynik_tmp2)
         {
             ilosc_punktow = ilosc_punktow + 1;
@@ -658,325 +1009,6 @@ public class Przycisk_zachownaie : MonoBehaviour
             powiadomienie_blad();
         }
         
-    }
-
-    string ustawienie_stolu;
-
-    public void wybor_ustawienie_stolow()
-    {
-//        widok_stol5.SetActive(false);
-//        widok_stol6.SetActive(false);
-//        widok_stol7.SetActive(false);
-        var tekst = EventSystem.current.currentSelectedGameObject.name;
-        ustawienie_stolu = tekst.ToString();
-        Debug.Log(tekst);
-        bool czy_ok = false;
-        if (tekst == "Pojedyncze stoly")
-        {
-            if (ustawienie_warunki() == true)
-            {
-                widok_stol5.SetActive(false);
-                widok_stol6.SetActive(false);
-                widok_stol7.SetActive(false);
-                if (nazwa_stolu_tmp == "Stol kwadratowy")
-                {
-                    widok_stol1.transform.position = new Vector3(411.0f, 144.6f, 0.0f);
-                    widok_stol2.transform.position = new Vector3(622.25f, 144.6f, 0.0f);
-                    widok_stol3.transform.position = new Vector3(514.25f, 218.1f, 0.0f);
-                    widok_stol4.transform.position = new Vector3(734.0f, 218.1f, 0.0f);
-                }
-                else if (nazwa_stolu_tmp == "Stol prostokatny")
-                {
-                    widok_stol1.transform.position = new Vector3(415.8f, 168.8f, 0.0f);
-                    widok_stol2.transform.position = new Vector3(648.8f, 168.8f, 0.0f);
-                    widok_stol3.transform.position = new Vector3(519.3f, 247.2f, 0.0f);
-                    widok_stol4.transform.position = new Vector3(731.2f, 247.2f, 0.0f);
-                }
-                else if (nazwa_stolu_tmp == "Stol okragly 70")
-                {
-                    widok_stol1.transform.position = new Vector3(428.3f, 135.0f, 0.0f);
-                    widok_stol2.transform.position = new Vector3(628.6f, 135.0f, 0.0f);
-                    widok_stol3.transform.position = new Vector3(529.9f, 209.5f, 0.0f);
-                    widok_stol4.transform.position = new Vector3(747.6f, 209.5f, 0.0f);
-                }
-                else if (nazwa_stolu_tmp == "Stol okragly 90")
-                {
-                    widok_stol1.transform.position = new Vector3(416.7f, 131.2f, 0.0f);
-                    widok_stol2.transform.position = new Vector3(629.6f, 131.2f, 0.0f);
-                    widok_stol3.transform.position = new Vector3(529.0f, 214.4f, 0.0f);
-                    widok_stol4.transform.position = new Vector3(745.7f, 214.4f, 0.0f);
-                }
-                czy_ok = true;
-            }
-            else
-            {
-                powiadomienie_blad();
-            }
-        }
-        else if (tekst == "Blok")
-        {
-            if (ustawienie_warunki() == true)
-            {
-                widok_stol5.SetActive(false);
-                widok_stol6.SetActive(false);
-                widok_stol7.SetActive(false);
-                if (nazwa_stolu_tmp == "Stol kwadratowy")
-                {
-                    widok_stol1.transform.position = new Vector3(424.5f, 180.5f, 0.0f);
-                    widok_stol2.transform.position = new Vector3(483.87f, 175.45f, 0.0f);
-                    widok_stol3.transform.position = new Vector3(541.17f, 170.05f, 0.0f);
-                    widok_stol4.transform.position = new Vector3(598.27f, 165.55f, 0.0f);
-                }
-                else if (nazwa_stolu_tmp == "Stol prostokatny")
-                {
-                    widok_stol1.transform.position = new Vector3(502.0f, 193.9f, 0.0f);
-                    widok_stol2.transform.position = new Vector3(526.8f, 184.5f, 0.0f);
-                    widok_stol3.transform.position = new Vector3(556.6f, 172.7f, 0.0f);
-                    widok_stol4.transform.position = new Vector3(588.0f, 161.8f, 0.0f);
-                }
-                else if (nazwa_stolu_tmp == "Stol okragly 70")
-                {
-                    widok_stol1.transform.position = new Vector3(742.7f, 174.1f, 0.0f);
-                    widok_stol2.transform.position = new Vector3(638.9f, 172.3f, 0.0f);
-                    widok_stol3.transform.position = new Vector3(539.3f, 168.2f, 0.0f);
-                    widok_stol4.transform.position = new Vector3(440.8f, 166.9f, 0.0f);
-                }
-                else if (nazwa_stolu_tmp == "Stol okragly 90")
-                {
-                    widok_stol1.transform.position = new Vector3(778.6f, 174.1f, 0.0f);
-                    widok_stol2.transform.position = new Vector3(669.6f, 172.3f, 0.0f);
-                    widok_stol3.transform.position = new Vector3(557.9f, 168.2f, 0.0f);
-                    widok_stol4.transform.position = new Vector3(440.8f, 166.9f, 0.0f);
-                }
-                czy_ok = true;
-            }
-            else
-            {
-                powiadomienie_blad();
-            }
-        }
-        else if (tekst == "Litera T")
-        {
-            if (ustawienie_warunki() == true)
-            {
-                widok_stol5.SetActive(true);
-                widok_stol6.SetActive(false);
-                widok_stol7.SetActive(false);
-                if (nazwa_stolu_tmp == "Stol kwadratowy")
-                {
-                    widok_stol1.transform.position = new Vector3(502.0f, 193.9f, 0.0f);
-                    widok_stol2.transform.position = new Vector3(558.3f, 188.9f, 0.0f);
-                    widok_stol3.transform.position = new Vector3(615.3f, 183.0f, 0.0f);
-                    widok_stol4.transform.position = new Vector3(518.2f, 175.8f, 0.0f);
-                    widok_stol5.transform.position = new Vector3(477.9f, 164.1f, 0.0f);
-                }
-                else if (nazwa_stolu_tmp == "Stol prostokatny")
-                {
-                    widok_stol1.transform.position = new Vector3(570.5f, 219.8f, 0.0f);
-                    widok_stol2.transform.position = new Vector3(608.7f, 205.6f, 0.0f);
-                    widok_stol3.transform.position = new Vector3(646.0f, 190.5f, 0.0f);
-                    widok_stol4.transform.position = new Vector3(560.1f, 201.7f, 0.0f);
-                    widok_stol5.transform.position = new Vector3(512.1f, 196.6f, 0.0f);
-                }
-                else if (nazwa_stolu_tmp == "Stol okragly 70")
-                {
-                    widok_stol1.transform.position = new Vector3(593.1f, 192.2f, 0.0f);
-                    widok_stol2.transform.position = new Vector3(662.2f, 183.2f, 0.0f);
-                    widok_stol3.transform.position = new Vector3(727.8f, 173.8f, 0.0f);
-                    widok_stol4.transform.position = new Vector3(587.6f, 177.5f, 0.0f);
-                    widok_stol5.transform.position = new Vector3(501.3f, 173.2f, 0.0f);
-                }
-                else if (nazwa_stolu_tmp == "Stol okragly 90")
-                {
-                    widok_stol1.transform.position = new Vector3(554.8f, 192.2f, 0.0f);
-                    widok_stol2.transform.position = new Vector3(650.6f, 183.9f, 0.0f);
-                    widok_stol3.transform.position = new Vector3(750.4f, 173.8f, 0.0f);
-                    widok_stol4.transform.position = new Vector3(563.5f, 172.5f, 0.0f);
-                    widok_stol5.transform.position = new Vector3(481.4f, 161.6f, 0.0f);
-                }
-                czy_ok = true;
-            }
-            else
-            {
-                powiadomienie_blad();
-            }
-        }
-        else if (tekst == "Litera U")
-        {
-            if (ustawienie_warunki() == true)
-            {
-                widok_stol5.SetActive(true);
-                widok_stol6.SetActive(false);
-                widok_stol7.SetActive(false);
-                if (nazwa_stolu_tmp == "Stol kwadratowy")
-                {
-                    widok_stol1.transform.position = new Vector3(516.0f, 216.8f, 0.0f);
-                    widok_stol2.transform.position = new Vector3(573.6f, 213.3f, 0.0f);
-                    widok_stol3.transform.position = new Vector3(637.6f, 209.6f, 0.0f);
-                    widok_stol4.transform.position = new Vector3(470.5f, 207.4f, 0.0f);
-                    widok_stol5.transform.position = new Vector3(601.3f, 195.7f, 0.0f);
-                }
-                else if (nazwa_stolu_tmp == "Stol prostokatny")
-                {
-                    widok_stol1.transform.position = new Vector3(666.0f, 218.4f, 0.0f);
-                    widok_stol2.transform.position = new Vector3(611.7f, 216.5f, 0.0f);
-                    widok_stol3.transform.position = new Vector3(554.2f, 215.9f, 0.0f);
-                    widok_stol4.transform.position = new Vector3(723.0f, 201.0f, 0.0f);
-                    widok_stol5.transform.position = new Vector3(590.9f, 199.7f, 0.0f);
-                }
-                else if (nazwa_stolu_tmp == "Stol okragly 70")
-                {
-                    widok_stol1.transform.position = new Vector3(666.0f, 218.4f, 0.0f);
-                    widok_stol2.transform.position = new Vector3(568.9f, 215.7f, 0.0f);
-                    widok_stol3.transform.position = new Vector3(472.4f, 212.7f, 0.0f);
-                    widok_stol4.transform.position = new Vector3(738.0f, 208.9f, 0.0f);
-                    widok_stol5.transform.position = new Vector3(536.9f, 202.9f, 0.0f);
-                }
-                else if (nazwa_stolu_tmp == "Stol okragly 90")
-                {
-                    widok_stol1.transform.position = new Vector3(666.8f, 218.4f, 0.0f);
-                    widok_stol2.transform.position = new Vector3(553.8f, 215.7f, 0.0f);
-                    widok_stol3.transform.position = new Vector3(452.6f, 212.7f, 0.0f);
-                    widok_stol4.transform.position = new Vector3(738.0f, 205.7f, 0.0f);
-                    widok_stol5.transform.position = new Vector3(506.0f, 195.8f, 0.0f);
-                }
-                czy_ok = true;
-            }
-            else
-            {
-                powiadomienie_blad();
-            }
-        }
-        else if (tekst == "Litera E")
-        {
-            if (ustawienie_warunki() == true)
-            {
-                widok_stol5.SetActive(true);
-                widok_stol6.SetActive(true);
-                widok_stol7.SetActive(true);
-                if (nazwa_stolu_tmp == "Stol kwadratowy")
-                {
-                    widok_stol1.transform.position = new Vector3(600.9f, 218.4f, 0.0f);
-                    widok_stol2.transform.position = new Vector3(559.3f, 204.6f, 0.0f);
-                    widok_stol3.transform.position = new Vector3(516.8f, 193.7f, 0.0f);
-                    widok_stol4.transform.position = new Vector3(653.9f, 213.7f, 0.0f);
-                    widok_stol5.transform.position = new Vector3(473.4f, 182.3f, 0.0f);
-                    widok_stol6.transform.position = new Vector3(598.0f, 195.0f, 0.0f);
-                    widok_stol7.transform.position = new Vector3(528.2f, 172.8f, 0.0f);
-                }
-                else if (nazwa_stolu_tmp == "Stol prostokatny")
-                {
-                    widok_stol1.transform.position = new Vector3(579.4f, 243.0f, 0.0f);
-                    widok_stol2.transform.position = new Vector3(624.3f, 227.6f, 0.0f);
-                    widok_stol3.transform.position = new Vector3(665.9f, 210.4f, 0.0f);
-                    widok_stol4.transform.position = new Vector3(707.8f, 194.7f, 0.0f);
-                    widok_stol5.transform.position = new Vector3(523.3f, 241.0f, 0.0f);
-                    widok_stol6.transform.position = new Vector3(587.7f, 219.6f, 0.0f);
-                    widok_stol7.transform.position = new Vector3(654.3f, 186.2f, 0.0f);
-                }
-                else if (nazwa_stolu_tmp == "Stol okragly 70")
-                {
-                    widok_stol1.transform.position = new Vector3(724.7f, 218.4f, 0.0f);
-                    widok_stol2.transform.position = new Vector3(612.5f, 215.7f, 0.0f);
-                    widok_stol3.transform.position = new Vector3(511.3f, 212.7f, 0.0f);
-                    widok_stol4.transform.position = new Vector3(796.7f, 208.9f, 0.0f);
-                    widok_stol5.transform.position = new Vector3(396.5f, 207.7f, 0.0f);
-                    widok_stol6.transform.position = new Vector3(448.1f, 193.4f, 0.0f);
-                    widok_stol7.transform.position = new Vector3(618.6f, 205.3f, 0.0f);
-                }
-                else if (nazwa_stolu_tmp == "Stol okragly 90")
-                {
-                    widok_stol1.transform.position = new Vector3(724.7f, 218.4f, 0.0f);
-                    widok_stol2.transform.position = new Vector3(612.5f, 215.7f, 0.0f);
-                    widok_stol3.transform.position = new Vector3(511.3f, 212.7f, 0.0f);
-                    widok_stol4.transform.position = new Vector3(796.7f, 205.7f, 0.0f);
-                    widok_stol5.transform.position = new Vector3(396.5f, 207.7f, 0.0f);
-                    widok_stol6.transform.position = new Vector3(448.1f, 190.2f, 0.0f);
-                    widok_stol7.transform.position = new Vector3(618.6f, 201.3f, 0.0f);
-                }
-                czy_ok = true;
-            }
-            else
-            {
-                powiadomienie_blad();
-            }
-        }
-        if (czy_ok == true)
-        {
-            ilosc_punktow = ilosc_punktow + 1;
-            punkty.GetComponent<UnityEngine.UI.Text>().text = ilosc_punktow.ToString();
-            Debug.Log("JESTEM");
-            scena6.SetActive(false);
-            scena5.SetActive(true);
-            licznik_scen++;
-        }
-    }
-
-    bool ustawienie_warunki()
-    {
-        if (nazwa_uroczystosci == "Walentynki")
-        {
-            if (ustawienie_stolu == "Pojedyncze stoly")
-            {
-                return true;
-            }
-        }
-        else if (nazwa_uroczystosci == "Wesele")
-        {
-            if (ustawienie_stolu == "Blok" || ustawienie_stolu == "Litera U")
-            {
-                return true;
-            }
-        }
-        else if (nazwa_uroczystosci != "")
-        {
-            int x = 0;
-            x = int.Parse(ilosc_osob_l);
-            if (nazwa_stolu_tmp == "Stol kwadratowy" || nazwa_stolu_tmp == "Stol okragly 70")
-            {
-                if (x < 10 & ustawienie_stolu == "Litera T")
-                {
-                    return false;
-                }
-                else if (x < 12 & ustawienie_stolu == "Litera U")
-                {
-                    return false;
-                }
-                else if (x < 18 & ustawienie_stolu == "Litera E")
-                {
-                    return false;
-                }
-                else
-                {
-                    return true;
-                }
-            }
-            else if (nazwa_stolu_tmp == "Stol prostokatny" || nazwa_stolu_tmp == "Stol okragly 90")
-            {
-                if (x < 9 & ustawienie_stolu == "Blok")
-                {
-                    return false;
-                }
-                else if (x < 13 & ustawienie_stolu == "Litera T")
-                {
-                    return false;
-                }
-                else if (x < 18 & ustawienie_stolu == "Litera U")
-                {
-                    return false;
-                }
-                else if (x < 30 & ustawienie_stolu == "Litera E")
-                {
-                    return false;
-                }
-                else
-                {
-                    return true;
-                }
-            }
-            return true;
-        }
-        return false;
     }
 
     public Toggle Obrus1;
