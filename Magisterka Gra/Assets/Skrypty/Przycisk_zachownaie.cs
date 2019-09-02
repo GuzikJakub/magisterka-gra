@@ -1402,13 +1402,10 @@ public class Przycisk_zachownaie : MonoBehaviour
         bool czy_kolejna = false;
         if (nazwa_menu == "Romantyczna kolacja")
         {
-//            Debug.Log("JESSSST");
-            Debug.Log(menu_warunki());
             if (menu_warunki() == true)
             {
                 //jeżeli kilka to dodać ifa z boolenem, że już wykorzystane (podczas cofania)
                 czy_kolejna = true;
-                Debug.Log("JESTEM");
             }
             else
             {
@@ -1465,7 +1462,27 @@ public class Przycisk_zachownaie : MonoBehaviour
         {
             if (nazwa_menu == "Romantyczna kolacja")
             {
-                Debug.Log("JESTEM 3");
+                return true;
+            }
+        }
+        else if (nazwa_uroczystosci == "Urodziny" || nazwa_uroczystosci == "Imieniny")
+        {
+            if (nazwa_menu == "Menu codzienne")
+            {
+                return true;
+            }
+        }
+        else if (nazwa_uroczystosci == "Stypa" || nazwa_uroczystosci == "Wielkanoc")
+        {
+            if (nazwa_menu == "Obiad wystawny")
+            {
+                return true;
+            }
+        }
+        else if (nazwa_uroczystosci == "Wesele" || nazwa_uroczystosci == "Spotkanie biznesowe")
+        {
+            if (nazwa_menu == "Oferta rozszerzona" || nazwa_menu == "Obiad wystawny")
+            {
                 return true;
             }
         }
@@ -1486,7 +1503,6 @@ public class Przycisk_zachownaie : MonoBehaviour
             Debug.Log(menu_warunki());
             if (nakrycie_warunki() == true)
             {
-                //jeżeli kilka to dodać ifa z boolenem, że już wykorzystane (podczas cofania)
                 czy_kolejna = true;
             }
             else

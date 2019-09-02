@@ -11,6 +11,7 @@ public class Licznik_czasu : MonoBehaviour {
     public GameObject scena;
     public GameObject scena0;
     float temp;
+    int minuta;
 
 	// Use this for initialization
 	void Start () {
@@ -28,11 +29,21 @@ public class Licznik_czasu : MonoBehaviour {
 //        float temp = Time.time - poczatek;
         else if (scena0.activeSelf == false && czyOk == false)
         {
-        temp = Time.time - poczatek;
-        string minuty = ((int)temp / 60).ToString();
-        string sekundy = (temp % 60).ToString("f4");
+            temp = Time.time - poczatek;
+            string minuty = ((int)temp / 60).ToString();
+            string sekundy = (temp % 60).ToString("f4");
 
-        licznikczasu.text = minuty + ":" + sekundy;
+            licznikczasu.text = minuty + ":" + sekundy;
+            int.TryParse(minuty, out minuta);
+            Debug.Log(temp % 60);
+            if (minuta == 1 & (temp % 60) > 30)
+            {
+                licznikczasu.color = Color.red;
+            }
+            else if (minuta == 2)
+            {
+                //koniec gry
+            }
         }
 	}
 }
