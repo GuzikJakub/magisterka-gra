@@ -6,11 +6,13 @@ public class TextAnim : MonoBehaviour
 {
     public float showTime = 0.01f;
     public string textshow;
+    public int ktora_scena;
     public GameObject mytext;
     public GameObject scena;
     public GameObject scena1;
     public GameObject scenaown;
     public GameObject tables_all;
+    public GameObject scena_error;
 
     void Start()
     {
@@ -31,9 +33,17 @@ public class TextAnim : MonoBehaviour
             yield return new WaitForSeconds(showTime);
         }
         yield return new WaitForSeconds(2);
-        scena.SetActive(true);
-        scena1.SetActive(true);
-        scenaown.SetActive(false);
-        tables_all.SetActive(true);
+        if (ktora_scena == 1)
+        {
+            scena.SetActive(true);
+            scena1.SetActive(true);
+            scenaown.SetActive(false);
+            tables_all.SetActive(true);
+        }
+        else if (ktora_scena == 2)
+        {
+            Application.LoadLevel("1Poczatek");
+        }
+        
     }
 }

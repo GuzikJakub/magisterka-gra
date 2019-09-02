@@ -10,13 +10,17 @@ public class Licznik_czasu : MonoBehaviour {
     public bool czyOk;
     public GameObject scena;
     public GameObject scena0;
+    public GameObject scena_error;
+    public GameObject scena_error_end;
+    public GameObject scena_error_end2;
     float temp;
     int minuta;
 
 	// Use this for initialization
 	void Start () {
-            temp = 0.0f;
-            czyOk = true;
+        licznikczasu.text = "0:00,0000";
+        temp = 0.0f;
+        czyOk = true;
 	}
 	
 	// Update is called once per frame
@@ -32,8 +36,14 @@ public class Licznik_czasu : MonoBehaviour {
             temp = Time.time - poczatek;
             string minuty = ((int)temp / 60).ToString();
             string sekundy = (temp % 60).ToString("f4");
-
-            licznikczasu.text = minuty + ":" + sekundy;
+            if ((temp % 60) < 10)
+            {
+                licznikczasu.text = minuty + ":0" + sekundy;
+            }
+            else
+            {
+                licznikczasu.text = minuty + ":" + sekundy;
+            }
             int.TryParse(minuty, out minuta);
             Debug.Log(temp % 60);
             if (minuta == 1 & (temp % 60) > 30)
@@ -42,7 +52,10 @@ public class Licznik_czasu : MonoBehaviour {
             }
             else if (minuta == 2)
             {
-                //koniec gry
+                scena_error.SetActive(true);
+                scena_error_end.SetActive(false);
+                scena_error_end2.SetActive(false);
+                licznikczasu.text = "0:00,0000";
             }
         }
 	}
