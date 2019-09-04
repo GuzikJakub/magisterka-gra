@@ -33,6 +33,7 @@ public class Przycisk_zachownaie : MonoBehaviour
     public Sprite widok_sala3;
     public Sprite widok_sala4;
     public Sprite widok_sala_white;
+    public Sprite widok_podloga;
     public GameObject widok_sali;
 
     public int max_ilosc_osob;
@@ -1677,6 +1678,8 @@ public class Przycisk_zachownaie : MonoBehaviour
             punkty.GetComponent<UnityEngine.UI.Text>().text = ilosc_punktow.ToString();
             scena10.SetActive(false);
             scena11.SetActive(true);
+            widok_stol_all.SetActive(false);
+            widok_sali.GetComponent<SpriteRenderer>().sprite = widok_podloga;
             if (nazwa_menu == "Romantyczna kolacja" || nazwa_menu == "Menu codzienne")
             {
                 scena11_srodek_proste.SetActive(true);
