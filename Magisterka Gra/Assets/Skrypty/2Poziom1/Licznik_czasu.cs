@@ -45,7 +45,7 @@ public class Licznik_czasu : MonoBehaviour {
                 licznikczasu.text = minuty + ":" + sekundy;
             }
             int.TryParse(minuty, out minuta);
-            Debug.Log(temp % 60);
+       //     Debug.Log(temp % 60);
             if (minuta == 1 & (temp % 60) > 30)
             {
                 licznikczasu.color = Color.red;

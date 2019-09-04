@@ -1787,6 +1787,8 @@ public class Przycisk_zachownaie : MonoBehaviour
 
     public void obiekt_wyswietl_proste(GameObject wyswietl, string numer)
     {
+        Debug.Log(wyswietl);
+        Debug.Log(numer);
         if (numer == "1")
         {
             wyswietl.transform.position = new Vector3(426.0f, 214.7f, 0.0f);
