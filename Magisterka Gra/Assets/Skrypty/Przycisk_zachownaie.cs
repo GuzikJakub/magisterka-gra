@@ -1583,8 +1583,6 @@ public class Przycisk_zachownaie : MonoBehaviour
         {
             aktywnosc.interactable = false;
             aktywnosc.text = "";
-            //           wino_biale.SetActive(false);
-            wino_czerwone.SetActive(false);
         }
     } 
 
@@ -1736,23 +1734,37 @@ public class Przycisk_zachownaie : MonoBehaviour
 
     public GameObject wino_biale;
     public GameObject wino_czerwone;
+
+    public void block_object(GameObject obiektt)
+    {
+        if (obiektt.activeSelf == true)
+        {
+            obiektt.SetActive(false);
+        }
+        else
+        {
+            obiektt.SetActive(true);
+        }
+    }
+
+
     public void szklo_wyswietl_proste()
     {
         obiekt_wyswietl(wino_biale, szklo1.text);
         obiekt_wyswietl(wino_czerwone, szklo2.text);
-        if (licznik_szklo >= 1)
-        {
-            int x = Random.Range(0, 15);
-            Debug.Log(x);
-            if (x % 4 == 0)
-            {
-                if (tablica[x] != null)
-                {
-                    int y = Random.Range(1, 6);
-                    obiekt_wyswietl(tablica[x], y.ToString());
-                }
-            }
-        }
+        /*       if (licznik_szklo >= 1)
+               {
+                   int x = Random.Range(0, 15);
+                   Debug.Log(x);
+                   if (x % 4 == 0)
+                   {
+                       if (tablica[x] != null)
+                       {
+                           int y = Random.Range(1, 6);
+                           obiekt_wyswietl(tablica[x], y.ToString());
+                       }
+                   }
+               }*/
     }
     private GameObject[] tablica = new GameObject[100];
     int licznik_szklo = 0;
