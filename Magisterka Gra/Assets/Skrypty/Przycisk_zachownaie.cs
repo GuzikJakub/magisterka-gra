@@ -1777,6 +1777,14 @@ public class Przycisk_zachownaie : MonoBehaviour
     }
     private GameObject[] tablica = new GameObject[100];
     int licznik_szklo = 0;
+
+//    public GameObject proste_1;
+//    public GameObject proste_2;
+//    public GameObject proste_3;
+//    public GameObject proste_4;
+//    public GameObject proste_5;
+//    public GameObject proste_6;
+
     public void obiekt_wyswietl_proste(GameObject wyswietl, string numer)
     {
         if (numer == "1")
