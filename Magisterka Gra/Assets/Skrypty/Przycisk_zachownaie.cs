@@ -1659,6 +1659,7 @@ public class Przycisk_zachownaie : MonoBehaviour
         }
         else if (nazwa_menu == "Oferta rozszerzona")
         {
+            Debug.Log("ZOOOOOOOOOOOOOOOOOOOOOOOMBIE");
             if (talerz2.isOn == true && ceramika3.isOn == true && ceramika4.isOn == true && ceramika8.isOn == true && ceramika9.isOn == true && talerz1.isOn == false && ceramika5.isOn == false && ceramika6.isOn == false && ceramika7.isOn == false && ceramika10.isOn == false)
             {
                 ilosc_punktow = ilosc_punktow + 2;
@@ -1750,8 +1751,16 @@ public class Przycisk_zachownaie : MonoBehaviour
 
     public void szklo_wyswietl_proste()
     {
-        obiekt_wyswietl(wino_biale, szklo1.text);
-        obiekt_wyswietl(wino_czerwone, szklo2.text);
+        if (scena11_srodek_proste.activeSelf == true)
+        {
+            obiekt_wyswietl_proste(wino_biale, szklo1.text);
+            obiekt_wyswietl_proste(wino_czerwone, szklo2.text);
+        }
+        else if (scena11_srodek_rozszerzone.activeSelf == false)
+        {
+            //rozszerzone
+        }
+        
         /*       if (licznik_szklo >= 1)
                {
                    int x = Random.Range(0, 15);
@@ -1768,7 +1777,7 @@ public class Przycisk_zachownaie : MonoBehaviour
     }
     private GameObject[] tablica = new GameObject[100];
     int licznik_szklo = 0;
-    public void obiekt_wyswietl(GameObject wyswietl, string numer)
+    public void obiekt_wyswietl_proste(GameObject wyswietl, string numer)
     {
         if (numer == "1")
         {
@@ -1806,15 +1815,13 @@ public class Przycisk_zachownaie : MonoBehaviour
     
     public void szkolo_proste_check()
     {
-        if (nazwa_uroczystosci == "Walentynki")
+        if (nazwa_menu == "Romantyczna kolacja")
         {
-            if (szklo1.text == "4" || szklo2.text == "4" || szklo3.text == "4")
+            if (szklo1.text == "5" || szklo2.text == "5" || szklo3.text == "5")
             {
-                Debug.Log("JESTEM");
-                if (szklo4.text == "5")
+                if (szklo4.text == "4")
                 {
-                    Debug.Log("JESTEM");
-                    if (szklo5.interactable == false && szklo6.interactable == false && szklo7.interactable == false && szklo8.interactable == false && szklo9.interactable == false)
+                    if (szklo6.interactable == false && szklo5.interactable == false && szklo7.interactable == false && szklo8.interactable == false && szklo8.interactable == false)
                     {
                         ilosc_punktow = ilosc_punktow + 2;
                         punkty.GetComponent<UnityEngine.UI.Text>().text = ilosc_punktow.ToString();
@@ -1828,6 +1835,7 @@ public class Przycisk_zachownaie : MonoBehaviour
                     {
                         powiadomienie_blad();
                     }
+
                 }
                 else
                 {
@@ -1838,6 +1846,38 @@ public class Przycisk_zachownaie : MonoBehaviour
             {
                 powiadomienie_blad();
             }
+        }
+        else if (nazwa_menu == "Menu codzienne")
+        {
+            if (szklo6.text == "4")
+            {
+                if (szklo1.interactable == false && szklo2.interactable == false && szklo3.interactable == false && szklo4.interactable == false && szklo5.interactable == false && szklo7.interactable == false && szklo8.interactable == false && szklo9.interactable == false)
+                {
+                    ilosc_punktow = ilosc_punktow + 2;
+                    punkty.GetComponent<UnityEngine.UI.Text>().text = ilosc_punktow.ToString();
+                    Debug.Log("JESTEM");
+                    licznik_scen++;
+                    licznik_szklo = 0;
+                    scena11.SetActive(false);
+                    scena12.SetActive(true);
+                }
+                else
+                {
+                    powiadomienie_blad();
+                }
+            }
+            else
+            {
+                powiadomienie_blad();
+            }
+        }
+        else if (nazwa_menu == "Obiad wystawny")
+        {
+
+        }
+        else if (nazwa_menu == "Oferta rozszerzona")
+        {
+
         }
     }
 
