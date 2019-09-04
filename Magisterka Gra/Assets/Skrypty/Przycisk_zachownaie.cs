@@ -1615,16 +1615,52 @@ public class Przycisk_zachownaie : MonoBehaviour
     public Toggle ceramika8;
     public Toggle ceramika9;
     public Toggle ceramika10;
-    public Toggle ceramika11;
+//    public Toggle ceramika11;
     public GameObject scena11_srodek_proste;
     public GameObject scena11_srodek_rozszerzone;
     bool nastepna_scena_ceramika;
     public void ceramika_sprawdzian()
     {
         nastepna_scena_ceramika = false;
-        if (nazwa_uroczystosci == "Walentynki")
+        if (nazwa_menu == "Romantyczna kolacja")
         {
-            if (talerz1.isOn == true && ceramika3.isOn == true && ceramika4.isOn == true)
+            if (talerz1.isOn == true && talerz2.isOn == true && ceramika3.isOn == true && ceramika7.isOn == true && ceramika4.isOn == false && ceramika5.isOn == false && ceramika6.isOn == false && ceramika8.isOn == false && ceramika9.isOn == false && ceramika10.isOn == false)
+            {
+                ilosc_punktow = ilosc_punktow + 2;
+                nastepna_scena_ceramika = true;
+            }
+            else
+            {
+                powiadomienie_blad();
+            }
+        }
+        else if (nazwa_menu == "Menu codzienne")
+        {
+            if (talerz1.isOn == true && talerz2.isOn == true && ceramika3.isOn == true && ceramika8.isOn == true && ceramika9.isOn == true && ceramika4.isOn == false && ceramika5.isOn == false && ceramika6.isOn == false && ceramika7.isOn == false && ceramika10.isOn == false)
+            {
+                ilosc_punktow = ilosc_punktow + 2;
+                nastepna_scena_ceramika = true;
+            }
+            else
+            {
+                powiadomienie_blad();
+            }
+        }
+        else if (nazwa_menu == "Obiad wystawny")
+        {
+            if (talerz1.isOn == true && talerz2.isOn == true && ceramika3.isOn == true && ceramika5.isOn == true && ceramika7.isOn == true && ceramika4.isOn == false && ceramika6.isOn == false && ceramika8.isOn == false && ceramika9.isOn == false && ceramika10.isOn == false)
+            {
+                ilosc_punktow = ilosc_punktow + 2;
+                nastepna_scena_ceramika = true;
+            }
+            else
+            {
+                powiadomienie_blad();
+            }
+        }
+        else if (nazwa_menu == "Oferta rozszerzona")
+        {
+            if (talerz2.isOn == true && ceramika3.isOn == true && ceramika4.isOn == true && ceramika8.isOn == true && ceramika9.isOn == true && talerz1.isOn == false && ceramika5.isOn == false && ceramika6.isOn == false && ceramika7.isOn == false && ceramika10.isOn == false)
             {
                 ilosc_punktow = ilosc_punktow + 2;
                 nastepna_scena_ceramika = true;
