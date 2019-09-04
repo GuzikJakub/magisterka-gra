@@ -1790,32 +1790,32 @@ public class Przycisk_zachownaie : MonoBehaviour
         if (numer == "1")
         {
             wyswietl.transform.position = new Vector3(426.0f, 214.7f, 0.0f);
-            wyswietl.SetActive(true);
+        //    wyswietl.SetActive(true);
         }
         if (numer == "2")
         {
             wyswietl.transform.position = new Vector3(776f, 214.7f, 0.0f);
-            wyswietl.SetActive(true);
+        //    wyswietl.SetActive(true);
         }
         if (numer == "3")
         {
             wyswietl.transform.position = new Vector3(834f, 214.7f, 0.0f);
-            wyswietl.SetActive(true);
+        //    wyswietl.SetActive(true);
         }
         if (numer == "4")
         {
-            wyswietl.transform.position = new Vector3(767f, 110.2f, 0.0f);
-            wyswietl.SetActive(true);
+            wyswietl.transform.position = new Vector3(327.47f, 108.47f, 0.0f);
+         //   wyswietl.SetActive(true);
         }
         if (numer == "5")
         {
-            wyswietl.transform.position = new Vector3(827.8f, 139.2f, 0.0f);
-            wyswietl.SetActive(true);
+            wyswietl.transform.position = new Vector3(383.47f, 79.47f, 0.0f);
+        //    wyswietl.SetActive(true);
         }
         if (numer == "6")
         {
             wyswietl.transform.position = new Vector3(613f, 89.7f, 0.0f);
-            wyswietl.SetActive(true);
+          //  wyswietl.SetActive(true);
         }
         tablica[licznik_szklo] = wyswietl;
         licznik_szklo++;
