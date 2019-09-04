@@ -1699,7 +1699,7 @@ public class Przycisk_zachownaie : MonoBehaviour
     public InputField szklo6;
     public InputField szklo7;
     public InputField szklo8;
-    public InputField szklo9;
+//    public InputField szklo9;
 
     public Toggle szklo11;
     public Toggle szklo22;
@@ -1849,9 +1849,9 @@ public class Przycisk_zachownaie : MonoBehaviour
         }
         else if (nazwa_menu == "Menu codzienne")
         {
-            if (szklo6.text == "4")
+            if (szklo4.text == "4" && szklo6.text == "5")
             {
-                if (szklo1.interactable == false && szklo2.interactable == false && szklo3.interactable == false && szklo4.interactable == false && szklo5.interactable == false && szklo7.interactable == false && szklo8.interactable == false && szklo9.interactable == false)
+                if (szklo1.interactable == false && szklo2.interactable == false && szklo3.interactable == false && szklo5.interactable == false && szklo7.interactable == false && szklo8.interactable == false)
                 {
                     ilosc_punktow = ilosc_punktow + 2;
                     punkty.GetComponent<UnityEngine.UI.Text>().text = ilosc_punktow.ToString();
@@ -1873,11 +1873,72 @@ public class Przycisk_zachownaie : MonoBehaviour
         }
         else if (nazwa_menu == "Obiad wystawny")
         {
-
+            if (szklo1.text == "6" || szklo2.text == "6" || szklo3.text == "6")
+            {
+                if (szklo4.text == "8" && szklo7.text == "7")
+                {
+                    if (szklo5.interactable == false && szklo6.interactable == false && szklo8.interactable == false)
+                    {
+                        ilosc_punktow = ilosc_punktow + 2;
+                        punkty.GetComponent<UnityEngine.UI.Text>().text = ilosc_punktow.ToString();
+                        Debug.Log("JESTEM");
+                        licznik_scen++;
+                        licznik_szklo = 0;
+                        scena11.SetActive(false);
+                        scena12.SetActive(true);
+                    }
+                    else
+                    {
+                        powiadomienie_blad();
+                    }
+                }
+                else
+                {
+                    powiadomienie_blad();
+                }
+            }
+            else
+            {
+                powiadomienie_blad();
+            }
         }
         else if (nazwa_menu == "Oferta rozszerzona")
         {
-
+            if (szklo1.text == "6" || szklo2.text == "6" || szklo3.text == "6")
+            {
+                if (szklo4.text == "8" || szklo6.text == "8")
+                {
+                    if (szklo7.text == "7")
+                    {
+                        if (szklo5.interactable == false && szklo8.interactable == false)
+                        {
+                            ilosc_punktow = ilosc_punktow + 2;
+                            punkty.GetComponent<UnityEngine.UI.Text>().text = ilosc_punktow.ToString();
+                            Debug.Log("JESTEM");
+                            licznik_scen++;
+                            licznik_szklo = 0;
+                            scena11.SetActive(false);
+                            scena12.SetActive(true);
+                        }
+                        else
+                        {
+                            powiadomienie_blad();
+                        }
+                    }
+                    else
+                    {
+                        powiadomienie_blad();
+                    }
+                }
+                else
+                {
+                    powiadomienie_blad();
+                }
+            }
+            else
+            {
+                powiadomienie_blad();
+            }
         }
     }
 
