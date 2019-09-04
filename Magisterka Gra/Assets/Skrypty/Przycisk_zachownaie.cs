@@ -1806,12 +1806,12 @@ public class Przycisk_zachownaie : MonoBehaviour
         }
         if (numer == "4")
         {
-            wyswietl.transform.position = new Vector3(327.47f, 108.47f, 0.0f);
+            wyswietl.transform.position = new Vector3(740.47f, 340.48f, 0.0f);
          //   wyswietl.SetActive(true);
         }
         if (numer == "5")
         {
-            wyswietl.transform.position = new Vector3(383.47f, 79.47f, 0.0f);
+            wyswietl.transform.position = new Vector3(781.47f, 325.48f, 0.0f);
         //    wyswietl.SetActive(true);
         }
         if (numer == "6")
