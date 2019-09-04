@@ -1381,19 +1381,19 @@ public class Przycisk_zachownaie : MonoBehaviour
         menu_zatwierdz.SetActive(true);
         if (tekst == "Romantyczna kolacja")
         {
-            menu_teskst.GetComponent<UnityEngine.UI.Text>().text = "<b><size=17>MENU: \n ROMANTYCZKA KOLACJA </size>\n \n PRZYSTAWKA \n Przegrzebki</b> \n <i><size=12>- z musem z białych warzyw i jabłka \n - z puree z zielonego gorszku \n - z masłem szałwiowym</size></i> \n \n <b>DANIE GŁÓWNE \n Polędwica z tuńczyka </b>\n <i><size=12>- z sosem z syropu klonowego i sosu sojowego \n - w sezamie na orientalnej sałatwce z mango i kolendra </size></i>\n \n <b>DESER \n Suflet </b>\n <i><size=12>- waniliowy z pomarańczą \n - czekoladowo - kokosowy \n - z białą czekaldą i malinami</size></i> \n \n <b>NAPOJE \n Wino czerwone \n \n Wino białe</b>";
+            menu_teskst.GetComponent<UnityEngine.UI.Text>().text = "<b><size=17>MENU: \n ROMANTYCZKA KOLACJA </size>\n \n PRZYSTAWKA \n Przegrzebki</b> \n <i><size=12>- z musem z białych warzyw i jabłka \n - z puree z zielonego gorszku \n - z masłem szałwiowym</size></i> \n \n <b>DANIE GŁÓWNE \n Polędwica z tuńczyka </b>\n <i><size=12>- z sosem z syropu klonowego i sosu sojowego \n - w sezamie na orientalnej sałatwce z mango i kolendra </size></i>\n \n <b>DESER \n Suflet </b>\n <i><size=12>- waniliowy z pomarańczą \n - czekoladowo - kokosowy \n - z białą czekaldą i malinami</size></i> \n \n <b>NAPOJE \n Wino czerwone \n Wino białe</b>";
         }
         else if (tekst == "Menu codzienne")
         {
-            menu_teskst.GetComponent<UnityEngine.UI.Text>().text = "<b><size=17>MENU: \n MENU CODZIENNE</size> \n \n ZUPA \n Serowa</b> \n <i><size=12>ciepłe tosty, parmezan</size></i> \n \n <b>Rosół</b> \n <i><size=12> - z makaronem \n - ręcznie lepionymi kołdunami </size></i> \n \n <b>DANIE GŁÓWNE \n Filet z indyka</b>\n <i><size=12>ser mozarella, papryka, grzanki, talarki ziemniaczane</size></i>\n \n <b>Tradycyjny kotlet schabowy</b> \n <i><size=12>kapusta zasmażana, ziemniaki</size></i> \n \n <b>DESER \n Sernik </b>\n <i><size=12>- z wiśniami \n - z lodami waniliowymi \n </size></i> \n <b>NAPOJE \n Sok </b> \n <i><size=12> - pomaranczowy \n - jablkowy </i></size> \n \n <b>Herbata</b>";
+            menu_teskst.GetComponent<UnityEngine.UI.Text>().text = "<b><size=17>MENU: \n MENU CODZIENNE</size> \n \n ZUPA \n Serowa</b> \n <i><size=12>ciepłe tosty, parmezan</size></i> \n \n <b>Rosół</b> \n <i><size=12> - z makaronem \n - ręcznie lepionymi kołdunami </size></i> \n \n <b>DANIE GŁÓWNE \n Tradycyjny kotlet schabowy</b> \n <i><size=12>kapusta zasmażana, ziemniaki</size></i> \n \n <b>DESER \n Sernik </b>\n <i><size=12>- z wiśniami \n - z lodami waniliowymi \n </size></i> \n <b>NAPOJE \n Sok </b> \n <i><size=12> - pomaranczowy \n - jablkowy </size></i> \n \n <b>Herbata</b>";
         }
         else if (tekst == "Obiad wystawny")
         {
-            menu_teskst.GetComponent<UnityEngine.UI.Text>().text = "obiad wystawny \n heuheuheue";
+            menu_teskst.GetComponent<UnityEngine.UI.Text>().text = "<b><size=17>MENU: \n OBIAD WYSTAWNY</size> \n \n ZUPA </b> \n <b>Rosół</b> \n <i><size=12> - z makaronem \n - ręcznie lepionymi kołdunami </size></i> \n \n <b>DANIE GŁÓWNE \n Polędwica z kurczaka </b>\n <i><size=12>- z sosem botwinkowym \n - w kremowym sosie ze szparagami \n - w sosie z whiksy </size></i>\n \n <b>DESER \n Suflet </b>\n <i><size=12>- waniliowy z pomarańczą \n - czekoladowo - kokosowy \n - z białą czekaldą i malinami</size></i> \n \n <b>NAPOJE \n Wino czerwone \n Wino białe \n Whisky </b>";
         }
         else if (tekst == "Oferta rozszerzona")
         {
-            menu_teskst.GetComponent<UnityEngine.UI.Text>().text = "rozszerzone dla burzujow \n heuheuheue";
+            menu_teskst.GetComponent<UnityEngine.UI.Text>().text = "<b><size=17>MENU: \n OFERTA ROZSZERZONA \n \n </size></b> \n \n Menu zawiera: \n - zupe \n - dane glowne \n - przystawke \n - kolacje \n - wybor alkoholi \n - wybor napojow \n \n <i>Do wybrania menu prosze o kontakt z klientem ws. calosciowego ustalenia wszystkich dan </i>";
         }
     }
 
