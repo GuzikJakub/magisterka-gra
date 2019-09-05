@@ -1805,17 +1805,17 @@ public class Przycisk_zachownaie : MonoBehaviour
     //    Debug.Log(numer);
         if (numer == "1")
         {
-            wyswietl.transform.position = new Vector3(426.0f, 214.7f, 0.0f);
+            wyswietl.transform.position = new Vector3(484.47f, 211.47f, 0.0f);
         //    wyswietl.SetActive(true);
         }
         if (numer == "2")
         {
-            wyswietl.transform.position = new Vector3(776f, 214.7f, 0.0f);
+            wyswietl.transform.position = new Vector3(738.5f, 206.47f, 0.0f);
         //    wyswietl.SetActive(true);
         }
         if (numer == "3")
         {
-            wyswietl.transform.position = new Vector3(834f, 214.7f, 0.0f);
+            wyswietl.transform.position = new Vector3(780.47f, 209.0f, 0.0f);
         //    wyswietl.SetActive(true);
         }
         if (numer == "4")
