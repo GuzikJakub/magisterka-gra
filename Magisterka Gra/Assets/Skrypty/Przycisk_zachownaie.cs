@@ -1830,7 +1830,7 @@ public class Przycisk_zachownaie : MonoBehaviour
         }
         if (numer == "6")
         {
-            wyswietl.transform.position = new Vector3(613f, 89.7f, 0.0f);
+            wyswietl.transform.position = new Vector3(618.47f, 329.98f, 0.0f);
           //  wyswietl.SetActive(true);
         }
     //    tablica[licznik_szklo] = wyswietl;
