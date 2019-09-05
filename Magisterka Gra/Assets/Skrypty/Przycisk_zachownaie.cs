@@ -1382,7 +1382,7 @@ public class Przycisk_zachownaie : MonoBehaviour
         menu_zatwierdz.SetActive(true);
         if (tekst == "Romantyczna kolacja")
         {
-            menu_teskst.GetComponent<UnityEngine.UI.Text>().text = "<b><size=17>MENU: \n ROMANTYCZKA KOLACJA </size>\n \n PRZYSTAWKA \n Przegrzebki</b> \n <i><size=12>- z musem z białych warzyw i jabłka \n - z puree z zielonego gorszku \n - z masłem szałwiowym</size></i> \n \n <b>DANIE GŁÓWNE \n Polędwica z tuńczyka </b>\n <i><size=12>- z sosem z syropu klonowego i sosu sojowego \n - w sezamie na orientalnej sałatwce z mango i kolendra </size></i>\n \n <b>DESER \n Suflet </b>\n <i><size=12>- waniliowy z pomarańczą \n - czekoladowo - kokosowy \n - z białą czekaldą i malinami</size></i> \n \n <b>NAPOJE \n Wino czerwone \n Wino białe</b>";
+            menu_teskst.GetComponent<UnityEngine.UI.Text>().text = "<b><size=17>MENU: \n ROMANTYCZKA KOLACJA </size>\n \n ZUPA \n Rosol</b> \n <i><size=12>- z musem z białych warzyw i jabłka \n - z puree z zielonego gorszku \n - z masłem szałwiowym</size></i> \n \n <b>DANIE GŁÓWNE \n Polędwica z tuńczyka </b>\n <i><size=12>- z sosem z syropu klonowego i sosu sojowego \n - w sezamie na orientalnej sałatwce z mango i kolendra </size></i>\n \n <b>DESER \n Suflet </b>\n <i><size=12>- waniliowy z pomarańczą \n - czekoladowo - kokosowy \n - z białą czekaldą i malinami</size></i> \n \n <b>NAPOJE \n Wino czerwone \n Wino białe</b>";
         }
         else if (tekst == "Menu codzienne")
         {
