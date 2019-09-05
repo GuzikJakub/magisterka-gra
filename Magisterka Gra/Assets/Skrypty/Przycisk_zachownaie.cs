@@ -2028,15 +2028,6 @@ public class Przycisk_zachownaie : MonoBehaviour
     public InputField sztucce6;
     public InputField sztucce7;
     public InputField sztucce8;
-    public InputField sztucce9;
-    public InputField sztucce10;
-    public InputField sztucce11;
-    public InputField sztucce12;
-    public InputField sztucce13;
-    public InputField sztucce14;
-    public InputField sztucce15;
-    public InputField sztucce16;
-    public InputField sztucce17;
 
     public GameObject lyzka_zupa;
     public GameObject noz;
@@ -2049,7 +2040,7 @@ public class Przycisk_zachownaie : MonoBehaviour
 
     public void sztucce_proste_chec()
     {
-        if (nazwa_uroczystosci == "Walentynki")
+    /*    if (nazwa_uroczystosci == "Walentynki")
         {
             if (sztucce1.text == "3" && sztucce2.text == "2" && sztucce3.text == "1" && sztucce5.text == "6")
             {
@@ -2059,6 +2050,6 @@ public class Przycisk_zachownaie : MonoBehaviour
                     punkty.GetComponent<UnityEngine.UI.Text>().text = ilosc_punktow.ToString();
                 }
             }
-        }
+        }*/
     }
 }
