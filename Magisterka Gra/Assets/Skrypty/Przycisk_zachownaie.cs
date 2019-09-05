@@ -1735,6 +1735,12 @@ public class Przycisk_zachownaie : MonoBehaviour
 
     public GameObject wino_biale;
     public GameObject wino_czerwone;
+    public GameObject wino_musujace;
+    public GameObject woda;
+    public GameObject koniak;
+    public GameObject sok;
+    public GameObject drinki;
+    public GameObject piwo;
 
     public void block_object(GameObject obiektt)
     {
@@ -1753,8 +1759,16 @@ public class Przycisk_zachownaie : MonoBehaviour
     {
         if (scena11_srodek_proste.activeSelf == true)
         {
+            Debug.Log("jestem");
+            Debug.Log(szklo3.text);
             obiekt_wyswietl_proste(wino_biale, szklo1.text);
             obiekt_wyswietl_proste(wino_czerwone, szklo2.text);
+            obiekt_wyswietl_proste(wino_musujace, szklo3.text);
+            obiekt_wyswietl_proste(woda, szklo4.text);
+            obiekt_wyswietl_proste(koniak, szklo5.text);
+            obiekt_wyswietl_proste(sok, szklo6.text);
+            obiekt_wyswietl_proste(drinki, szklo7.text);
+            obiekt_wyswietl_proste(piwo, szklo8.text);
         }
         else if (scena11_srodek_rozszerzone.activeSelf == false)
         {
@@ -1775,7 +1789,7 @@ public class Przycisk_zachownaie : MonoBehaviour
                    }
                }*/
     }
-    private GameObject[] tablica = new GameObject[100];
+//    private GameObject[] tablica = new GameObject[100];
     int licznik_szklo = 0;
 
 //    public GameObject proste_1;
@@ -1786,6 +1800,44 @@ public class Przycisk_zachownaie : MonoBehaviour
 //    public GameObject proste_6;
 
     public void obiekt_wyswietl_proste(GameObject wyswietl, string numer)
+    {
+    //    Debug.Log(wyswietl);
+    //    Debug.Log(numer);
+        if (numer == "1")
+        {
+            wyswietl.transform.position = new Vector3(426.0f, 214.7f, 0.0f);
+        //    wyswietl.SetActive(true);
+        }
+        if (numer == "2")
+        {
+            wyswietl.transform.position = new Vector3(776f, 214.7f, 0.0f);
+        //    wyswietl.SetActive(true);
+        }
+        if (numer == "3")
+        {
+            wyswietl.transform.position = new Vector3(834f, 214.7f, 0.0f);
+        //    wyswietl.SetActive(true);
+        }
+        if (numer == "4")
+        {
+            wyswietl.transform.position = new Vector3(740.47f, 340.48f, 0.0f);
+         //   wyswietl.SetActive(true);
+        }
+        if (numer == "5")
+        {
+            wyswietl.transform.position = new Vector3(781.47f, 325.48f, 0.0f);
+        //    wyswietl.SetActive(true);
+        }
+        if (numer == "6")
+        {
+            wyswietl.transform.position = new Vector3(613f, 89.7f, 0.0f);
+          //  wyswietl.SetActive(true);
+        }
+    //    tablica[licznik_szklo] = wyswietl;
+    //    licznik_szklo++;
+    }
+    
+    public void obiekt_wyswietl_rozszerzone(GameObject wyswietl, string numer)
     {
         Debug.Log(wyswietl);
         Debug.Log(numer);
@@ -1819,10 +1871,26 @@ public class Przycisk_zachownaie : MonoBehaviour
             wyswietl.transform.position = new Vector3(613f, 89.7f, 0.0f);
           //  wyswietl.SetActive(true);
         }
-        tablica[licznik_szklo] = wyswietl;
-        licznik_szklo++;
+        if (numer == "7")
+        {
+            wyswietl.transform.position = new Vector3(613f, 89.7f, 0.0f);
+          //  wyswietl.SetActive(true);
+        }
+        if (numer == "8")
+        {
+            wyswietl.transform.position = new Vector3(613f, 89.7f, 0.0f);
+          //  wyswietl.SetActive(true);
+        }
+        if (numer == "9")
+        {
+            wyswietl.transform.position = new Vector3(613f, 89.7f, 0.0f);
+          //  wyswietl.SetActive(true);
+        }
+    //    tablica[licznik_szklo] = wyswietl;
+    //    licznik_szklo++;
     }
-    
+
+
     public void szkolo_proste_check()
     {
         if (nazwa_menu == "Romantyczna kolacja")
