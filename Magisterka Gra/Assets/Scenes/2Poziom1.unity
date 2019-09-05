@@ -748,11 +748,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 20240065}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -122, y: -135, z: 0}
+  m_LocalPosition: {x: -238, y: -154, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 1}
   m_Children: []
   m_Father: {fileID: 313654334}
-  m_RootOrder: 12
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &20240067
 SpriteRenderer:
@@ -1169,7 +1169,7 @@ GameObject:
   - component: {fileID: 48580648}
   - component: {fileID: 48580647}
   m_Layer: 5
-  m_Name: InputField
+  m_Name: zupa_input
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1253,7 +1253,18 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1430363618}
+        m_MethodName: sztucce_wyswietl_proste
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.InputField+OnChangeEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_CaretColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
@@ -2546,7 +2557,7 @@ GameObject:
   - component: {fileID: 130750296}
   - component: {fileID: 130750295}
   m_Layer: 5
-  m_Name: InputField
+  m_Name: widelec_ryba_input
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2630,7 +2641,18 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1430363618}
+        m_MethodName: sztucce_wyswietl_proste
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.InputField+OnChangeEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_CaretColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
@@ -4814,7 +4836,7 @@ GameObject:
   - component: {fileID: 240560585}
   - component: {fileID: 240560584}
   m_Layer: 5
-  m_Name: InputField
+  m_Name: desery_input
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4898,7 +4920,18 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1430363618}
+        m_MethodName: sztucce_wyswietl_proste
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.InputField+OnChangeEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_CaretColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
@@ -6388,9 +6421,6 @@ RectTransform:
   - {fileID: 2035483715}
   - {fileID: 1217768658}
   - {fileID: 136890113}
-  - {fileID: 2072527584}
-  - {fileID: 1593272458}
-  - {fileID: 1589957053}
   - {fileID: 1550894766}
   - {fileID: 1191468480}
   - {fileID: 1628697445}
@@ -6401,6 +6431,9 @@ RectTransform:
   - {fileID: 1361658271}
   - {fileID: 426658054}
   - {fileID: 408060850}
+  - {fileID: 2072527584}
+  - {fileID: 1593272458}
+  - {fileID: 1589957053}
   m_Father: {fileID: 508999917}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7960,11 +7993,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 408060849}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -229, y: -12.500014, z: 0}
+  m_LocalPosition: {x: -229, y: -148, z: 0}
   m_LocalScale: {x: 7, y: 7, z: 1}
   m_Children: []
   m_Father: {fileID: 313654334}
-  m_RootOrder: 15
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &408060851
 SpriteRenderer:
@@ -8181,6 +8214,17 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 1745980078}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.InputField, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1430363618}
+        m_MethodName: block_object
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1564673460}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -8529,11 +8573,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 426658053}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -51, y: -131, z: 0}
+  m_LocalPosition: {x: -238, y: -131, z: 0}
   m_LocalScale: {x: 8, y: 8, z: 1}
   m_Children: []
   m_Father: {fileID: 313654334}
-  m_RootOrder: 14
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &426658055
 SpriteRenderer:
@@ -9010,11 +9054,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 444883468}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -368, y: -129, z: 0}
+  m_LocalPosition: {x: -221, y: -138.2, z: 0}
   m_LocalScale: {x: 9, y: 9, z: 1}
   m_Children: []
   m_Father: {fileID: 313654334}
-  m_RootOrder: 10
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &444883470
 SpriteRenderer:
@@ -10113,11 +10157,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 520025406}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -340, y: -123.8, z: 0}
+  m_LocalPosition: {x: -230, y: -129, z: 0}
   m_LocalScale: {x: 10, y: 7, z: 1}
   m_Children: []
   m_Father: {fileID: 313654334}
-  m_RootOrder: 11
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &520025408
 SpriteRenderer:
@@ -11597,7 +11641,7 @@ GameObject:
   - component: {fileID: 605151818}
   - component: {fileID: 605151817}
   m_Layer: 5
-  m_Name: InputField
+  m_Name: nozmaslo_input
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11681,7 +11725,18 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1430363618}
+        m_MethodName: sztucce_wyswietl_proste
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.InputField+OnChangeEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_CaretColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
@@ -16513,7 +16568,7 @@ GameObject:
   - component: {fileID: 911795193}
   - component: {fileID: 911795192}
   m_Layer: 5
-  m_Name: InputField
+  m_Name: widelec_przystawka_input
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16597,7 +16652,18 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1430363618}
+        m_MethodName: sztucce_wyswietl_proste
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.InputField+OnChangeEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_CaretColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
@@ -17486,6 +17552,17 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 1065949321}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.InputField, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1430363618}
+        m_MethodName: block_object
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 444883468}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -19134,7 +19211,7 @@ GameObject:
   - component: {fileID: 1065949322}
   - component: {fileID: 1065949321}
   m_Layer: 5
-  m_Name: InputField
+  m_Name: nozprzy_input
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19218,7 +19295,18 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1430363618}
+        m_MethodName: sztucce_wyswietl_proste
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.InputField+OnChangeEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_CaretColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
@@ -21492,7 +21580,7 @@ Transform:
   m_LocalScale: {x: 5.25, y: 5.25, z: 0.21}
   m_Children: []
   m_Father: {fileID: 313654334}
-  m_RootOrder: 7
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1191468481
 SpriteRenderer:
@@ -21946,6 +22034,17 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 48580647}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.InputField, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1430363618}
+        m_MethodName: block_object
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1628697444}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -22729,6 +22828,17 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 240560584}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.InputField, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1430363618}
+        m_MethodName: block_object
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 408060849}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -25186,6 +25296,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1430363618}
+        m_MethodName: block_object
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1361658270}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_IsOn: 0
@@ -25527,11 +25648,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1361658270}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -85, y: -138, z: 0}
+  m_LocalPosition: {x: -225, y: -138, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 1}
   m_Children: []
   m_Father: {fileID: 313654334}
-  m_RootOrder: 13
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1361658272
 SpriteRenderer:
@@ -26744,17 +26865,22 @@ MonoBehaviour:
   sok: {fileID: 1191468479}
   drinki: {fileID: 1589957052}
   piwo: {fileID: 1550894765}
-  sztucce1: {fileID: 0}
-  sztucce2: {fileID: 0}
-  sztucce3: {fileID: 0}
-  sztucce4: {fileID: 0}
-  sztucce5: {fileID: 0}
-  sztucce6: {fileID: 0}
-  sztucce7: {fileID: 0}
-  sztucce8: {fileID: 0}
-  lyzka_zupa: {fileID: 0}
-  noz: {fileID: 0}
-  widelec: {fileID: 0}
+  sztucce1: {fileID: 48580647}
+  sztucce2: {fileID: 1745980078}
+  sztucce3: {fileID: 1796780763}
+  sztucce4: {fileID: 240560584}
+  sztucce5: {fileID: 1065949321}
+  sztucce6: {fileID: 605151817}
+  sztucce7: {fileID: 911795192}
+  sztucce8: {fileID: 130750295}
+  zupa_lyzka: {fileID: 1628697444}
+  noz_podsawowy: {fileID: 1564673460}
+  widelec_glowne: {fileID: 426658053}
+  desery_oba: {fileID: 408060849}
+  noz_przystawki: {fileID: 444883468}
+  noz_maslo: {fileID: 520025406}
+  widelec_przystawka: {fileID: 20240065}
+  widelec_ryba: {fileID: 1361658270}
 --- !u!114 &1430363619
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28772,7 +28898,7 @@ Transform:
   m_LocalScale: {x: 10, y: 10, z: 1}
   m_Children: []
   m_Father: {fileID: 313654334}
-  m_RootOrder: 6
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1550894767
 SpriteRenderer:
@@ -29064,7 +29190,7 @@ Transform:
   m_LocalScale: {x: 7.5, y: 7.5, z: 1}
   m_Children: []
   m_Father: {fileID: 313654334}
-  m_RootOrder: 9
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1564673462
 SpriteRenderer:
@@ -29606,6 +29732,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1430363618}
+        m_MethodName: block_object
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 520025406}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_IsOn: 0
@@ -29864,11 +30001,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1589957052}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -237.5, y: -146.9, z: 0}
+  m_LocalPosition: {x: -132, y: 27.999985, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 0.21}
   m_Children: []
   m_Father: {fileID: 313654334}
-  m_RootOrder: 5
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1589957054
 SpriteRenderer:
@@ -30048,11 +30185,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1593272457}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -237.5, y: -146.9, z: 0}
+  m_LocalPosition: {x: -104, y: -2.0000143, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 0.21}
   m_Children: []
   m_Father: {fileID: 313654334}
-  m_RootOrder: 4
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1593272459
 SpriteRenderer:
@@ -30753,7 +30890,7 @@ Transform:
   m_LocalScale: {x: 9, y: 9, z: 1}
   m_Children: []
   m_Father: {fileID: 313654334}
-  m_RootOrder: 8
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1628697446
 SpriteRenderer:
@@ -33288,7 +33425,7 @@ GameObject:
   - component: {fileID: 1745980079}
   - component: {fileID: 1745980078}
   m_Layer: 5
-  m_Name: InputField
+  m_Name: noz_input
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -33372,7 +33509,18 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1430363618}
+        m_MethodName: sztucce_wyswietl_proste
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.InputField+OnChangeEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_CaretColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
@@ -34168,7 +34316,7 @@ GameObject:
   - component: {fileID: 1796780764}
   - component: {fileID: 1796780763}
   m_Layer: 5
-  m_Name: InputField
+  m_Name: widelec_inut
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34252,7 +34400,18 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1430363618}
+        m_MethodName: sztucce_wyswietl_proste
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.InputField+OnChangeEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_CaretColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
@@ -36874,6 +37033,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1430363618}
+        m_MethodName: block_object
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 20240065}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_IsOn: 0
@@ -38695,6 +38865,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1430363618}
+        m_MethodName: block_object
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 426658053}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_IsOn: 0
@@ -40506,11 +40687,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2072527583}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -237.5, y: -146.9, z: 0}
+  m_LocalPosition: {x: -65, y: -13.000014, z: 0}
   m_LocalScale: {x: 5.25, y: 5.25, z: 0.21}
   m_Children: []
   m_Father: {fileID: 313654334}
-  m_RootOrder: 3
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2072527585
 SpriteRenderer:

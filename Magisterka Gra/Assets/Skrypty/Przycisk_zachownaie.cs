@@ -1742,6 +1742,24 @@ public class Przycisk_zachownaie : MonoBehaviour
     public GameObject drinki;
     public GameObject piwo;
 
+    public InputField sztucce1;
+    public InputField sztucce2;
+    public InputField sztucce3;
+    public InputField sztucce4;
+    public InputField sztucce5;
+    public InputField sztucce6;
+    public InputField sztucce7;
+    public InputField sztucce8;
+
+    public GameObject zupa_lyzka;
+    public GameObject noz_podsawowy;
+    public GameObject widelec_glowne;
+    public GameObject desery_oba;
+    public GameObject noz_przystawki;
+    public GameObject noz_maslo;
+    public GameObject widelec_przystawka;
+    public GameObject widelec_ryba;
+
     public void block_object(GameObject obiektt)
     {
         if (obiektt.activeSelf == true)
@@ -1772,7 +1790,14 @@ public class Przycisk_zachownaie : MonoBehaviour
         }
         else if (scena11_srodek_rozszerzone.activeSelf == false)
         {
-            //rozszerzone
+            obiekt_wyswietl_rozszerzone(wino_biale, szklo1.text);
+            obiekt_wyswietl_rozszerzone(wino_czerwone, szklo2.text);
+            obiekt_wyswietl_rozszerzone(wino_musujace, szklo3.text);
+            obiekt_wyswietl_rozszerzone(woda, szklo4.text);
+            obiekt_wyswietl_rozszerzone(koniak, szklo5.text);
+            obiekt_wyswietl_rozszerzone(sok, szklo6.text);
+            obiekt_wyswietl_rozszerzone(drinki, szklo7.text);
+            obiekt_wyswietl_rozszerzone(piwo, szklo8.text);
         }
         
         /*       if (licznik_szklo >= 1)
@@ -1789,8 +1814,34 @@ public class Przycisk_zachownaie : MonoBehaviour
                    }
                }*/
     }
-//    private GameObject[] tablica = new GameObject[100];
-    int licznik_szklo = 0;
+
+    public void sztucce_wyswietl_proste()
+    {
+        if (scena11_srodek_proste.activeSelf == true)
+        {
+            obiekt_wyswietl_proste(zupa_lyzka, sztucce1.text);
+            obiekt_wyswietl_proste(noz_podsawowy, sztucce2.text);
+            obiekt_wyswietl_proste(widelec_glowne, sztucce3.text);
+            obiekt_wyswietl_proste(desery_oba, sztucce4.text);
+            obiekt_wyswietl_proste(noz_przystawki, sztucce5.text);
+            obiekt_wyswietl_proste(noz_maslo, sztucce6.text);
+            obiekt_wyswietl_proste(widelec_przystawka, sztucce7.text);
+            obiekt_wyswietl_proste(widelec_ryba, sztucce8.text);
+        }
+        else if (scena11_srodek_rozszerzone.activeSelf == false)
+        {
+            obiekt_wyswietl_rozszerzone(zupa_lyzka, sztucce1.text);
+            obiekt_wyswietl_rozszerzone(noz_podsawowy, sztucce2.text);
+            obiekt_wyswietl_rozszerzone(widelec_glowne, sztucce3.text);
+            obiekt_wyswietl_rozszerzone(desery_oba, sztucce4.text);
+            obiekt_wyswietl_rozszerzone(noz_przystawki, sztucce5.text);
+            obiekt_wyswietl_rozszerzone(noz_maslo, sztucce6.text);
+            obiekt_wyswietl_rozszerzone(widelec_przystawka, sztucce7.text);
+            obiekt_wyswietl_rozszerzone(widelec_ryba, sztucce8.text);
+        }
+    }
+        //    private GameObject[] tablica = new GameObject[100];
+        int licznik_szklo = 0;
 
 //    public GameObject proste_1;
 //    public GameObject proste_2;
@@ -1866,19 +1917,19 @@ public class Przycisk_zachownaie : MonoBehaviour
             wyswietl.transform.position = new Vector3(796.47f, 211.48f, 0.0f);
         //    wyswietl.SetActive(true);
         }
-        if (numer == "6") //to
+        if (numer == "6")
         {
-            wyswietl.transform.position = new Vector3(613f, 89.7f, 0.0f);
+            wyswietl.transform.position = new Vector3(782.47f, 329.48f, 0.0f);
           //  wyswietl.SetActive(true);
         }
-        if (numer == "7") //to
+        if (numer == "7")
         {
-            wyswietl.transform.position = new Vector3(613f, 89.7f, 0.0f);
+            wyswietl.transform.position = new Vector3(743.47f, 340.48f, 0.0f);
           //  wyswietl.SetActive(true);
         }
-        if (numer == "8") //to
+        if (numer == "8")
         {
-            wyswietl.transform.position = new Vector3(613f, 89.7f, 0.0f);
+            wyswietl.transform.position = new Vector3(715.47f, 370.48f, 0.0f);
           //  wyswietl.SetActive(true);
         }
         if (numer == "9")
@@ -2019,19 +2070,6 @@ public class Przycisk_zachownaie : MonoBehaviour
             }
         }
     }
-
-    public InputField sztucce1;
-    public InputField sztucce2;
-    public InputField sztucce3;
-    public InputField sztucce4;
-    public InputField sztucce5;
-    public InputField sztucce6;
-    public InputField sztucce7;
-    public InputField sztucce8;
-
-    public GameObject lyzka_zupa;
-    public GameObject noz;
-    public GameObject widelec;
 
     public void sztucce_proste()
     {
