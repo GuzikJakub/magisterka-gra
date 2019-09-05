@@ -1843,47 +1843,47 @@ public class Przycisk_zachownaie : MonoBehaviour
         Debug.Log(numer);
         if (numer == "1")
         {
-            wyswietl.transform.position = new Vector3(426.0f, 214.7f, 0.0f);
+            wyswietl.transform.position = new Vector3(479.47f, 213.47f, 0.0f);
         //    wyswietl.SetActive(true);
         }
         if (numer == "2")
         {
-            wyswietl.transform.position = new Vector3(776f, 214.7f, 0.0f);
+            wyswietl.transform.position = new Vector3(507.47f, 218.67f, 0.0f);
         //    wyswietl.SetActive(true);
         }
         if (numer == "3")
         {
-            wyswietl.transform.position = new Vector3(834f, 214.7f, 0.0f);
+            wyswietl.transform.position = new Vector3(725.47f, 207.47f, 0.0f);
         //    wyswietl.SetActive(true);
         }
         if (numer == "4")
         {
-            wyswietl.transform.position = new Vector3(740.47f, 340.48f, 0.0f);
+            wyswietl.transform.position = new Vector3(762.47f, 204.48f, 0.0f);
          //   wyswietl.SetActive(true);
         }
         if (numer == "5")
         {
-            wyswietl.transform.position = new Vector3(781.47f, 325.48f, 0.0f);
+            wyswietl.transform.position = new Vector3(796.47f, 211.48f, 0.0f);
         //    wyswietl.SetActive(true);
         }
-        if (numer == "6")
+        if (numer == "6") //to
         {
             wyswietl.transform.position = new Vector3(613f, 89.7f, 0.0f);
           //  wyswietl.SetActive(true);
         }
-        if (numer == "7")
+        if (numer == "7") //to
         {
             wyswietl.transform.position = new Vector3(613f, 89.7f, 0.0f);
           //  wyswietl.SetActive(true);
         }
-        if (numer == "8")
+        if (numer == "8") //to
         {
             wyswietl.transform.position = new Vector3(613f, 89.7f, 0.0f);
           //  wyswietl.SetActive(true);
         }
         if (numer == "9")
         {
-            wyswietl.transform.position = new Vector3(613f, 89.7f, 0.0f);
+            wyswietl.transform.position = new Vector3(618.47f, 329.97f, 0.0f);
           //  wyswietl.SetActive(true);
         }
     //    tablica[licznik_szklo] = wyswietl;
