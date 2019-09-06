@@ -2080,7 +2080,10 @@ public class Przycisk_zachownaie : MonoBehaviour
         }
     }
 
-    public void sztucce_proste_chec() // 3 pkt
+    public GameObject scena_win;
+    public GameObject obiekty_all;
+
+    public void sztucce_proste_chec()
     {
         if (nazwa_menu == "Romantyczna kolacja")
         {
@@ -2089,8 +2092,17 @@ public class Przycisk_zachownaie : MonoBehaviour
                 ilosc_punktow = ilosc_punktow + 3;
                 punkty.GetComponent<UnityEngine.UI.Text>().text = ilosc_punktow.ToString();
                 Debug.Log("KONIEC GRY");
-                licznik_scen++;
+                scena12.SetActive(false);
+                scena_win.SetActive(true);
+                scena11_srodek_rozszerzone.SetActive(false);
+                scena11_srodek_proste.SetActive(false);
+                obiekty_all.SetActive(false);
+                widok_sali.GetComponent<SpriteRenderer>().sprite = widok_podloga;
                 licznik_szklo = 0;
+            }
+            else
+            {
+                powiadomienie_blad();
             }
         }
         else if (nazwa_menu == "Menu codzienne")
@@ -2100,8 +2112,17 @@ public class Przycisk_zachownaie : MonoBehaviour
                 ilosc_punktow = ilosc_punktow + 3;
                 punkty.GetComponent<UnityEngine.UI.Text>().text = ilosc_punktow.ToString();
                 Debug.Log("KONIEC GRY");
-                licznik_scen++;
+                scena12.SetActive(false);
+                scena_win.SetActive(true);
+                scena11_srodek_rozszerzone.SetActive(false);
+                scena11_srodek_proste.SetActive(false);
+                obiekty_all.SetActive(false);
+                widok_sali.GetComponent<SpriteRenderer>().sprite = widok_podloga;
                 licznik_szklo = 0;
+            }
+            else
+            {
+                powiadomienie_blad();
             }
         }
         else if (nazwa_menu == "Obiad wystawny" || nazwa_menu == "Oferta rozszerzona")
@@ -2111,8 +2132,17 @@ public class Przycisk_zachownaie : MonoBehaviour
                 ilosc_punktow = ilosc_punktow + 3;
                 punkty.GetComponent<UnityEngine.UI.Text>().text = ilosc_punktow.ToString();
                 Debug.Log("KONIEC GRY");
-                licznik_scen++;
+                scena12.SetActive(false);
+                scena_win.SetActive(true);
+                scena11_srodek_rozszerzone.SetActive(false);
+                scena11_srodek_proste.SetActive(false);
+                obiekty_all.SetActive(false);
+                widok_sali.GetComponent<SpriteRenderer>().sprite = widok_podloga;
                 licznik_szklo = 0;
+            }
+            else
+            {
+                powiadomienie_blad();
             }
         }
     }
