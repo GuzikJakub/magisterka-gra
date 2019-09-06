@@ -984,6 +984,8 @@ public class Przycisk_zachownaie : MonoBehaviour
         ksiazka_scena.SetActive(false);
     }
 
+    public GameObject scena5_input;
+
     public void powiadomienie_blad()
     {
         if (ilosc_punktow > 0)
@@ -995,6 +997,10 @@ public class Przycisk_zachownaie : MonoBehaviour
             pomoc.interactable = false;
         }
         blad.SetActive(true);
+        if (scena5.activeSelf == true)
+        {
+            scena5_input.SetActive(false);
+        }
         StartCoroutine(Blad_wait());
     }
 
@@ -1002,6 +1008,10 @@ public class Przycisk_zachownaie : MonoBehaviour
     {
         yield return new WaitForSeconds(3);
         blad.SetActive(false);
+        if (scena5.activeSelf == true)
+        {
+            scena5_input.SetActive(true);
+        }
     }
 
     public void zapisz_scena_stol()
@@ -2086,6 +2096,7 @@ public class Przycisk_zachownaie : MonoBehaviour
 
     public GameObject scena_win;
     public GameObject obiekty_all;
+    public GameObject wyjdz_cofnij_button;
 
     public void sztucce_proste_chec()
     {
@@ -2100,6 +2111,7 @@ public class Przycisk_zachownaie : MonoBehaviour
                 scena_win.SetActive(true);
                 scena11_srodek_rozszerzone.SetActive(false);
                 scena11_srodek_proste.SetActive(false);
+                wyjdz_cofnij_button.SetActive(false);
                 obiekty_all.SetActive(false);
                 widok_sali.GetComponent<SpriteRenderer>().sprite = widok_podloga;
                 licznik_szklo = 0;
@@ -2120,6 +2132,7 @@ public class Przycisk_zachownaie : MonoBehaviour
                 scena_win.SetActive(true);
                 scena11_srodek_rozszerzone.SetActive(false);
                 scena11_srodek_proste.SetActive(false);
+                wyjdz_cofnij_button.SetActive(false);
                 obiekty_all.SetActive(false);
                 widok_sali.GetComponent<SpriteRenderer>().sprite = widok_podloga;
                 licznik_szklo = 0;
@@ -2140,6 +2153,7 @@ public class Przycisk_zachownaie : MonoBehaviour
                 scena_win.SetActive(true);
                 scena11_srodek_rozszerzone.SetActive(false);
                 scena11_srodek_proste.SetActive(false);
+                wyjdz_cofnij_button.SetActive(false);
                 obiekty_all.SetActive(false);
                 widok_sali.GetComponent<SpriteRenderer>().sprite = widok_podloga;
                 licznik_szklo = 0;
