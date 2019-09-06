@@ -857,14 +857,14 @@ public class Przycisk_zachownaie : MonoBehaviour
     }
 
     bool ilosc_stolow_dalej;
-
+    int wynik_tmp;
+    int wynik_tmp2;
     public void get_ilosc_stolow()
     {
         string ile_stolow;
         int ile_stolow_tmp;
         int ilosc_osob_tmp;
         ile_stolow = ilosc_stolow_get.text;
-        int wynik_tmp;
         ilosc_stolow_dalej = false;
 
         int.TryParse(ilosc_osob_l, out ilosc_osob_tmp);
@@ -873,7 +873,7 @@ public class Przycisk_zachownaie : MonoBehaviour
         //        wynik_tmp = ile_stolow_tmp * max_ilosc_stolow;
         //        int wynik_tmp2 = ile_stolow_tmp * (max_ilosc_stolow - 1);
         wynik_tmp = podstawowa_ilosc_osob * (ile_stolow_tmp - dodatkowa_ilosc_stolow) + dodatkowa_ilosc_osob;
-        int wynik_tmp2 = podstawowa_ilosc_osob * (ile_stolow_tmp - dodatkowa_ilosc_stolow - 1) + dodatkowa_ilosc_osob;
+        wynik_tmp2 = podstawowa_ilosc_osob * (ile_stolow_tmp - dodatkowa_ilosc_stolow - 1) + dodatkowa_ilosc_osob;
         Debug.Log(ilosc_osob_tmp);
         Debug.Log(wynik_tmp);
         Debug.Log(wynik_tmp2);
@@ -931,47 +931,51 @@ public class Przycisk_zachownaie : MonoBehaviour
         ksiazka_scena.SetActive(true);
         ilosc_punktow = ilosc_punktow - 1;
         punkty.GetComponent<UnityEngine.UI.Text>().text = ilosc_punktow.ToString();
-        if (nazwa_uroczystosci == "Walentynki")
+        if (licznik_scen == 3)
         {
-            if (licznik_scen == 3)
-            {
-                pomoc_text.GetComponent<UnityEngine.UI.Text>().text = "Wybierając uroczystosc " + nazwa_uroczystosci + " dla " + ilosc_osob_l + " osób powinienieś wybrać salę, która będzie odpowiednia dla uroczystości romantycznych. Dodatkowo pamiętaj, żeby dobrze dysponować wszystkimi salami w naszej restauracji. Dla mniejszej ilości osób wybieraj mniejsze sale. Za pomoc utraciłeś 1 punkt.";
+            pomoc_text.GetComponent<UnityEngine.UI.Text>().text = "Wybierając uroczystosc " + nazwa_uroczystosci + " dla " + ilosc_osob_l + " osób powinienieś wybrać salę, która będzie odpowiednia dla tego wydarzenia oraz przede wszystkim najlepiej wykorzystane dostepne miejsce. Za pomoc utraciłeś 1 punkt.";
+        }
+        if (licznik_scen == 4)
+        {
+            pomoc_text.GetComponent<UnityEngine.UI.Text>().text = "Wybierając uroczystość " + nazwa_uroczystosci + " dla " + ilosc_osob_l + "osób, pamiętaj o dobrze odpowiedniego stolika. Rozdysponuj stolikami tak, aby najlepiej pomieścić osoby. Pamiętaj również, że do niektórych typów wydarzeń, niektóre stoły się nie nadaja. Za pomoc tracisz 1 punkt.";
+        }
+        if (licznik_scen == 6)
+        {
+            pomoc_text.GetComponent<UnityEngine.UI.Text>().text = "Wybrałeś uroczystość " + nazwa_uroczystosci + " dla " + ilosc_osob_l + "osób. Pamiętaj, że w zależności od ustawienia stołu masz dodatkowo miejsca na stole. Miejsce dla jednego konsumenta,na przyjęciu zasiadanym powinno wynosić od 60-75cm. Odleglosc pierwszego nakrycia od krawedzi stolu od 45-55cm.";
+        }
+        if (licznik_scen == 5)
+        {
+            pomoc_text.GetComponent<UnityEngine.UI.Text>().text = "Wybraleś uroczystość " + nazwa_uroczystosci + ". Pamiętaj o tym, aby ułożenie było najbardziej odpowiednie do okoliczności, a przede wszystkim... najlepiej pod wzgledem wybranej ilosci osob oraz wielkosci sali";
+        }
+        if (licznik_scen == 7)
+        {
+            if (obrus_chec == false)                {
+                pomoc_text.GetComponent<UnityEngine.UI.Text>().text = "Na wybrany przez Ciebie stół " + nazwa_stolu_tmp + " powinienieś wybrać inny obrus. Zastanów się nad tym i spróbuj poprawić!";
             }
-            if (licznik_scen == 4)
-            {
-                pomoc_text.GetComponent<UnityEngine.UI.Text>().text = "Wybierając uroczystość " + nazwa_uroczystosci + " dla " + ilosc_osob_l + "osób, pamiętaj o dobrze odpowiedniego stolika. Takiej osoby chciałby siedzieć naprzeciwko siebie oraz jak najbardziej blisko. Rozdysponuj stolikami tak, aby w przypadku mniejszej ilości osób na jeden stolik, takie osoby dostawały mniejsze stoliki.";
+            else if (Dekoracje3.isOn == true && nazwa_uroczystosci == "Walentynki" || nazwa_uroczystosci == "Stypa")
+            { //to nie mam ogólne, tylko na walentynki
+                pomoc_text.GetComponent<UnityEngine.UI.Text>().text = "Na wybraną przez Ciebie uroczystość " + nazwa_uroczystosci + " powinienieś wybrać bardziej dogodne dekoracje, które wprowadzą elementy romatyczne";                
             }
-            if (licznik_scen == 6)
-            {
-                pomoc_text.GetComponent<UnityEngine.UI.Text>().text = "Wybrałeś uroczystość " + nazwa_uroczystosci + " dla " + ilosc_osob_l + "osób. Stoliki, na którym siąda goście są dla " + max_ilosc_osob + " osób. Przelicz jeszcze raz ilość stolików!";
-            }
-            if (licznik_scen == 5)
-            {
-                pomoc_text.GetComponent<UnityEngine.UI.Text>().text = "Wybraleś uroczystość " + nazwa_uroczystosci + ". Dla romantycznej kolacji, najlepiej, żeby stoły były trochę od siebie oddalone. Dajmy ludziom trochę prywatności :)";
-            }
-            if (licznik_scen == 7)
-            {
-                if (obrus_chec == false)
-                {
-                    pomoc_text.GetComponent<UnityEngine.UI.Text>().text = "Na wybrany przez Ciebie stół " + nazwa_stolu_tmp + " powinienieś wybrać inny obrus. Zastanów się nad tym i spróbuj poprawić!";
-                }
-                else if (licznik_scen == 7 && dekoracje_check == true && Dekoracje3 == true && nazwa_uroczystosci == "Walentynki")
-                { //to nie mam ogólne, tylko na walentynki
-                    pomoc_text.GetComponent<UnityEngine.UI.Text>().text = "Na wybraną przez Ciebie uroczystość " + nazwa_uroczystosci + " powinienieś wybrać bardziej dogodne dekoracje, które wprowadzą elementy romatyczne";
-                }
-            }
-            if (licznik_scen == 8)
-            {
-                pomoc_text.GetComponent<UnityEngine.UI.Text>().text = "Na wybraną przez Ciebie uroczystość " + nazwa_uroczystosci + " powinienieś wybrać menu, które najbardziej będzie odpowiadało gościom. Czy jesteś pewny tego? Zastanów się :) ";
-            }
-            if (licznik_scen == 9)
-            {
-                pomoc_text.GetComponent<UnityEngine.UI.Text>().text = "Na wybraną przez Ciebie uroczystość " + nazwa_uroczystosci + " i wybranym menu " + nazwa_menu + "powinienieś wybrać bardziej przystosowany rodzaj nakrycia";
-            }
-            if (licznik_scen == 10)
-            {
-                pomoc_text.GetComponent<UnityEngine.UI.Text>().text = "Dla wybranego " + nazwa_menu + " wybrane przez Ciebie elementy są błędną lub niekompletne. Zobacz jeszcze raz na menu, a następnie ponownie skup się nad przygotowaniem zastawy ceramicznej.";
-            }
+        }
+        if (licznik_scen == 8)
+        {
+            pomoc_text.GetComponent<UnityEngine.UI.Text>().text = "Na wybraną przez Ciebie uroczystość " + nazwa_uroczystosci + " powinienieś wybrać menu, które najbardziej będzie odpowiadało gościom. Czy jesteś pewny tego? Zastanów się :) ";
+        }
+        if (licznik_scen == 9)
+        {
+            pomoc_text.GetComponent<UnityEngine.UI.Text>().text = "Na wybraną przez Ciebie uroczystość " + nazwa_uroczystosci + " i wybranym menu " + nazwa_menu + "powinienieś wybrać bardziej przystosowany rodzaj nakrycia";
+        }
+        if (licznik_scen == 10)
+        {
+            pomoc_text.GetComponent<UnityEngine.UI.Text>().text = "Dla wybranego " + nazwa_menu + " wybrane przez Ciebie elementy są błędną lub niekompletne. Zobacz jeszcze raz na menu, a następnie ponownie skup się nad przygotowaniem zastawy ceramicznej.";
+        }
+        if (licznik_scen == 11)
+        {
+            pomoc_text.GetComponent<UnityEngine.UI.Text>().text = "Dla wybranego " + nazwa_menu + " wybrane przez Ciebie elementy są błędną lub niekompletne. Zobacz jeszcze raz na menu, a następnie ponownie skup się nad przygotowaniem szklanej zastawy. Wszystko masz w menu :) Dodatkowo im większa szklanka tym bardziej na prawo.";
+        }
+        if (licznik_scen == 12)
+        {
+            pomoc_text.GetComponent<UnityEngine.UI.Text>().text = "Dla wybranego " + nazwa_menu + " wybrane przez Ciebie elementy są błędną lub niekompletne. Zobacz jeszcze raz na menu, a następnie ponownie skup się nad przygotowaniem sztuccy. Pamiętaj, całość odpowiedzi masz w menu. Dodatkowo pamiętaj po prawej stronie masz takie sztucce, ktore wybierzesz pierwsze. Jaka potrawe podasz najpierw? :) ";
         }
     }
 
