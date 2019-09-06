@@ -22,7 +22,7 @@ public class Main_poczatek : MonoBehaviour {
  //       napis.SetActive(false);
         napis.GetComponent<UnityEngine.UI.Text>().text = "Wybierz poziom";
         przycisk1.SetActive(true);
-        przycisk2.SetActive(true);
+//        przycisk2.SetActive(true);
     }
 
 

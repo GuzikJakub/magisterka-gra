@@ -13,7 +13,7 @@ public class Main_poczatek_wyjdz : MonoBehaviour {
         napis.GetComponent<UnityEngine.UI.Text>().text = "Wybierz poziom";
         napis.SetActive(true);
         przycisk1.SetActive(true);
-        przycisk2.SetActive(true);
+//        przycisk2.SetActive(true);
     }
 
     // Update is called once per frame

@@ -941,7 +941,7 @@ public class Przycisk_zachownaie : MonoBehaviour
         }
         if (licznik_scen == 6)
         {
-            pomoc_text.GetComponent<UnityEngine.UI.Text>().text = "Wybrałeś uroczystość " + nazwa_uroczystosci + " dla " + ilosc_osob_l + "osób. Pamiętaj, że w zależności od ustawienia stołu masz dodatkowo miejsca na stole. Miejsce dla jednego konsumenta,na przyjęciu zasiadanym powinno wynosić od 60-75cm. Odleglosc pierwszego nakrycia od krawedzi stolu od 45-55cm.";
+            pomoc_text.GetComponent<UnityEngine.UI.Text>().text = "Wybrałeś uroczystość " + nazwa_uroczystosci + " dla " + ilosc_osob_l + "osób. Pamiętaj, że w zależności od ustawienia stołu masz dodatkowo miejsca na stole. Miejsce dla jednego konsumenta,na przyjęciu zasiadanym powinno wynosić od 60-75cm. Odleglosc pierwszego nakrycia od krawedzi stolu od 45-55cm. Obecnie, według Twojego ustawienia starczy miejsca na od " + wynik_tmp2 + " do " + wynik_tmp + " osob!";
         }
         if (licznik_scen == 5)
         {
@@ -982,6 +982,10 @@ public class Przycisk_zachownaie : MonoBehaviour
     public void zamknij_pomoc()
     {
         ksiazka_scena.SetActive(false);
+        if (scena5_input.activeSelf == false)
+        {
+            scena5_input.SetActive(true);
+        }
     }
 
     public GameObject scena5_input;
@@ -1010,7 +1014,10 @@ public class Przycisk_zachownaie : MonoBehaviour
         blad.SetActive(false);
         if (scena5.activeSelf == true)
         {
-            scena5_input.SetActive(true);
+            if (ksiazka_scena.activeSelf == false)
+            {
+                scena5_input.SetActive(true);
+            }
         }
     }
 

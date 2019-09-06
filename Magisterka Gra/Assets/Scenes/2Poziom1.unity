@@ -621,7 +621,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   showTime: 0.01
   textshow: 
-  ktora_scena: 2
+  ktora_scena: 3
   mytext: {fileID: 14762822}
   scena: {fileID: 1595166675}
   scena1: {fileID: 1298293770}
@@ -1048,7 +1048,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -384982925
   m_SortingLayer: 2
-  m_SortingOrder: 10
+  m_SortingOrder: 340
   m_Sprite: {fileID: 21300000, guid: 8eaead9920b8e474ebe59f04a441fd2c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1548,15 +1548,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 1ed8cbd9230d53a4e9bbb4bd5ad66334, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1607,7 +1607,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 50.7, y: 0}
+  m_AnchoredPosition: {x: 85, y: 0}
   m_SizeDelta: {x: 40, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &57839316
@@ -6829,7 +6829,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.7, y: 35.6}
+  m_AnchoredPosition: {x: -1.7, y: 9.499992}
   m_SizeDelta: {x: 340, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &325812260
@@ -10733,7 +10733,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 373, y: 46}
+  m_AnchoredPosition: {x: 373, y: 68}
   m_SizeDelta: {x: 216.9, y: 391.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &552583633
@@ -12109,7 +12109,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -79.5, y: -14.9}
+  m_AnchoredPosition: {x: -79.5, y: -41}
   m_SizeDelta: {x: 100, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &620879761
@@ -12163,7 +12163,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 1Poczatek_bis
+          m_StringArgument: 1Poczatek_wyjdz1
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -18775,7 +18775,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1028579877}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 62, y: -140, z: 0}
+  m_LocalPosition: {x: 62, y: -11, z: 0}
   m_LocalScale: {x: 70, y: 70, z: 1}
   m_Children:
   - {fileID: 1845167746}
@@ -30446,7 +30446,7 @@ MonoBehaviour:
   m_Text: "Witaj w mojej restauracji...\nW dniu dzisiejszym we\u017Amiesz udzia\u0142
     w praktykach. Wykonaj wszystkie zadania, a zdob\u0119dziesz 1000 z\u0142 oraz
     mo\u017Cliwo\u015B\u0107 sta\u017Cu u nas w firmie!\nKa\u017Cdego wyboru b\u0119dziesz
-    dokonywa\u0142 w panelu po lewej stronie.\n\nCzas start!"
+    dokonywa\u0142 w panelu po lewej stronie. Masz na to 2 minuty!\n\nCzas start!"
 --- !u!222 &1591876362
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -32345,8 +32345,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 299.59998, y: -7.5}
-  m_SizeDelta: {x: 60, y: 30}
+  m_AnchoredPosition: {x: 298, y: -7.5}
+  m_SizeDelta: {x: 122.5, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1661294048
 MonoBehaviour:
@@ -32381,7 +32381,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Punkty:'
+  m_Text: 'Mastery Pomocy:'
 --- !u!222 &1661294049
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -35628,7 +35628,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.6342864, y: 1.7842827}
+  m_AnchoredPosition: {x: 2.6342864, y: 2.33}
   m_SizeDelta: {x: 340, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1845167747
@@ -35791,7 +35791,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.9985733, y: 0.991429}
+  m_AnchoredPosition: {x: 1.9985733, y: 1.5371462}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1848165175
@@ -36908,7 +36908,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.6, y: 53.9}
+  m_AnchoredPosition: {x: -1.6, y: 27.799995}
   m_SizeDelta: {x: 340, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1890362534
@@ -41793,7 +41793,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 75.4, y: -14.899994}
+  m_AnchoredPosition: {x: 75.4, y: -41}
   m_SizeDelta: {x: 100, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2113133307

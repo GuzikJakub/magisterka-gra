@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Licznik_czasu : MonoBehaviour {
 
@@ -16,12 +17,15 @@ public class Licznik_czasu : MonoBehaviour {
     public GameObject scena_final;
     float temp;
     int minuta;
+    string nazwa_sceny;
 
 	// Use this for initialization
 	void Start () {
         licznikczasu.text = "0:00,0000";
         temp = 0.0f;
         czyOk = true;
+        Scene obecna_scena = SceneManager.GetActiveScene();
+        nazwa_sceny = obecna_scena.name;
 	}
 	
 	// Update is called once per frame
@@ -47,17 +51,36 @@ public class Licznik_czasu : MonoBehaviour {
             }
             int.TryParse(minuty, out minuta);
        //     Debug.Log(temp % 60);
-            if (minuta == 1 & (temp % 60) > 30)
+            if (nazwa_sceny == "2Poziom1")
             {
-                licznikczasu.color = Color.red;
+                if (minuta == 1 & (temp % 60) > 30)
+                {
+                    licznikczasu.color = Color.red;
+                }
+                else if (minuta == 2)
+                {
+                    scena_error.SetActive(true);
+                    scena_error_end.SetActive(false);
+                    scena_error_end2.SetActive(false);
+                    licznikczasu.text = "2:00,0000";
+                }
             }
-            else if (minuta == 2)
+            else if (nazwa_sceny == "2Poziom2")
             {
-                scena_error.SetActive(true);
-                scena_error_end.SetActive(false);
-                scena_error_end2.SetActive(false);
-                licznikczasu.text = "0:00,0000";
+                Debug.Log(nazwa_sceny);
+                if (minuta == 1)
+                {
+                    licznikczasu.color = Color.red;
+                    if (minuta == 1 & (temp % 60) >= 30)
+                    {
+                        scena_error.SetActive(true);
+                        scena_error_end.SetActive(false);
+                        scena_error_end2.SetActive(false);
+                        licznikczasu.text = "1:30,0000";
+                    }
+                }
             }
+
         }
         else if (scena_final.activeSelf == true)
         {

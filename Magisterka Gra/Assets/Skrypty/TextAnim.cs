@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TextAnim : MonoBehaviour
 {
@@ -13,11 +14,14 @@ public class TextAnim : MonoBehaviour
     public GameObject scenaown;
     public GameObject tables_all;
     public GameObject scena_error;
+    string nazwa_sceny;
 
     void Start()
     {
   //      mytext = GetComponent<UnityEngine.UI.Text>().text;
         textshow = mytext.GetComponent<UnityEngine.UI.Text>().text;
+        Scene obecna_scena = SceneManager.GetActiveScene();
+        nazwa_sceny = obecna_scena.name;
         Debug.Log(textshow);
         mytext.GetComponent<UnityEngine.UI.Text>().text = "";
         StartCoroutine(TypeText());
@@ -42,8 +46,18 @@ public class TextAnim : MonoBehaviour
         }
         else if (ktora_scena == 2)
         {
-            Application.LoadLevel("1Poczatek");
+            if (nazwa_sceny == "2Poziom2")
+            {
+                Application.LoadLevel("1Poczatek_bis");
+            }
+            else if (nazwa_sceny == "2Poziom1")
+            {
+                Application.LoadLevel("1Poczatek_wyjdz1");
+            }
         }
-        
+        else if (ktora_scena == 3)
+        {
+            Application.LoadLevel("1Poczatek_bis");
+        }
     }
 }

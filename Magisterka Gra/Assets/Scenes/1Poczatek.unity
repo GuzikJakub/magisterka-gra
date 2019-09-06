@@ -730,31 +730,41 @@ MonoBehaviour:
   scena12: {fileID: 0}
   ilosc_osob: {fileID: 0}
   ilosc_stolow_get: {fileID: 0}
+  tables_all: {fileID: 0}
   max_ilosc_stolow: 0
   widok_sala1: {fileID: 0}
   widok_sala2: {fileID: 0}
   widok_sala3: {fileID: 0}
   widok_sala4: {fileID: 0}
+  widok_sala_white: {fileID: 0}
+  widok_podloga: {fileID: 0}
+  widok_sali: {fileID: 0}
   max_ilosc_osob: 0
+  widok_stol_all: {fileID: 0}
   widok_stol1: {fileID: 0}
   widok_stol2: {fileID: 0}
   widok_stol3: {fileID: 0}
   widok_stol4: {fileID: 0}
+  widok_stol5: {fileID: 0}
+  widok_stol6: {fileID: 0}
+  widok_stol7: {fileID: 0}
   punkty: {fileID: 0}
   ilosc_punktow: 0
   blad: {fileID: 0}
   pop_up_wyjdz: {fileID: 0}
   licznik_scen: 0
   nazwa_uroczystosci: 
+  menu: {fileID: 0}
+  menu_zatwierdz: {fileID: 0}
+  okragly70: {fileID: 0}
+  okragly90: {fileID: 0}
+  kwadrat: {fileID: 0}
+  prostokat: {fileID: 0}
   nazwa_sali: 
   pomoc: {fileID: 0}
   ksiazka_scena: {fileID: 0}
   pomoc_text: {fileID: 0}
-  ustawienie1: {fileID: 0}
-  ustawienie2: {fileID: 0}
-  ustawienie3: {fileID: 0}
-  ustawienie4: {fileID: 0}
-  ustawienie5: {fileID: 0}
+  scena5_input: {fileID: 0}
   Obrus1: {fileID: 0}
   Obrus2: {fileID: 0}
   Obrus3: {fileID: 0}
@@ -775,10 +785,7 @@ MonoBehaviour:
   Dekoracje1: {fileID: 0}
   Dekoracje2: {fileID: 0}
   Dekoracje3: {fileID: 0}
-  menu1: {fileID: 0}
-  menu2: {fileID: 0}
-  menu3: {fileID: 0}
-  menu4: {fileID: 0}
+  menu_teskst: {fileID: 0}
   talerz1: {fileID: 0}
   talerz2: {fileID: 0}
   ceramika3: {fileID: 0}
@@ -789,7 +796,6 @@ MonoBehaviour:
   ceramika8: {fileID: 0}
   ceramika9: {fileID: 0}
   ceramika10: {fileID: 0}
-  ceramika11: {fileID: 0}
   scena11_srodek_proste: {fileID: 0}
   scena11_srodek_rozszerzone: {fileID: 0}
   szklo1: {fileID: 0}
@@ -800,12 +806,17 @@ MonoBehaviour:
   szklo6: {fileID: 0}
   szklo7: {fileID: 0}
   szklo8: {fileID: 0}
-  szklo9: {fileID: 0}
   szklo11: {fileID: 0}
   szklo22: {fileID: 0}
   szklo33: {fileID: 0}
   wino_biale: {fileID: 0}
   wino_czerwone: {fileID: 0}
+  wino_musujace: {fileID: 0}
+  woda: {fileID: 0}
+  koniak: {fileID: 0}
+  sok: {fileID: 0}
+  drinki: {fileID: 0}
+  piwo: {fileID: 0}
   sztucce1: {fileID: 0}
   sztucce2: {fileID: 0}
   sztucce3: {fileID: 0}
@@ -814,18 +825,17 @@ MonoBehaviour:
   sztucce6: {fileID: 0}
   sztucce7: {fileID: 0}
   sztucce8: {fileID: 0}
-  sztucce9: {fileID: 0}
-  sztucce10: {fileID: 0}
-  sztucce11: {fileID: 0}
-  sztucce12: {fileID: 0}
-  sztucce13: {fileID: 0}
-  sztucce14: {fileID: 0}
-  sztucce15: {fileID: 0}
-  sztucce16: {fileID: 0}
-  sztucce17: {fileID: 0}
-  lyzka_zupa: {fileID: 0}
-  noz: {fileID: 0}
-  widelec: {fileID: 0}
+  zupa_lyzka: {fileID: 0}
+  noz_podsawowy: {fileID: 0}
+  widelec_glowne: {fileID: 0}
+  desery_oba: {fileID: 0}
+  noz_przystawki: {fileID: 0}
+  noz_maslo: {fileID: 0}
+  widelec_przystawka: {fileID: 0}
+  widelec_ryba: {fileID: 0}
+  scena_win: {fileID: 0}
+  obiekty_all: {fileID: 0}
+  wyjdz_cofnij_button: {fileID: 0}
 --- !u!1 &1303592429
 GameObject:
   m_ObjectHideFlags: 0
