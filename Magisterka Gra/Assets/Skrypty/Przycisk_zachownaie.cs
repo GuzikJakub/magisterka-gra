@@ -9,6 +9,7 @@ public class Przycisk_zachownaie : MonoBehaviour
     // Button przycisk;
     public GameObject tekst_uroczystosc;
 
+    public GameObject scena0;
     public GameObject scena1;
     public GameObject scena2;
     public GameObject scena3;
@@ -93,7 +94,7 @@ public class Przycisk_zachownaie : MonoBehaviour
     public void wycztaj_scene(string name)
     {
         Application.LoadLevel(name);
-        licznik_scen = 0;
+ //       licznik_scen = 0;
         ilosc_punktow = 0;
     }
 
@@ -105,6 +106,12 @@ public class Przycisk_zachownaie : MonoBehaviour
             tekst_uroczystosc.SetActive(false);
             scena2.SetActive(false);
             scena1.SetActive(true);
+        }
+        else if (licznik_scen == 1)
+        {
+            licznik_scen--;
+            scena1.SetActive(false);
+            scena0.SetActive(true);
         }
         else if (licznik_scen == 3)
         {
@@ -200,6 +207,18 @@ public class Przycisk_zachownaie : MonoBehaviour
         }
         punkty.GetComponent<UnityEngine.UI.Text>().text = ilosc_punktow.ToString();
         Debug.Log(licznik_scen);
+    }
+
+    string typ_przyjecia_string;
+
+    public void typ_przyjecia()
+    {
+        var tekst = EventSystem.current.currentSelectedGameObject.name;
+        typ_przyjecia_string = tekst.ToString();
+        Debug.Log(typ_przyjecia_string);
+        licznik_scen++;
+        scena0.SetActive(false);
+        scena1.SetActive(true);
     }
 
     public void get_ilosc_osob()
@@ -941,7 +960,7 @@ public class Przycisk_zachownaie : MonoBehaviour
         }
         if (licznik_scen == 6)
         {
-            pomoc_text.GetComponent<UnityEngine.UI.Text>().text = "Wybrałeś uroczystość " + nazwa_uroczystosci + " dla " + ilosc_osob_l + "osób. Pamiętaj, że w zależności od ustawienia stołu masz dodatkowo miejsca na stole. Miejsce dla jednego konsumenta,na przyjęciu zasiadanym powinno wynosić od 60-75cm. Odleglosc pierwszego nakrycia od krawedzi stolu od 45-55cm. Obecnie, według Twojego ustawienia starczy miejsca na od " + wynik_tmp2 + " do " + wynik_tmp + " osob!";
+            pomoc_text.GetComponent<UnityEngine.UI.Text>().text = "Wybrałeś uroczystość " + nazwa_uroczystosci + " dla " + ilosc_osob_l + "osób. Pamiętaj, że w zależności od ustawienia stołu masz dodatkowo miejsca na stole. Miejsce dla jednego konsumenta,na przyjęciu zasiadanym powinno wynosić od 60-75cm. Odleglosc pierwszego nakrycia od krawedzi stolu od 45-55cm. Obecnie, według Twojego ustawienia starczy miejsca na od " + (wynik_tmp2 + 1) + " do " + wynik_tmp + " osob!";
         }
         if (licznik_scen == 5)
         {
@@ -1789,15 +1808,6 @@ public class Przycisk_zachownaie : MonoBehaviour
     public InputField sztucce7;
     public InputField sztucce8;
 
-    public GameObject zupa_lyzka;
-    public GameObject noz_podsawowy;
-    public GameObject widelec_glowne;
-    public GameObject desery_oba;
-    public GameObject noz_przystawki;
-    public GameObject noz_maslo;
-    public GameObject widelec_przystawka;
-    public GameObject widelec_ryba;
-
     public void block_object(GameObject obiektt)
     {
         if (obiektt.activeSelf == true)
@@ -1809,19 +1819,34 @@ public class Przycisk_zachownaie : MonoBehaviour
             obiektt.SetActive(true);
         }
     }
+
+    public GameObject cat;
+    public GameObject ghost;
     public GameObject[] szklo_game;
     public InputField[] szklo_input;
     public Toggle[] szklo_toggle;
+    int y;
+    IEnumerator Timewiat()
+    {
+        yield return new WaitForSeconds(1);
+        cat.SetActive(false);
+        ghost.SetActive(false);
+    }
+
     public void szklo_wyswietl_proste()
     {
+     //   szklo_input[y].text = "";
+        //   cat.SetActive(false);
+        //   ghost.SetActive(false);
         int x = Random.Range(0, 15);
-        int y = Random.Range(1, 8);
-        int yy = Random.Range(1, 8);
+        y = Random.Range(1, 8);
+        int yy = 0;
         Debug.Log("DZIEL" + x%4);
-        Debug.Log(y);
+        Debug.Log("YYYYYYYYYYYYYYYY" + y);
         
         if (scena11_srodek_proste.activeSelf == true)
         {
+            yy = Random.Range(1, 6);
             obiekt_wyswietl_proste(szklo_game[0], szklo_input[0].text);
             obiekt_wyswietl_proste(szklo_game[1], szklo_input[1].text);
             obiekt_wyswietl_proste(szklo_game[2], szklo_input[2].text);
@@ -1830,9 +1855,39 @@ public class Przycisk_zachownaie : MonoBehaviour
             obiekt_wyswietl_proste(szklo_game[5], szklo_input[5].text);
             obiekt_wyswietl_proste(szklo_game[6], szklo_input[6].text);
             obiekt_wyswietl_proste(szklo_game[7], szklo_input[7].text);
+            if (x % 4 == 0)
+            {
+                if (y % 2 == 0)
+                {
+                    Debug.Log("KOT ACTIVE " + y % 2);
+                    cat.SetActive(true);
+                }
+                else if (y % 2 == 1)
+                {
+                    Debug.Log("DUCH ACTIVE: " + y % 2);
+                    ghost.SetActive(true);
+                }
+                if (szklo_toggle[y].isOn == true)
+                {
+                    szklo_toggle[y].isOn = false;
+                }
+                else
+                {
+                    szklo_toggle[y].isOn = true;
+                    if (szklo_game[y].activeSelf == false)
+                    {
+                        szklo_game[y].SetActive(true);
+                    }
+                    Debug.Log("SZKLO KOT JESTEM");
+                    obiekt_wyswietl_proste(szklo_game[y], yy.ToString());
+                    szklo_input[y].text = yy.ToString();
+                    StartCoroutine(Timewiat());
+                }
+            }
         }
         else if (scena11_srodek_rozszerzone.activeSelf == false)
         {
+            yy = Random.Range(1, 9);
             obiekt_wyswietl_rozszerzone(szklo_game[0], szklo_input[0].text);
             obiekt_wyswietl_rozszerzone(szklo_game[1], szklo_input[1].text);
             obiekt_wyswietl_rozszerzone(szklo_game[2], szklo_input[2].text);
@@ -1841,61 +1896,134 @@ public class Przycisk_zachownaie : MonoBehaviour
             obiekt_wyswietl_rozszerzone(szklo_game[5], szklo_input[5].text);
             obiekt_wyswietl_rozszerzone(szklo_game[6], szklo_input[6].text);
             obiekt_wyswietl_rozszerzone(szklo_game[7], szklo_input[7].text);
-        }
-        if (x % 4 == 0)
-        {
-            if (szklo_toggle[y].isOn == true)
+            if (x % 4 == 0)
             {
-                szklo_toggle[y].isOn = false;
-            }
-            else
-            {
-                szklo_toggle[y].isOn = true;
-                if (szklo_game[y].activeSelf == false)
+                if (y % 2 == 0)
                 {
-                    szklo_game[y].SetActive(true);
+                    Debug.Log("KOT ACTIVE " + y % 2);
+                    cat.SetActive(true);
                 }
-                Debug.Log("SZKLO KOT JESTEM");
-                obiekt_wyswietl_proste(szklo_game[y], yy.ToString());
-                szklo_input[y].text = yy.ToString();
+                else if (y % 2 == 1)
+                {
+                    Debug.Log("DUCH ACTIVE: " + y % 2);
+                    ghost.SetActive(true);
+                }
+                if (szklo_toggle[y].isOn == true)
+                {
+                    szklo_toggle[y].isOn = false;
+                }
+                else
+                {
+                    szklo_toggle[y].isOn = true;
+                    if (szklo_game[y].activeSelf == false)
+                    {
+                        szklo_game[y].SetActive(true);
+                    }
+                    Debug.Log("SZKLO KOT JESTEM");
+                    obiekt_wyswietl_rozszerzone(szklo_game[y], yy.ToString());
+                    szklo_input[y].text = yy.ToString();
+                    StartCoroutine(Timewiat());
+                }
             }
         }
     }
+
+    public GameObject[] sztucce_game;
+    public InputField[] sztucce_input;
+    public Toggle[] sztucce_toggle;
 
     public void sztucce_wyswietl_proste()
     {
+    //    szklo_input[y].text = "";
+        int x = Random.Range(0, 15);
+        y = Random.Range(1, 8);
+        int yy = 0;
+        Debug.Log("DZIEL" + x % 4);
+        Debug.Log(y);
         if (scena11_srodek_proste.activeSelf == true)
         {
-            obiekt_wyswietl_proste(zupa_lyzka, sztucce1.text);
-            obiekt_wyswietl_proste(noz_podsawowy, sztucce2.text);
-            obiekt_wyswietl_proste(widelec_glowne, sztucce3.text);
-            obiekt_wyswietl_proste(desery_oba, sztucce4.text);
-            obiekt_wyswietl_proste(noz_przystawki, sztucce5.text);
-            obiekt_wyswietl_proste(noz_maslo, sztucce6.text);
-            obiekt_wyswietl_proste(widelec_przystawka, sztucce7.text);
-            obiekt_wyswietl_proste(widelec_ryba, sztucce8.text);
+            yy = Random.Range(1, 6);
+            obiekt_wyswietl_proste(sztucce_game[0], sztucce_input[0].text);
+            obiekt_wyswietl_proste(sztucce_game[1], sztucce_input[1].text);
+            obiekt_wyswietl_proste(sztucce_game[2], sztucce_input[2].text);
+            obiekt_wyswietl_proste(sztucce_game[3], sztucce_input[3].text);
+            obiekt_wyswietl_proste(sztucce_game[4], sztucce_input[4].text);
+            obiekt_wyswietl_proste(sztucce_game[5], sztucce_input[5].text);
+            obiekt_wyswietl_proste(sztucce_game[6], sztucce_input[6].text);
+            obiekt_wyswietl_proste(sztucce_game[7], sztucce_input[7].text);
+            if (x % 4 == 0)
+            {
+                if (y % 2 == 0)
+                {
+                    Debug.Log("KOT ACTIVE " + y % 2);
+                    cat.SetActive(true);
+                }
+                else if (y % 2 == 1)
+                {
+                    Debug.Log("DUCH ACTIVE: " + y % 2);
+                    ghost.SetActive(true);
+                }
+                if (sztucce_toggle[y].isOn == true)
+                {
+                    sztucce_toggle[y].isOn = false;
+                }
+                else
+                {
+                    sztucce_toggle[y].isOn = true;
+                    if (sztucce_game[y].activeSelf == false)
+                    {
+                        sztucce_game[y].SetActive(true);
+                    }
+                    Debug.Log("SZKLO KOT JESTEM");
+                    obiekt_wyswietl_proste(sztucce_game[y], yy.ToString());
+                    sztucce_input[y].text = yy.ToString();
+                    StartCoroutine(Timewiat());
+                }
+            }
         }
         else if (scena11_srodek_rozszerzone.activeSelf == false)
         {
-            obiekt_wyswietl_rozszerzone(zupa_lyzka, sztucce1.text);
-            obiekt_wyswietl_rozszerzone(noz_podsawowy, sztucce2.text);
-            obiekt_wyswietl_rozszerzone(widelec_glowne, sztucce3.text);
-            obiekt_wyswietl_rozszerzone(desery_oba, sztucce4.text);
-            obiekt_wyswietl_rozszerzone(noz_przystawki, sztucce5.text);
-            obiekt_wyswietl_rozszerzone(noz_maslo, sztucce6.text);
-            obiekt_wyswietl_rozszerzone(widelec_przystawka, sztucce7.text);
-            obiekt_wyswietl_rozszerzone(widelec_ryba, sztucce8.text);
+            yy = Random.Range(1, 9);
+            obiekt_wyswietl_rozszerzone(sztucce_game[0], sztucce_input[0].text);
+            obiekt_wyswietl_rozszerzone(sztucce_game[1], sztucce_input[1].text);
+            obiekt_wyswietl_rozszerzone(sztucce_game[2], sztucce_input[2].text);
+            obiekt_wyswietl_rozszerzone(sztucce_game[2], sztucce_input[3].text);
+            obiekt_wyswietl_rozszerzone(sztucce_game[4], sztucce_input[4].text);
+            obiekt_wyswietl_rozszerzone(sztucce_game[5], sztucce_input[5].text);
+            obiekt_wyswietl_rozszerzone(sztucce_game[6], sztucce_input[6].text);
+            obiekt_wyswietl_rozszerzone(sztucce_game[7], sztucce_input[7].text);
+            if (x % 4 == 0)
+            {
+                if (y % 2 == 0)
+                {
+                    Debug.Log("KOT ACTIVE " + y % 2);
+                    cat.SetActive(true);
+                }
+                else if (y % 2 == 1)
+                {
+                    Debug.Log("DUCH ACTIVE: " + y % 2);
+                    ghost.SetActive(true);
+                }
+                if (sztucce_toggle[y].isOn == true)
+                {
+                    sztucce_toggle[y].isOn = false;
+                }
+                else
+                {
+                    sztucce_toggle[y].isOn = true;
+                    if (sztucce_game[y].activeSelf == false)
+                    {
+                        sztucce_game[y].SetActive(true);
+                    }
+                    Debug.Log("SZKLO KOT JESTEM");
+                    obiekt_wyswietl_rozszerzone(sztucce_game[y], yy.ToString());
+                    sztucce_input[y].text = yy.ToString();
+                    StartCoroutine(Timewiat());
+                }
+            }
         }
     }
-        //    private GameObject[] tablica = new GameObject[100];
-        int licznik_szklo = 0;
-
-//    public GameObject proste_1;
-//    public GameObject proste_2;
-//    public GameObject proste_3;
-//    public GameObject proste_4;
-//    public GameObject proste_5;
-//    public GameObject proste_6;
+    int licznik_szklo = 0;
 
     public void obiekt_wyswietl_proste(GameObject wyswietl, string numer)
     {
