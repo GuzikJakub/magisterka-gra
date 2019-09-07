@@ -1046,8 +1046,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -384982925
-  m_SortingLayer: 2
+  m_SortingLayerID: 1668054135
+  m_SortingLayer: 3
   m_SortingOrder: 340
   m_Sprite: {fileID: 21300000, guid: 8eaead9920b8e474ebe59f04a441fd2c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -23390,17 +23390,6 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 1430363618}
-        m_MethodName: toggle_blokuj_szklo
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1430363618}
         m_MethodName: block_object
         m_Mode: 2
         m_Arguments:
@@ -27080,14 +27069,6 @@ MonoBehaviour:
   szklo11: {fileID: 1465700089}
   szklo22: {fileID: 1233993791}
   szklo33: {fileID: 1651860033}
-  wino_biale: {fileID: 1217768657}
-  wino_czerwone: {fileID: 2035483713}
-  wino_musujace: {fileID: 136890112}
-  woda: {fileID: 2072527583}
-  koniak: {fileID: 1593272457}
-  sok: {fileID: 1191468479}
-  drinki: {fileID: 1589957052}
-  piwo: {fileID: 1550894765}
   sztucce1: {fileID: 48580647}
   sztucce2: {fileID: 1745980078}
   sztucce3: {fileID: 1796780763}
@@ -27104,6 +27085,33 @@ MonoBehaviour:
   noz_maslo: {fileID: 520025406}
   widelec_przystawka: {fileID: 20240065}
   widelec_ryba: {fileID: 1361658270}
+  szklo_game:
+  - {fileID: 1217768657}
+  - {fileID: 2035483713}
+  - {fileID: 136890112}
+  - {fileID: 2072527583}
+  - {fileID: 1593272457}
+  - {fileID: 1191468479}
+  - {fileID: 1589957052}
+  - {fileID: 1550894765}
+  szklo_input:
+  - {fileID: 1192073593}
+  - {fileID: 1627871387}
+  - {fileID: 1194703504}
+  - {fileID: 264111863}
+  - {fileID: 1111035620}
+  - {fileID: 508997485}
+  - {fileID: 817624022}
+  - {fileID: 2139322433}
+  szklo_toggle:
+  - {fileID: 1465700089}
+  - {fileID: 1233993791}
+  - {fileID: 1651860033}
+  - {fileID: 2038726630}
+  - {fileID: 1796654359}
+  - {fileID: 1585636662}
+  - {fileID: 290340767}
+  - {fileID: 1205412789}
   scena_win: {fileID: 531821721}
   obiekty_all: {fileID: 313654333}
   wyjdz_cofnij_button: {fileID: 1595166675}
@@ -27840,17 +27848,6 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1430363618}
-        m_MethodName: toggle_blokuj_szklo
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
       - m_Target: {fileID: 1430363618}
         m_MethodName: aktywne_toggle_off
         m_Mode: 2
@@ -31921,17 +31918,6 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 1194703504}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.InputField, UnityEngine.UI
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1430363618}
-        m_MethodName: toggle_blokuj_szklo
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 

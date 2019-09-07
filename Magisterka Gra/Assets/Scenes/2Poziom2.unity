@@ -281,7 +281,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: sprawdz_menu
         m_Mode: 1
         m_Arguments:
@@ -650,7 +650,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: serwety_ulozenie
         m_Mode: 1
         m_Arguments:
@@ -746,7 +746,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: wybor_sali
         m_Mode: 1
         m_Arguments:
@@ -1077,7 +1077,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: wybor_uroczystosci
         m_Mode: 1
         m_Arguments:
@@ -1248,7 +1248,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: wybor_uroczystosci
         m_Mode: 1
         m_Arguments:
@@ -1381,7 +1381,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: zamknij
         m_Mode: 1
         m_Arguments:
@@ -1679,7 +1679,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: sztucce_wyswietl_proste
         m_Mode: 1
         m_Arguments:
@@ -1784,7 +1784,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: aktywne_toggle_off
         m_Mode: 2
         m_Arguments:
@@ -1795,7 +1795,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: block_object
         m_Mode: 2
         m_Arguments:
@@ -2356,7 +2356,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: aktywne_toggle_off
         m_Mode: 2
         m_Arguments:
@@ -2367,7 +2367,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: block_object
         m_Mode: 2
         m_Arguments:
@@ -2465,7 +2465,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: check_obrus
         m_Mode: 1
         m_Arguments:
@@ -2563,7 +2563,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: kolory_ustaw_skirtingi
         m_Mode: 1
         m_Arguments:
@@ -3302,7 +3302,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: szklo_wyswietl_proste
         m_Mode: 1
         m_Arguments:
@@ -3682,7 +3682,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: zapisz_scena
         m_Mode: 1
         m_Arguments:
@@ -3817,7 +3817,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: dekoracje_ustaw
         m_Mode: 1
         m_Arguments:
@@ -4116,7 +4116,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: wybor_stolu
         m_Mode: 1
         m_Arguments:
@@ -4327,7 +4327,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: aktywne_toggle_off
         m_Mode: 2
         m_Arguments:
@@ -4338,7 +4338,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: block_object
         m_Mode: 2
         m_Arguments:
@@ -4587,7 +4587,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &235169430
 GameObject:
@@ -4828,7 +4828,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: aktywne_toggle_off
         m_Mode: 2
         m_Arguments:
@@ -4839,7 +4839,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: block_object
         m_Mode: 2
         m_Arguments:
@@ -4935,7 +4935,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: zatwierdz_bielizna
         m_Mode: 1
         m_Arguments:
@@ -5070,7 +5070,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: serwety_ulozenie
         m_Mode: 1
         m_Arguments:
@@ -5788,7 +5788,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: sprawdz_menu
         m_Mode: 1
         m_Arguments:
@@ -6836,7 +6836,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: szklo_wyswietl_proste
         m_Mode: 1
         m_Arguments:
@@ -6938,7 +6938,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: wycztaj_scene
         m_Mode: 5
         m_Arguments:
@@ -7892,7 +7892,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: szklo_wyswietl_proste
         m_Mode: 1
         m_Arguments:
@@ -8303,7 +8303,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: sztucce_proste_chec
         m_Mode: 1
         m_Arguments:
@@ -8592,7 +8592,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: kolory_ustaw_skirtingi
         m_Mode: 1
         m_Arguments:
@@ -8767,7 +8767,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: ceramika_sprawdzian
         m_Mode: 1
         m_Arguments:
@@ -9367,7 +9367,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: toggle_blokuj_szklo
         m_Mode: 1
         m_Arguments:
@@ -9378,7 +9378,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: aktywne_toggle_off
         m_Mode: 2
         m_Arguments:
@@ -9389,7 +9389,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: block_object
         m_Mode: 2
         m_Arguments:
@@ -10221,7 +10221,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: check_obrus
         m_Mode: 1
         m_Arguments:
@@ -10496,7 +10496,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: kolory_ustaw_laufry
         m_Mode: 1
         m_Arguments:
@@ -10675,7 +10675,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: wybor_ustawienie_stolow
         m_Mode: 1
         m_Arguments:
@@ -11197,7 +11197,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: sprawdz_nakrycie
         m_Mode: 1
         m_Arguments:
@@ -11462,7 +11462,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: aktywne_toggle_off
         m_Mode: 2
         m_Arguments:
@@ -11473,7 +11473,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: toggle_blokuj_szklo
         m_Mode: 1
         m_Arguments:
@@ -11484,7 +11484,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: block_object
         m_Mode: 2
         m_Arguments:
@@ -12032,7 +12032,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: aktywne_toggle_off
         m_Mode: 2
         m_Arguments:
@@ -12043,7 +12043,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: block_object
         m_Mode: 2
         m_Arguments:
@@ -12193,7 +12193,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: sztucce_wyswietl_proste
         m_Mode: 1
         m_Arguments:
@@ -12376,7 +12376,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: check_obrus
         m_Mode: 1
         m_Arguments:
@@ -12700,7 +12700,7 @@ MonoBehaviour:
   m_OnEndEdit:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: get_ilosc_osob
         m_Mode: 1
         m_Arguments:
@@ -14165,7 +14165,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: dekoracje_ustaw
         m_Mode: 1
         m_Arguments:
@@ -14406,7 +14406,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: cofnij
         m_Mode: 1
         m_Arguments:
@@ -14923,7 +14923,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: wybor_uroczystosci
         m_Mode: 1
         m_Arguments:
@@ -15056,7 +15056,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: wybor_stolu
         m_Mode: 1
         m_Arguments:
@@ -15189,7 +15189,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: zapisz_scena_stol
         m_Mode: 1
         m_Arguments:
@@ -15635,7 +15635,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: wybor_stolu
         m_Mode: 1
         m_Arguments:
@@ -16359,7 +16359,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: zatwiedz_menu
         m_Mode: 1
         m_Arguments:
@@ -17093,7 +17093,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: wybor_ustawienie_stolow
         m_Mode: 1
         m_Arguments:
@@ -17229,7 +17229,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: aktywne_toggle_off
         m_Mode: 2
         m_Arguments:
@@ -17240,7 +17240,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: block_object
         m_Mode: 2
         m_Arguments:
@@ -17427,7 +17427,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: sztucce_wyswietl_proste
         m_Mode: 1
         m_Arguments:
@@ -18033,7 +18033,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: wybor_ustawienie_stolow
         m_Mode: 1
         m_Arguments:
@@ -18296,7 +18296,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: szklo_wyswietl_proste
         m_Mode: 1
         m_Arguments:
@@ -18400,7 +18400,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: kolory_ustaw_laufry
         m_Mode: 1
         m_Arguments:
@@ -18499,7 +18499,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: aktywne_toggle_off
         m_Mode: 2
         m_Arguments:
@@ -18510,7 +18510,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: block_object
         m_Mode: 2
         m_Arguments:
@@ -18682,7 +18682,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: sprawdz_nakrycie
         m_Mode: 1
         m_Arguments:
@@ -18894,7 +18894,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: aktywne_toggle_off
         m_Mode: 2
         m_Arguments:
@@ -18905,7 +18905,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: block_object
         m_Mode: 2
         m_Arguments:
@@ -19909,7 +19909,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: sprawdz_menu
         m_Mode: 1
         m_Arguments:
@@ -20329,7 +20329,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: szklo_wyswietl_proste
         m_Mode: 1
         m_Arguments:
@@ -21924,7 +21924,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: sztucce_wyswietl_proste
         m_Mode: 1
         m_Arguments:
@@ -22080,7 +22080,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: sztucce_wyswietl_proste
         m_Mode: 1
         m_Arguments:
@@ -22261,7 +22261,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: wybor_stolu
         m_Mode: 1
         m_Arguments:
@@ -23649,7 +23649,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: wybor_ustawienie_stolow
         m_Mode: 1
         m_Arguments:
@@ -23782,7 +23782,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: wybor_uroczystosci
         m_Mode: 1
         m_Arguments:
@@ -24383,7 +24383,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: kolory_ustaw_skirtingi
         m_Mode: 1
         m_Arguments:
@@ -25100,7 +25100,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: wybor_uroczystosci
         m_Mode: 1
         m_Arguments:
@@ -26177,7 +26177,7 @@ RectTransform:
   - {fileID: 467875620}
   - {fileID: 172826855}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -26579,7 +26579,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: wybor_sali
         m_Mode: 1
         m_Arguments:
@@ -27032,7 +27032,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: dekoracje_ustaw
         m_Mode: 1
         m_Arguments:
@@ -28344,7 +28344,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: kolory_ustaw_laufry
         m_Mode: 1
         m_Arguments:
@@ -28988,7 +28988,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: szklo_wyswietl_proste
         m_Mode: 1
         m_Arguments:
@@ -29092,7 +29092,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: check_obrus
         m_Mode: 1
         m_Arguments:
@@ -29339,7 +29339,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: wybor_sali
         m_Mode: 1
         m_Arguments:
@@ -29512,258 +29512,6 @@ RectTransform:
   m_AnchoredPosition: {x: -4, y: 60.99998}
   m_SizeDelta: {x: 216.9, y: 391.6}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &1476918943
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1476918950}
-  - component: {fileID: 1476918949}
-  - component: {fileID: 1476918948}
-  - component: {fileID: 1476918947}
-  - component: {fileID: 1476918946}
-  - component: {fileID: 1476918945}
-  - component: {fileID: 1476918944}
-  m_Layer: 0
-  m_Name: EventSystem
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1476918944
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1476918943}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f34c5ddeca791704198cce1d2a9a87cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tekst_uroczystosc: {fileID: 962366185}
-  scena1: {fileID: 1678236933}
-  scena2: {fileID: 1447449139}
-  scena3: {fileID: 741926584}
-  scena4: {fileID: 575163588}
-  scena5: {fileID: 1566615297}
-  scena6: {fileID: 2071211432}
-  scena7: {fileID: 314981157}
-  scena8: {fileID: 831237835}
-  scena9: {fileID: 674123513}
-  scena10: {fileID: 1750619650}
-  scena11: {fileID: 764540001}
-  scena12: {fileID: 1475502725}
-  ilosc_osob: {fileID: 713802553}
-  ilosc_stolow_get: {fileID: 1487210999}
-  tables_all: {fileID: 1553323802}
-  max_ilosc_stolow: 0
-  widok_sala1: {fileID: 21300000, guid: 44479542f746c994a96854ccfc933d86, type: 3}
-  widok_sala2: {fileID: 21300000, guid: f7a2e486f7cd2284d812de4ccfec8804, type: 3}
-  widok_sala3: {fileID: 21300000, guid: 32d26d8005c21794d8d85489cf49a835, type: 3}
-  widok_sala4: {fileID: 21300000, guid: 68a4f5bb17a499840ad0c12ac88f8ffd, type: 3}
-  widok_sala_white: {fileID: 21300000, guid: acb0907f45cc13a459b18277626d24a0, type: 3}
-  widok_podloga: {fileID: 21300000, guid: 6191c0952ef0d1646874c01300be5bff, type: 3}
-  widok_sali: {fileID: 467875618}
-  max_ilosc_osob: 0
-  widok_stol_all: {fileID: 1514391639}
-  widok_stol1: {fileID: 1003994533}
-  widok_stol2: {fileID: 1561151536}
-  widok_stol3: {fileID: 1010705492}
-  widok_stol4: {fileID: 189655337}
-  widok_stol5: {fileID: 1996165517}
-  widok_stol6: {fileID: 1385418578}
-  widok_stol7: {fileID: 1371198842}
-  punkty: {fileID: 727206175}
-  ilosc_punktow: 0
-  blad: {fileID: 912757128}
-  pop_up_wyjdz: {fileID: 1199439062}
-  licznik_scen: 1
-  nazwa_uroczystosci: 
-  menu: {fileID: 1649977369}
-  menu_zatwierdz: {fileID: 860952232}
-  okragly70: {fileID: 21300000, guid: 6c966cc533204b64990579e95c73e4ac, type: 3}
-  okragly90: {fileID: 21300000, guid: c2d55970834bc584784af1be2c57f872, type: 3}
-  kwadrat: {fileID: 21300000, guid: 0696a7295a1b53341ba216d2fdca028b, type: 3}
-  prostokat: {fileID: 21300000, guid: 3195f6ae2202968488e733b79590510a, type: 3}
-  nazwa_sali: 
-  pomoc: {fileID: 1662567454}
-  ksiazka_scena: {fileID: 760290404}
-  pomoc_text: {fileID: 872857802}
-  scena5_input: {fileID: 1087089952}
-  Obrus1: {fileID: 697890536}
-  Obrus2: {fileID: 1466601757}
-  Obrus3: {fileID: 116581715}
-  Obrus4: {fileID: 600019523}
-  serwety1: {fileID: 1690508084}
-  serwety2: {fileID: 21722649}
-  serwety3: {fileID: 1987768520}
-  serwety4: {fileID: 276454246}
-  Laufry1: {fileID: 609617996}
-  Laufry2: {fileID: 1452057173}
-  Laufry3: {fileID: 921316395}
-  Skirtingi1: {fileID: 133282288}
-  Skirtingi2: {fileID: 524987917}
-  Skirtingi3: {fileID: 1207493979}
-  Napperony1: {fileID: 1677197680}
-  Napperony2: {fileID: 1650204859}
-  Napperony3: {fileID: 1753043165}
-  Dekoracje1: {fileID: 1391105164}
-  Dekoracje2: {fileID: 197086000}
-  Dekoracje3: {fileID: 761856678}
-  menu_teskst: {fileID: 1157084126}
-  talerz1: {fileID: 1133806930}
-  talerz2: {fileID: 1070024957}
-  ceramika3: {fileID: 422497767}
-  ceramika4: {fileID: 167365612}
-  ceramika5: {fileID: 1013825025}
-  ceramika6: {fileID: 1097971942}
-  ceramika7: {fileID: 1078886050}
-  ceramika8: {fileID: 1932063976}
-  ceramika9: {fileID: 1903613822}
-  ceramika10: {fileID: 1922793237}
-  scena11_srodek_proste: {fileID: 560936672}
-  scena11_srodek_rozszerzone: {fileID: 53918200}
-  szklo1: {fileID: 916317913}
-  szklo2: {fileID: 1590269452}
-  szklo3: {fileID: 186432359}
-  szklo4: {fileID: 1039076090}
-  szklo5: {fileID: 414355608}
-  szklo6: {fileID: 1466441393}
-  szklo7: {fileID: 1847263368}
-  szklo8: {fileID: 485884126}
-  szklo11: {fileID: 577648549}
-  szklo22: {fileID: 1761686587}
-  szklo33: {fileID: 650879464}
-  wino_biale: {fileID: 1110072064}
-  wino_czerwone: {fileID: 1208878182}
-  wino_musujace: {fileID: 1123957976}
-  woda: {fileID: 1050897157}
-  koniak: {fileID: 736086583}
-  sok: {fileID: 1328450170}
-  drinki: {fileID: 186872267}
-  piwo: {fileID: 1712218990}
-  sztucce1: {fileID: 1089274307}
-  sztucce2: {fileID: 2074444529}
-  sztucce3: {fileID: 1089917294}
-  sztucce4: {fileID: 880991397}
-  sztucce5: {fileID: 1850412031}
-  sztucce6: {fileID: 683752592}
-  sztucce7: {fileID: 70925257}
-  sztucce8: {fileID: 2080033738}
-  zupa_lyzka: {fileID: 703186812}
-  noz_podsawowy: {fileID: 1079388154}
-  widelec_glowne: {fileID: 1415891564}
-  desery_oba: {fileID: 2061490714}
-  noz_przystawki: {fileID: 1941899542}
-  noz_maslo: {fileID: 1052594222}
-  widelec_przystawka: {fileID: 1452570436}
-  widelec_ryba: {fileID: 992156851}
-  scena_win: {fileID: 172826854}
-  obiekty_all: {fileID: 1924934459}
-  wyjdz_cofnij_button: {fileID: 453637878}
---- !u!114 &1476918945
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1476918943}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06cc08262e615c14093c272ce79fae71, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  przycisk_wyjdz: {fileID: 66404541}
-  przycisk_cofnij: {fileID: 766414697}
-  scena1: {fileID: 1678236933}
-  scena0: {fileID: 880025231}
---- !u!114 &1476918946
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1476918943}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84861818d8210dc49b6fedff9f361542, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  licznikczasu: {fileID: 582280436}
-  czyOk: 0
-  scena: {fileID: 1678236933}
-  scena0: {fileID: 880025231}
-  scena_error: {fileID: 190877202}
-  scena_error_end: {fileID: 1394155632}
-  scena_error_end2: {fileID: 1042811506}
-  scena_final: {fileID: 172826854}
---- !u!114 &1476918947
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1476918943}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2aaf507e6be0a74438642a4b0238027e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scena1: {fileID: 880025231}
---- !u!114 &1476918948
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1476918943}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
-  m_CancelButton: Cancel
-  m_InputActionsPerSecond: 10
-  m_RepeatDelay: 0.5
-  m_ForceModuleActive: 0
---- !u!114 &1476918949
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1476918943}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
-  m_sendNavigationEvents: 1
-  m_DragThreshold: 10
---- !u!4 &1476918950
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1476918943}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1485458242
 GameObject:
   m_ObjectHideFlags: 0
@@ -29971,7 +29719,7 @@ MonoBehaviour:
   m_OnEndEdit:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: get_ilosc_stolow
         m_Mode: 1
         m_Arguments:
@@ -30856,7 +30604,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: wybor_uroczystosci
         m_Mode: 1
         m_Arguments:
@@ -30989,7 +30737,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: wybor_uroczystosci
         m_Mode: 1
         m_Arguments:
@@ -31396,7 +31144,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: sprawdz_nakrycie
         m_Mode: 1
         m_Arguments:
@@ -31686,7 +31434,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: aktywne_toggle_off
         m_Mode: 2
         m_Arguments:
@@ -31697,7 +31445,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: block_object
         m_Mode: 2
         m_Arguments:
@@ -31868,7 +31616,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: zamknij_pomoc
         m_Mode: 1
         m_Arguments:
@@ -32055,7 +31803,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: szklo_wyswietl_proste
         m_Mode: 1
         m_Arguments:
@@ -32551,7 +32299,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: aktywne_toggle_off
         m_Mode: 2
         m_Arguments:
@@ -32562,7 +32310,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: block_object
         m_Mode: 2
         m_Arguments:
@@ -32900,7 +32648,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: kolory_ustaw_napperony
         m_Mode: 1
         m_Arguments:
@@ -32996,7 +32744,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: wybor_ustawienie_stolow
         m_Mode: 1
         m_Arguments:
@@ -33348,7 +33096,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: pomoc_przycisk
         m_Mode: 1
         m_Arguments:
@@ -33812,7 +33560,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: kolory_ustaw_napperony
         m_Mode: 1
         m_Arguments:
@@ -34110,7 +33858,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: serwety_ulozenie
         m_Mode: 1
         m_Arguments:
@@ -34442,7 +34190,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: aktywne_toggle_off
         m_Mode: 2
         m_Arguments:
@@ -34453,7 +34201,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: block_object
         m_Mode: 2
         m_Arguments:
@@ -34984,7 +34732,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: kolory_ustaw_napperony
         m_Mode: 1
         m_Arguments:
@@ -35162,7 +34910,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: aktywne_toggle_off
         m_Mode: 2
         m_Arguments:
@@ -35173,7 +34921,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: toggle_blokuj_szklo
         m_Mode: 1
         m_Arguments:
@@ -35184,7 +34932,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: block_object
         m_Mode: 2
         m_Arguments:
@@ -36798,7 +36546,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: szklo_wyswietl_proste
         m_Mode: 1
         m_Arguments:
@@ -36954,7 +36702,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: sztucce_wyswietl_proste
         m_Mode: 1
         m_Arguments:
@@ -37132,7 +36880,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: szkolo_proste_check
         m_Mode: 1
         m_Arguments:
@@ -37341,7 +37089,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: wybor_sali
         m_Mode: 1
         m_Arguments:
@@ -37994,7 +37742,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: wyjdz_nie
         m_Mode: 1
         m_Arguments:
@@ -38926,7 +38674,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: sprawdz_menu
         m_Mode: 1
         m_Arguments:
@@ -39298,7 +39046,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: serwety_ulozenie
         m_Mode: 1
         m_Arguments:
@@ -40446,6 +40194,267 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2053775063}
   m_CullTransparentMesh: 0
+--- !u!1 &2054721408
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2054721415}
+  - component: {fileID: 2054721414}
+  - component: {fileID: 2054721413}
+  - component: {fileID: 2054721412}
+  - component: {fileID: 2054721411}
+  - component: {fileID: 2054721410}
+  - component: {fileID: 2054721409}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2054721409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2054721408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f34c5ddeca791704198cce1d2a9a87cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tekst_uroczystosc: {fileID: 0}
+  scena1: {fileID: 0}
+  scena2: {fileID: 0}
+  scena3: {fileID: 0}
+  scena4: {fileID: 0}
+  scena5: {fileID: 0}
+  scena6: {fileID: 0}
+  scena7: {fileID: 0}
+  scena8: {fileID: 0}
+  scena9: {fileID: 0}
+  scena10: {fileID: 0}
+  scena11: {fileID: 0}
+  scena12: {fileID: 0}
+  ilosc_osob: {fileID: 0}
+  ilosc_stolow_get: {fileID: 0}
+  tables_all: {fileID: 0}
+  max_ilosc_stolow: 0
+  widok_sala1: {fileID: 21300000, guid: 44479542f746c994a96854ccfc933d86, type: 3}
+  widok_sala2: {fileID: 21300000, guid: f7a2e486f7cd2284d812de4ccfec8804, type: 3}
+  widok_sala3: {fileID: 21300000, guid: 32d26d8005c21794d8d85489cf49a835, type: 3}
+  widok_sala4: {fileID: 21300000, guid: 68a4f5bb17a499840ad0c12ac88f8ffd, type: 3}
+  widok_sala_white: {fileID: 21300000, guid: acb0907f45cc13a459b18277626d24a0, type: 3}
+  widok_podloga: {fileID: 21300000, guid: 6191c0952ef0d1646874c01300be5bff, type: 3}
+  widok_sali: {fileID: 0}
+  max_ilosc_osob: 0
+  widok_stol_all: {fileID: 0}
+  widok_stol1: {fileID: 0}
+  widok_stol2: {fileID: 0}
+  widok_stol3: {fileID: 0}
+  widok_stol4: {fileID: 0}
+  widok_stol5: {fileID: 0}
+  widok_stol6: {fileID: 0}
+  widok_stol7: {fileID: 0}
+  punkty: {fileID: 0}
+  ilosc_punktow: 0
+  blad: {fileID: 0}
+  pop_up_wyjdz: {fileID: 0}
+  licznik_scen: 1
+  nazwa_uroczystosci: 
+  menu: {fileID: 0}
+  menu_zatwierdz: {fileID: 0}
+  okragly70: {fileID: 21300000, guid: 6c966cc533204b64990579e95c73e4ac, type: 3}
+  okragly90: {fileID: 21300000, guid: c2d55970834bc584784af1be2c57f872, type: 3}
+  kwadrat: {fileID: 21300000, guid: 0696a7295a1b53341ba216d2fdca028b, type: 3}
+  prostokat: {fileID: 21300000, guid: 3195f6ae2202968488e733b79590510a, type: 3}
+  nazwa_sali: 
+  pomoc: {fileID: 0}
+  ksiazka_scena: {fileID: 0}
+  pomoc_text: {fileID: 0}
+  scena5_input: {fileID: 0}
+  Obrus1: {fileID: 0}
+  Obrus2: {fileID: 0}
+  Obrus3: {fileID: 0}
+  Obrus4: {fileID: 0}
+  serwety1: {fileID: 0}
+  serwety2: {fileID: 0}
+  serwety3: {fileID: 0}
+  serwety4: {fileID: 0}
+  Laufry1: {fileID: 0}
+  Laufry2: {fileID: 0}
+  Laufry3: {fileID: 0}
+  Skirtingi1: {fileID: 0}
+  Skirtingi2: {fileID: 0}
+  Skirtingi3: {fileID: 0}
+  Napperony1: {fileID: 0}
+  Napperony2: {fileID: 0}
+  Napperony3: {fileID: 0}
+  Dekoracje1: {fileID: 0}
+  Dekoracje2: {fileID: 0}
+  Dekoracje3: {fileID: 0}
+  menu_teskst: {fileID: 0}
+  talerz1: {fileID: 0}
+  talerz2: {fileID: 0}
+  ceramika3: {fileID: 0}
+  ceramika4: {fileID: 0}
+  ceramika5: {fileID: 0}
+  ceramika6: {fileID: 0}
+  ceramika7: {fileID: 0}
+  ceramika8: {fileID: 0}
+  ceramika9: {fileID: 0}
+  ceramika10: {fileID: 0}
+  scena11_srodek_proste: {fileID: 0}
+  scena11_srodek_rozszerzone: {fileID: 0}
+  szklo1: {fileID: 0}
+  szklo2: {fileID: 0}
+  szklo3: {fileID: 0}
+  szklo4: {fileID: 0}
+  szklo5: {fileID: 0}
+  szklo6: {fileID: 0}
+  szklo7: {fileID: 0}
+  szklo8: {fileID: 0}
+  szklo11: {fileID: 0}
+  szklo22: {fileID: 0}
+  szklo33: {fileID: 0}
+  wino_biale: {fileID: 0}
+  wino_czerwone: {fileID: 0}
+  wino_musujace: {fileID: 0}
+  woda: {fileID: 0}
+  koniak: {fileID: 0}
+  sok: {fileID: 0}
+  drinki: {fileID: 0}
+  piwo: {fileID: 0}
+  sztucce1: {fileID: 0}
+  sztucce2: {fileID: 0}
+  sztucce3: {fileID: 0}
+  sztucce4: {fileID: 0}
+  sztucce5: {fileID: 0}
+  sztucce6: {fileID: 0}
+  sztucce7: {fileID: 0}
+  sztucce8: {fileID: 0}
+  zupa_lyzka: {fileID: 0}
+  noz_podsawowy: {fileID: 0}
+  widelec_glowne: {fileID: 0}
+  desery_oba: {fileID: 0}
+  noz_przystawki: {fileID: 0}
+  noz_maslo: {fileID: 0}
+  widelec_przystawka: {fileID: 0}
+  widelec_ryba: {fileID: 0}
+  szklo_game:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  scena_win: {fileID: 0}
+  obiekty_all: {fileID: 0}
+  wyjdz_cofnij_button: {fileID: 0}
+--- !u!114 &2054721410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2054721408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06cc08262e615c14093c272ce79fae71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  przycisk_wyjdz: {fileID: 0}
+  przycisk_cofnij: {fileID: 0}
+  scena1: {fileID: 0}
+  scena0: {fileID: 0}
+--- !u!114 &2054721411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2054721408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84861818d8210dc49b6fedff9f361542, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  licznikczasu: {fileID: 0}
+  czyOk: 0
+  scena: {fileID: 0}
+  scena0: {fileID: 0}
+  scena_error: {fileID: 0}
+  scena_error_end: {fileID: 0}
+  scena_error_end2: {fileID: 0}
+  scena_final: {fileID: 0}
+--- !u!114 &2054721412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2054721408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2aaf507e6be0a74438642a4b0238027e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scena1: {fileID: 0}
+--- !u!114 &2054721413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2054721408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
+--- !u!114 &2054721414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2054721408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
+--- !u!4 &2054721415
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2054721408}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2057199515
 GameObject:
   m_ObjectHideFlags: 0
@@ -41330,7 +41339,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: sztucce_wyswietl_proste
         m_Mode: 1
         m_Arguments:
@@ -41427,7 +41436,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: sztucce_wyswietl_proste
         m_Mode: 1
         m_Arguments:
@@ -42526,7 +42535,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: aktywne_toggle_off
         m_Mode: 2
         m_Arguments:
@@ -42537,7 +42546,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: block_object
         m_Mode: 2
         m_Arguments:
@@ -42636,7 +42645,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: aktywne_toggle_off
         m_Mode: 2
         m_Arguments:
@@ -42647,7 +42656,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1476918944}
+      - m_Target: {fileID: 0}
         m_MethodName: block_object
         m_Mode: 2
         m_Arguments:
