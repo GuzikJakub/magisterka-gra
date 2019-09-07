@@ -1800,9 +1800,13 @@ public class Przycisk_zachownaie : MonoBehaviour
             obiektt.SetActive(true);
         }
     }
+
+    public GameObject cat;
+    public GameObject ghost;
     public GameObject[] szklo_game;
     public InputField[] szklo_input;
     public Toggle[] szklo_toggle;
+
     public void szklo_wyswietl_proste()
     {
         int x = Random.Range(0, 15);
@@ -1835,6 +1839,14 @@ public class Przycisk_zachownaie : MonoBehaviour
         }
         if (x % 4 == 0)
         {
+            if (y % 2 == 0)
+            {
+                cat.SetActive(true);
+            }
+            else
+            {
+                ghost.SetActive(true);
+            }
             if (szklo_toggle[y].isOn == true)
             {
                 szklo_toggle[y].isOn = false;
@@ -1849,6 +1861,7 @@ public class Przycisk_zachownaie : MonoBehaviour
                 Debug.Log("SZKLO KOT JESTEM");
                 obiekt_wyswietl_proste(szklo_game[y], yy.ToString());
                 szklo_input[y].text = yy.ToString();
+                StartCoroutine(Timewiat());
             }
         }
     }
@@ -1856,6 +1869,20 @@ public class Przycisk_zachownaie : MonoBehaviour
     public GameObject[] sztucce_game;
     public InputField[] sztucce_input;
     public Toggle[] sztucce_toggle;
+
+    IEnumerator Timewiat()
+    {
+        yield return new WaitForSeconds(2);
+        if (cat.activeSelf == true)
+        {
+            cat.SetActive(false);
+        }
+        else if (ghost.activeSelf == true)
+        {
+            ghost.SetActive(false);
+        }
+    }
+
     public void sztucce_wyswietl_proste()
     {
         int x = Random.Range(0, 15);
