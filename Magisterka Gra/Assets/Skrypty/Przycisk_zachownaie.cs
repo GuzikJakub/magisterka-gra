@@ -959,6 +959,7 @@ public class Przycisk_zachownaie : MonoBehaviour
         }
         if (licznik_scen == 8)
         {
+            menu.SetActive(false);
             pomoc_text.GetComponent<UnityEngine.UI.Text>().text = "Na wybraną przez Ciebie uroczystość " + nazwa_uroczystosci + " powinienieś wybrać menu, które najbardziej będzie odpowiadało gościom. Czy jesteś pewny tego? Zastanów się :) ";
         }
         if (licznik_scen == 9)
@@ -986,6 +987,10 @@ public class Przycisk_zachownaie : MonoBehaviour
         {
             scena5_input.SetActive(true);
         }
+        if (licznik_scen == 8)
+        {
+            scena8.SetActive(true);
+        }
     }
 
     public GameObject scena5_input;
@@ -1004,6 +1009,10 @@ public class Przycisk_zachownaie : MonoBehaviour
         if (scena5.activeSelf == true)
         {
             scena5_input.SetActive(false);
+        }
+        if (scena8.activeSelf == true)
+        {
+            menu.SetActive(true);
         }
         StartCoroutine(Blad_wait());
     }
@@ -1440,6 +1449,7 @@ public class Przycisk_zachownaie : MonoBehaviour
             }
             else
             {
+                menu.SetActive(false);
                 powiadomienie_blad();
             }
         }
@@ -1451,6 +1461,7 @@ public class Przycisk_zachownaie : MonoBehaviour
             }
             else
             {
+                menu.SetActive(false);
                 powiadomienie_blad();
             }
         }
@@ -1462,6 +1473,7 @@ public class Przycisk_zachownaie : MonoBehaviour
             }
             else
             {
+                menu.SetActive(false);
                 powiadomienie_blad();
             }
         }
@@ -1473,6 +1485,7 @@ public class Przycisk_zachownaie : MonoBehaviour
             }
             else
             {
+                menu.SetActive(false);
                 powiadomienie_blad();
             }
         }
@@ -1483,6 +1496,10 @@ public class Przycisk_zachownaie : MonoBehaviour
             scena8.SetActive(false);
             scena9.SetActive(true);
             licznik_scen++;
+        }
+        else
+        {
+            menu.SetActive(false);
         }
     }
 
@@ -1763,15 +1780,6 @@ public class Przycisk_zachownaie : MonoBehaviour
         }
     }
 
-    public GameObject wino_biale;
-    public GameObject wino_czerwone;
-    public GameObject wino_musujace;
-    public GameObject woda;
-    public GameObject koniak;
-    public GameObject sok;
-    public GameObject drinki;
-    public GameObject piwo;
-
     public InputField sztucce1;
     public InputField sztucce2;
     public InputField sztucce3;
@@ -1801,48 +1809,57 @@ public class Przycisk_zachownaie : MonoBehaviour
             obiektt.SetActive(true);
         }
     }
-
-
+    public GameObject[] szklo_game;
+    public InputField[] szklo_input;
+    public Toggle[] szklo_toggle;
     public void szklo_wyswietl_proste()
     {
+        int x = Random.Range(0, 15);
+        int y = Random.Range(1, 8);
+        int yy = Random.Range(1, 8);
+        Debug.Log("DZIEL" + x%4);
+        Debug.Log(y);
+        
         if (scena11_srodek_proste.activeSelf == true)
         {
-            Debug.Log("jestem");
-            Debug.Log(szklo3.text);
-            obiekt_wyswietl_proste(wino_biale, szklo1.text);
-            obiekt_wyswietl_proste(wino_czerwone, szklo2.text);
-            obiekt_wyswietl_proste(wino_musujace, szklo3.text);
-            obiekt_wyswietl_proste(woda, szklo4.text);
-            obiekt_wyswietl_proste(koniak, szklo5.text);
-            obiekt_wyswietl_proste(sok, szklo6.text);
-            obiekt_wyswietl_proste(drinki, szklo7.text);
-            obiekt_wyswietl_proste(piwo, szklo8.text);
+            obiekt_wyswietl_proste(szklo_game[0], szklo_input[0].text);
+            obiekt_wyswietl_proste(szklo_game[1], szklo_input[1].text);
+            obiekt_wyswietl_proste(szklo_game[2], szklo_input[2].text);
+            obiekt_wyswietl_proste(szklo_game[3], szklo_input[3].text);
+            obiekt_wyswietl_proste(szklo_game[4], szklo_input[4].text);
+            obiekt_wyswietl_proste(szklo_game[5], szklo_input[5].text);
+            obiekt_wyswietl_proste(szklo_game[6], szklo_input[6].text);
+            obiekt_wyswietl_proste(szklo_game[7], szklo_input[7].text);
         }
         else if (scena11_srodek_rozszerzone.activeSelf == false)
         {
-            obiekt_wyswietl_rozszerzone(wino_biale, szklo1.text);
-            obiekt_wyswietl_rozszerzone(wino_czerwone, szklo2.text);
-            obiekt_wyswietl_rozszerzone(wino_musujace, szklo3.text);
-            obiekt_wyswietl_rozszerzone(woda, szklo4.text);
-            obiekt_wyswietl_rozszerzone(koniak, szklo5.text);
-            obiekt_wyswietl_rozszerzone(sok, szklo6.text);
-            obiekt_wyswietl_rozszerzone(drinki, szklo7.text);
-            obiekt_wyswietl_rozszerzone(piwo, szklo8.text);
+            obiekt_wyswietl_rozszerzone(szklo_game[0], szklo_input[0].text);
+            obiekt_wyswietl_rozszerzone(szklo_game[1], szklo_input[1].text);
+            obiekt_wyswietl_rozszerzone(szklo_game[2], szklo_input[2].text);
+            obiekt_wyswietl_rozszerzone(szklo_game[3], szklo_input[3].text);
+            obiekt_wyswietl_rozszerzone(szklo_game[4], szklo_input[4].text);
+            obiekt_wyswietl_rozszerzone(szklo_game[5], szklo_input[5].text);
+            obiekt_wyswietl_rozszerzone(szklo_game[6], szklo_input[6].text);
+            obiekt_wyswietl_rozszerzone(szklo_game[7], szklo_input[7].text);
         }
-        
-        /*       if (licznik_szklo >= 1)
-               {
-                   int x = Random.Range(0, 15);
-                   Debug.Log(x);
-                   if (x % 4 == 0)
-                   {
-                       if (tablica[x] != null)
-                       {
-                           int y = Random.Range(1, 6);
-                           obiekt_wyswietl(tablica[x], y.ToString());
-                       }
-                   }
-               }*/
+        if (x % 4 == 0)
+        {
+            if (szklo_toggle[y].isOn == true)
+            {
+                szklo_toggle[y].isOn = false;
+            }
+            else
+            {
+                szklo_toggle[y].isOn = true;
+                if (szklo_game[y].activeSelf == false)
+                {
+                    szklo_game[y].SetActive(true);
+                }
+                Debug.Log("SZKLO KOT JESTEM");
+                obiekt_wyswietl_proste(szklo_game[y], yy.ToString());
+                szklo_input[y].text = yy.ToString();
+            }
+        }
     }
 
     public void sztucce_wyswietl_proste()
@@ -1914,8 +1931,7 @@ public class Przycisk_zachownaie : MonoBehaviour
             wyswietl.transform.position = new Vector3(618.47f, 329.98f, 0.0f);
           //  wyswietl.SetActive(true);
         }
-    //    tablica[licznik_szklo] = wyswietl;
-    //    licznik_szklo++;
+        licznik_szklo++;
     }
     
     public void obiekt_wyswietl_rozszerzone(GameObject wyswietl, string numer)
@@ -1968,7 +1984,7 @@ public class Przycisk_zachownaie : MonoBehaviour
           //  wyswietl.SetActive(true);
         }
     //    tablica[licznik_szklo] = wyswietl;
-    //    licznik_szklo++;
+        licznik_szklo++;
     }
 
 
