@@ -10327,8 +10327,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Gratulacje! Twoje praktyki dobieg\u0142y ko\u0144ca! Zdobywasz 1000 z\u0142
-    i mo\u017Cliwo\u015B\u0107 odbywacia praktyki w mojej restauracji :) "
+  m_Text: "Gratulacje! Twoj staz dobieg\u0142y ko\u0144ca! Zdobywasz 2000 z\u0142
+    i mo\u017Cliwo\u015B\u0107 odbywacia zatrudnienia w mojej restauracji :) "
 --- !u!222 &605920423
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -28686,10 +28686,10 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "Witaj w mojej restauracji...\nW dniu dzisiejszym rozpoczyna si\u0119 Tw\xF3j
-    test podczas sta\u017Cu w restaruacji. Wykonaj wszystkie zadania, a zdob\u0119dziesz
-    2000 z\u0142 oraz mo\u017Cliwo\u015B\u0107 sta\u017Cu u mnie w restauracji!\nKa\u017Cdego
-    wyboru b\u0119dziesz dokonywa\u0142 w panelu po lewej stronie. Masz na to 1,5
-    minuty!\n\nCzas start!"
+    test konczacy sta\u017C. Wykonaj wszystkie zadania, a zdob\u0119dziesz 2000 z\u0142
+    oraz mo\u017Cliwo\u015B\u0107 sta\u017Cu u mnie w restauracji!\nKa\u017Cdego wyboru
+    b\u0119dziesz dokonywa\u0142 w panelu po lewej stronie. Masz na to 1,5 minuty!\n\nCzas
+    start!"
 --- !u!222 &1458987546
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -38754,9 +38754,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Niestety, ale nie uda\u0142o Ci si\u0119 zako\u0144czy\u0107 poprawnie
-    Twojej praktyki. Poducz si\u0119 troch\u0119 i wr\xF3\u0107 ponownie, a mo\u017Ce
-    wtedy Ci si\u0119 uda."
+  m_Text: "Niestety, ale nie uda\u0142o Ci si\u0119 zako\u0144czy\u0107 testu konczacego
+    staz w resturacji. Poducz si\u0119 troch\u0119 i wr\xF3\u0107 za rok ponownie,
+    a mo\u017Ce wtedy Ci si\u0119 uda."
 --- !u!222 &1961461438
 CanvasRenderer:
   m_ObjectHideFlags: 0

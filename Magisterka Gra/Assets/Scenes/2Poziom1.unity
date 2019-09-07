@@ -662,7 +662,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "Gratulacje! Twoje praktyki dobieg\u0142y ko\u0144ca! Zdobywasz 1000 z\u0142
-    i mo\u017Cliwo\u015B\u0107 odbywacia praktyki w mojej restauracji :) "
+    i mo\u017Cliwo\u015B\u0107 odbywacia stazu w mojej restauracji :) "
 --- !u!222 &14762826
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -30445,8 +30445,9 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: "Witaj w mojej restauracji...\nW dniu dzisiejszym we\u017Amiesz udzia\u0142
     w praktykach. Wykonaj wszystkie zadania, a zdob\u0119dziesz 1000 z\u0142 oraz
-    mo\u017Cliwo\u015B\u0107 sta\u017Cu u nas w firmie!\nKa\u017Cdego wyboru b\u0119dziesz
-    dokonywa\u0142 w panelu po lewej stronie. Masz na to 2 minuty!\n\nCzas start!"
+    mo\u017Cliwo\u015B\u0107 sta\u017Cu w mojej restauracji!\nKa\u017Cdego wyboru
+    b\u0119dziesz dokonywa\u0142 w panelu po lewej stronie. Masz na to 2 minuty!\n\nCzas
+    start!"
 --- !u!222 &1591876362
 CanvasRenderer:
   m_ObjectHideFlags: 0
