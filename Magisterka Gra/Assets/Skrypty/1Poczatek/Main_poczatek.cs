@@ -6,10 +6,10 @@ public class Main_poczatek : MonoBehaviour {
     public GameObject napis;
     public GameObject przycisk1;
     public GameObject przycisk2;
-    public GameObject Sebastian;
+//    public GameObject Sebastian;
 	// Use this for initialization
 	void Start () {
-        Sebastian.SetActive(true);
+ //       Sebastian.SetActive(true);
         napis.SetActive(true);
         przycisk1.SetActive(false);
         przycisk2.SetActive(false);
@@ -19,9 +19,10 @@ public class Main_poczatek : MonoBehaviour {
     IEnumerator Przycisk()
     {
         yield return new WaitForSeconds(3);
-        napis.SetActive(false);
+ //       napis.SetActive(false);
+        napis.GetComponent<UnityEngine.UI.Text>().text = "Wybierz poziom";
         przycisk1.SetActive(true);
-        przycisk2.SetActive(true);
+//        przycisk2.SetActive(true);
     }
 
 
