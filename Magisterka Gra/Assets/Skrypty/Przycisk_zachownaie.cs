@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Przycisk_zachownaie : MonoBehaviour
 {
@@ -75,10 +76,30 @@ public class Przycisk_zachownaie : MonoBehaviour
         tekst_uroczystosc.SetActive(true);
         tekst_uroczystosc.GetComponent<UnityEngine.UI.Text>().text = tekst;
         nazwa_uroczystosci = tekst.ToString();
-        scena1.SetActive(false);
-        scena2.SetActive(true);
-        licznik_scen++;
-        Debug.Log(tekst);
+        Scene obecna_scena = SceneManager.GetActiveScene();
+        string nazwa_sceny = obecna_scena.name;
+        if (nazwa_sceny == "2Poziom2")
+        {
+            if (nazwa_uroczystosci == "Walentynki" && typ_przyjecia_string == "Angielskie")
+            {
+                powiadomienie_blad();
+            }
+            else
+            {
+                scena1.SetActive(false);
+                scena2.SetActive(true);
+                licznik_scen++;
+                Debug.Log(tekst);
+            }
+        }
+        else
+        {
+            scena1.SetActive(false);
+            scena2.SetActive(true);
+            licznik_scen++;
+            Debug.Log(tekst);
+        }
+        
     }
 
     public void zamknij()
@@ -885,14 +906,23 @@ public class Przycisk_zachownaie : MonoBehaviour
         int ilosc_osob_tmp;
         ile_stolow = ilosc_stolow_get.text;
         ilosc_stolow_dalej = false;
-
+        Scene obecna_scena = SceneManager.GetActiveScene();
+        string nazwa_sceny = obecna_scena.name;
         int.TryParse(ilosc_osob_l, out ilosc_osob_tmp);
         int.TryParse(ile_stolow, out ile_stolow_tmp);
 
         //        wynik_tmp = ile_stolow_tmp * max_ilosc_stolow;
-        //        int wynik_tmp2 = ile_stolow_tmp * (max_ilosc_stolow - 1);
-        wynik_tmp = podstawowa_ilosc_osob * (ile_stolow_tmp - dodatkowa_ilosc_stolow) + dodatkowa_ilosc_osob;
-        wynik_tmp2 = podstawowa_ilosc_osob * (ile_stolow_tmp - dodatkowa_ilosc_stolow - 1) + dodatkowa_ilosc_osob;
+        //        int wynik_tmp2 = ile_stolow_tmp * (max_ilosc_stolow - 1
+        if (nazwa_sceny == "2Poziom1")
+        {
+            wynik_tmp = podstawowa_ilosc_osob * (ile_stolow_tmp - dodatkowa_ilosc_stolow) + dodatkowa_ilosc_osob;
+            wynik_tmp2 = podstawowa_ilosc_osob * (ile_stolow_tmp - dodatkowa_ilosc_stolow - 1) + dodatkowa_ilosc_osob;
+        }
+        else if (nazwa_sceny == "2Poziom2")
+        {
+            wynik_tmp = (podstawowa_ilosc_osob + 1) * (ile_stolow_tmp - dodatkowa_ilosc_stolow) + dodatkowa_ilosc_osob;
+            wynik_tmp2 = (podstawowa_ilosc_osob + 1) * (ile_stolow_tmp - dodatkowa_ilosc_stolow - 1) + dodatkowa_ilosc_osob;
+        }
         Debug.Log(ilosc_osob_tmp);
         Debug.Log(wynik_tmp);
         Debug.Log(wynik_tmp2);
