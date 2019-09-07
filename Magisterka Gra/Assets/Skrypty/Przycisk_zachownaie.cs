@@ -9,6 +9,7 @@ public class Przycisk_zachownaie : MonoBehaviour
     // Button przycisk;
     public GameObject tekst_uroczystosc;
 
+    public GameObject scena0;
     public GameObject scena1;
     public GameObject scena2;
     public GameObject scena3;
@@ -93,7 +94,7 @@ public class Przycisk_zachownaie : MonoBehaviour
     public void wycztaj_scene(string name)
     {
         Application.LoadLevel(name);
-        licznik_scen = 0;
+ //       licznik_scen = 0;
         ilosc_punktow = 0;
     }
 
@@ -105,6 +106,12 @@ public class Przycisk_zachownaie : MonoBehaviour
             tekst_uroczystosc.SetActive(false);
             scena2.SetActive(false);
             scena1.SetActive(true);
+        }
+        else if (licznik_scen == 1)
+        {
+            licznik_scen--;
+            scena1.SetActive(false);
+            scena0.SetActive(true);
         }
         else if (licznik_scen == 3)
         {
@@ -200,6 +207,18 @@ public class Przycisk_zachownaie : MonoBehaviour
         }
         punkty.GetComponent<UnityEngine.UI.Text>().text = ilosc_punktow.ToString();
         Debug.Log(licznik_scen);
+    }
+
+    string typ_przyjecia_string;
+
+    public void typ_przyjecia()
+    {
+        var tekst = EventSystem.current.currentSelectedGameObject.name;
+        typ_przyjecia_string = tekst.ToString();
+        Debug.Log(typ_przyjecia_string);
+        licznik_scen++;
+        scena0.SetActive(false);
+        scena1.SetActive(true);
     }
 
     public void get_ilosc_osob()
@@ -1806,17 +1825,28 @@ public class Przycisk_zachownaie : MonoBehaviour
     public GameObject[] szklo_game;
     public InputField[] szklo_input;
     public Toggle[] szklo_toggle;
+    int y;
+    IEnumerator Timewiat()
+    {
+        yield return new WaitForSeconds(1);
+        cat.SetActive(false);
+        ghost.SetActive(false);
+    }
 
     public void szklo_wyswietl_proste()
     {
+     //   szklo_input[y].text = "";
+        //   cat.SetActive(false);
+        //   ghost.SetActive(false);
         int x = Random.Range(0, 15);
-        int y = Random.Range(1, 8);
-        int yy = Random.Range(1, 8);
+        y = Random.Range(1, 8);
+        int yy = 0;
         Debug.Log("DZIEL" + x%4);
-        Debug.Log(y);
+        Debug.Log("YYYYYYYYYYYYYYYY" + y);
         
         if (scena11_srodek_proste.activeSelf == true)
         {
+            yy = Random.Range(1, 6);
             obiekt_wyswietl_proste(szklo_game[0], szklo_input[0].text);
             obiekt_wyswietl_proste(szklo_game[1], szklo_input[1].text);
             obiekt_wyswietl_proste(szklo_game[2], szklo_input[2].text);
@@ -1825,9 +1855,39 @@ public class Przycisk_zachownaie : MonoBehaviour
             obiekt_wyswietl_proste(szklo_game[5], szklo_input[5].text);
             obiekt_wyswietl_proste(szklo_game[6], szklo_input[6].text);
             obiekt_wyswietl_proste(szklo_game[7], szklo_input[7].text);
+            if (x % 4 == 0)
+            {
+                if (y % 2 == 0)
+                {
+                    Debug.Log("KOT ACTIVE " + y % 2);
+                    cat.SetActive(true);
+                }
+                else if (y % 2 == 1)
+                {
+                    Debug.Log("DUCH ACTIVE: " + y % 2);
+                    ghost.SetActive(true);
+                }
+                if (szklo_toggle[y].isOn == true)
+                {
+                    szklo_toggle[y].isOn = false;
+                }
+                else
+                {
+                    szklo_toggle[y].isOn = true;
+                    if (szklo_game[y].activeSelf == false)
+                    {
+                        szklo_game[y].SetActive(true);
+                    }
+                    Debug.Log("SZKLO KOT JESTEM");
+                    obiekt_wyswietl_proste(szklo_game[y], yy.ToString());
+                    szklo_input[y].text = yy.ToString();
+                    StartCoroutine(Timewiat());
+                }
+            }
         }
         else if (scena11_srodek_rozszerzone.activeSelf == false)
         {
+            yy = Random.Range(1, 9);
             obiekt_wyswietl_rozszerzone(szklo_game[0], szklo_input[0].text);
             obiekt_wyswietl_rozszerzone(szklo_game[1], szklo_input[1].text);
             obiekt_wyswietl_rozszerzone(szklo_game[2], szklo_input[2].text);
@@ -1836,32 +1896,34 @@ public class Przycisk_zachownaie : MonoBehaviour
             obiekt_wyswietl_rozszerzone(szklo_game[5], szklo_input[5].text);
             obiekt_wyswietl_rozszerzone(szklo_game[6], szklo_input[6].text);
             obiekt_wyswietl_rozszerzone(szklo_game[7], szklo_input[7].text);
-        }
-        if (x % 4 == 0)
-        {
-            if (y % 2 == 0)
+            if (x % 4 == 0)
             {
-                cat.SetActive(true);
-            }
-            else
-            {
-                ghost.SetActive(true);
-            }
-            if (szklo_toggle[y].isOn == true)
-            {
-                szklo_toggle[y].isOn = false;
-            }
-            else
-            {
-                szklo_toggle[y].isOn = true;
-                if (szklo_game[y].activeSelf == false)
+                if (y % 2 == 0)
                 {
-                    szklo_game[y].SetActive(true);
+                    Debug.Log("KOT ACTIVE " + y % 2);
+                    cat.SetActive(true);
                 }
-                Debug.Log("SZKLO KOT JESTEM");
-                obiekt_wyswietl_proste(szklo_game[y], yy.ToString());
-                szklo_input[y].text = yy.ToString();
-                StartCoroutine(Timewiat());
+                else if (y % 2 == 1)
+                {
+                    Debug.Log("DUCH ACTIVE: " + y % 2);
+                    ghost.SetActive(true);
+                }
+                if (szklo_toggle[y].isOn == true)
+                {
+                    szklo_toggle[y].isOn = false;
+                }
+                else
+                {
+                    szklo_toggle[y].isOn = true;
+                    if (szklo_game[y].activeSelf == false)
+                    {
+                        szklo_game[y].SetActive(true);
+                    }
+                    Debug.Log("SZKLO KOT JESTEM");
+                    obiekt_wyswietl_rozszerzone(szklo_game[y], yy.ToString());
+                    szklo_input[y].text = yy.ToString();
+                    StartCoroutine(Timewiat());
+                }
             }
         }
     }
@@ -1870,28 +1932,17 @@ public class Przycisk_zachownaie : MonoBehaviour
     public InputField[] sztucce_input;
     public Toggle[] sztucce_toggle;
 
-    IEnumerator Timewiat()
-    {
-        yield return new WaitForSeconds(2);
-        if (cat.activeSelf == true)
-        {
-            cat.SetActive(false);
-        }
-        else if (ghost.activeSelf == true)
-        {
-            ghost.SetActive(false);
-        }
-    }
-
     public void sztucce_wyswietl_proste()
     {
+    //    szklo_input[y].text = "";
         int x = Random.Range(0, 15);
-        int y = Random.Range(1, 8);
-        int yy = Random.Range(1, 8);
+        y = Random.Range(1, 8);
+        int yy = 0;
         Debug.Log("DZIEL" + x % 4);
         Debug.Log(y);
         if (scena11_srodek_proste.activeSelf == true)
         {
+            yy = Random.Range(1, 6);
             obiekt_wyswietl_proste(sztucce_game[0], sztucce_input[0].text);
             obiekt_wyswietl_proste(sztucce_game[1], sztucce_input[1].text);
             obiekt_wyswietl_proste(sztucce_game[2], sztucce_input[2].text);
@@ -1900,9 +1951,39 @@ public class Przycisk_zachownaie : MonoBehaviour
             obiekt_wyswietl_proste(sztucce_game[5], sztucce_input[5].text);
             obiekt_wyswietl_proste(sztucce_game[6], sztucce_input[6].text);
             obiekt_wyswietl_proste(sztucce_game[7], sztucce_input[7].text);
+            if (x % 4 == 0)
+            {
+                if (y % 2 == 0)
+                {
+                    Debug.Log("KOT ACTIVE " + y % 2);
+                    cat.SetActive(true);
+                }
+                else if (y % 2 == 1)
+                {
+                    Debug.Log("DUCH ACTIVE: " + y % 2);
+                    ghost.SetActive(true);
+                }
+                if (sztucce_toggle[y].isOn == true)
+                {
+                    sztucce_toggle[y].isOn = false;
+                }
+                else
+                {
+                    sztucce_toggle[y].isOn = true;
+                    if (sztucce_game[y].activeSelf == false)
+                    {
+                        sztucce_game[y].SetActive(true);
+                    }
+                    Debug.Log("SZKLO KOT JESTEM");
+                    obiekt_wyswietl_proste(sztucce_game[y], yy.ToString());
+                    sztucce_input[y].text = yy.ToString();
+                    StartCoroutine(Timewiat());
+                }
+            }
         }
         else if (scena11_srodek_rozszerzone.activeSelf == false)
         {
+            yy = Random.Range(1, 9);
             obiekt_wyswietl_rozszerzone(sztucce_game[0], sztucce_input[0].text);
             obiekt_wyswietl_rozszerzone(sztucce_game[1], sztucce_input[1].text);
             obiekt_wyswietl_rozszerzone(sztucce_game[2], sztucce_input[2].text);
@@ -1911,23 +1992,34 @@ public class Przycisk_zachownaie : MonoBehaviour
             obiekt_wyswietl_rozszerzone(sztucce_game[5], sztucce_input[5].text);
             obiekt_wyswietl_rozszerzone(sztucce_game[6], sztucce_input[6].text);
             obiekt_wyswietl_rozszerzone(sztucce_game[7], sztucce_input[7].text);
-        }
-        if (x % 4 == 0)
-        {
-            if (sztucce_toggle[y].isOn == true)
+            if (x % 4 == 0)
             {
-                sztucce_toggle[y].isOn = false;
-            }
-            else
-            {
-                sztucce_toggle[y].isOn = true;
-                if (sztucce_game[y].activeSelf == false)
+                if (y % 2 == 0)
                 {
-                    sztucce_game[y].SetActive(true);
+                    Debug.Log("KOT ACTIVE " + y % 2);
+                    cat.SetActive(true);
                 }
-                Debug.Log("SZKLO KOT JESTEM");
-                obiekt_wyswietl_proste(sztucce_game[y], yy.ToString());
-                sztucce_input[y].text = yy.ToString();
+                else if (y % 2 == 1)
+                {
+                    Debug.Log("DUCH ACTIVE: " + y % 2);
+                    ghost.SetActive(true);
+                }
+                if (sztucce_toggle[y].isOn == true)
+                {
+                    sztucce_toggle[y].isOn = false;
+                }
+                else
+                {
+                    sztucce_toggle[y].isOn = true;
+                    if (sztucce_game[y].activeSelf == false)
+                    {
+                        sztucce_game[y].SetActive(true);
+                    }
+                    Debug.Log("SZKLO KOT JESTEM");
+                    obiekt_wyswietl_rozszerzone(sztucce_game[y], yy.ToString());
+                    sztucce_input[y].text = yy.ToString();
+                    StartCoroutine(Timewiat());
+                }
             }
         }
     }

@@ -10,6 +10,7 @@ public class TextAnim : MonoBehaviour
     public int ktora_scena;
     public GameObject mytext;
     public GameObject scena;
+    public GameObject scena0;
     public GameObject scena1;
     public GameObject scenaown;
     public GameObject tables_all;
@@ -39,10 +40,21 @@ public class TextAnim : MonoBehaviour
         yield return new WaitForSeconds(2);
         if (ktora_scena == 1)
         {
-            scena.SetActive(true);
-            scena1.SetActive(true);
-            scenaown.SetActive(false);
-            tables_all.SetActive(true);
+            if (nazwa_sceny == "2Poziom1")
+            {
+                scena.SetActive(true);
+                scena1.SetActive(true);
+                scenaown.SetActive(false);
+                tables_all.SetActive(true);
+            }
+            else if (nazwa_sceny == "2Poziom2")
+            {
+                scena.SetActive(true);
+                scena0.SetActive(true);
+                scenaown.SetActive(false);
+                tables_all.SetActive(true);
+            }
+
         }
         else if (ktora_scena == 2)
         {
