@@ -911,8 +911,6 @@ public class Przycisk_zachownaie : MonoBehaviour
         int.TryParse(ilosc_osob_l, out ilosc_osob_tmp);
         int.TryParse(ile_stolow, out ile_stolow_tmp);
 
-        //        wynik_tmp = ile_stolow_tmp * max_ilosc_stolow;
-        //        int wynik_tmp2 = ile_stolow_tmp * (max_ilosc_stolow - 1
         if (nazwa_sceny == "2Poziom1")
         {
             wynik_tmp = podstawowa_ilosc_osob * (ile_stolow_tmp - dodatkowa_ilosc_stolow) + dodatkowa_ilosc_osob;
@@ -920,8 +918,16 @@ public class Przycisk_zachownaie : MonoBehaviour
         }
         else if (nazwa_sceny == "2Poziom2")
         {
-            wynik_tmp = (podstawowa_ilosc_osob + 1) * (ile_stolow_tmp - dodatkowa_ilosc_stolow) + dodatkowa_ilosc_osob;
-            wynik_tmp2 = (podstawowa_ilosc_osob + 1) * (ile_stolow_tmp - dodatkowa_ilosc_stolow - 1) + dodatkowa_ilosc_osob;
+            if (typ_przyjecia_string == "Angielskie")
+            {
+                wynik_tmp = (podstawowa_ilosc_osob + 1) * (ile_stolow_tmp - dodatkowa_ilosc_stolow) + dodatkowa_ilosc_osob;
+                wynik_tmp2 = (podstawowa_ilosc_osob + 1) * (ile_stolow_tmp - dodatkowa_ilosc_stolow - 1) + dodatkowa_ilosc_osob;
+            }
+            else
+            {
+                wynik_tmp = podstawowa_ilosc_osob * (ile_stolow_tmp - dodatkowa_ilosc_stolow) + dodatkowa_ilosc_osob;
+                wynik_tmp2 = podstawowa_ilosc_osob * (ile_stolow_tmp - dodatkowa_ilosc_stolow - 1) + dodatkowa_ilosc_osob;
+            }
         }
         Debug.Log(ilosc_osob_tmp);
         Debug.Log(wynik_tmp);
